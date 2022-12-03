@@ -1,7 +1,7 @@
 {
-  "name": "John Doe",
-  "bio": "John is a designer, photographer, speaker, author of a couple of books about typography and the founder of photo magazine Curious.",
-  "url": "https://justgoodthemes.com",
-  "location": "Vilnius, Lithuania",
-  "image": "images/author.png"
+  "name": "Blake Watt",
+  "bio": "Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.",
+  "url": "http://helloblake.com",
+  "location": "Spokane, WA",
+  "image": "/images/blake.jpg"
 }

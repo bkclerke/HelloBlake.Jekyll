@@ -42,7 +42,8 @@ $palette: (
 
 // Imports
 @import "functions";
-@import "icons";
+//@import "icons";
+@import url(fa-all.min.css);
 @import "reset";
 @import "general";
 @import "structure";
