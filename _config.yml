@@ -23,8 +23,8 @@ url: "https://helloblake.com"
 # Favicon
 favicon: images/favicon.png
 
-# Google Analytics id, e.g. "UA-NNNNNNNN-N"
-google_analytics: "UA-19021521-2"
+# Google Analytics
+google_analytics: "G-SB3CZEHJ16"
 
 # Site navigation - each item must have a title and a url.
 navigation:
