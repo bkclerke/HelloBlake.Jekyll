@@ -41,7 +41,7 @@ accent_color: '#fb6eb4'
 
 # Site footer
 footer:
-  content: "&copy; [Scriptor](https://github.com/JustGoodThemes/Scriptor-Jekyll-Theme) Jekyll Theme."
+  content: ""
   has_social: true
 
 # Plugins
