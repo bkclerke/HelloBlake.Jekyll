@@ -18,13 +18,13 @@ description: "Hello! I'm Blake Watt, Umbraco Certified Master, Web Developer & T
 baseurl: ""
 
 # The base hostname & protocol of your site for where absolute urls are needed.
-url: "http://helloblake.com"
+url: "https://helloblake.com"
 
 # Favicon
 favicon: images/favicon.png
 
 # Google Analytics id, e.g. "UA-NNNNNNNN-N"
-google_analytics: ""
+google_analytics: "UA-19021521-2"
 
 # Site navigation - each item must have a title and a url.
 navigation:
