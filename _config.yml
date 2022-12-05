@@ -30,6 +30,8 @@ google_analytics: "G-SB3CZEHJ16"
 navigation:
   - text: About
     url: /about
+  - text: Community
+    url: /community
 
 # The shortname for your Disqus site to enable comments.
 disqus: helloblake
