@@ -32,6 +32,8 @@ navigation:
     url: /about
   - text: Community
     url: /community
+  - text: LetsWriteCode
+    url: https://letswritecode.net
 
 # The shortname for your Disqus site to enable comments.
 disqus: helloblake
