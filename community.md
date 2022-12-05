@@ -18,7 +18,8 @@ feature_image:
 
 **Contributions**
 
-- Hactoberfest 2022
-- [CodeCabin 2022](https://twitter.com/codecabin/status/1575786922601218048){:target="_blank"}
-- [Umbraco Backoffice Community Team 2022](https://umbraco.com/blog/introducing-the-new-new-backoffice-community-team/){:target="_blank"}
-- [Umbraco Certified Master](https://umbraco.com/training/certified-developers/developer/?id=08b50a85-1492-4334-9561-efafa0004aeb){:target="_blank"}
+- Umbraco Hactoberfest &mdash; 2022
+- [CodeCabin](https://twitter.com/codecabin/status/1575786922601218048){:target="_blank"} &mdash; 2022
+- [Umbraco Backoffice Community Team](https://umbraco.com/blog/introducing-the-new-new-backoffice-community-team/){:target="_blank"} &mdash; 2022
+- [Umbraco Certified Master](https://umbraco.com/training/certified-developers/developer/?id=08b50a85-1492-4334-9561-efafa0004aeb){:target="_blank"} &mdash; 2022
+- [Denver Umbraco Meetup](https://www.meetup.com/denver-area-umbraco-meetup/){:target="_blank"} &mdash; 2017
