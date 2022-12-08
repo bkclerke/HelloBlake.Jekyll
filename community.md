@@ -18,6 +18,7 @@ feature_image:
 
 **Community Involvement**
 
+- [Umbraco Community Quiz](https://communityquiz.net/leaderboard/){:target="_blank"} Leaderboard &mdash; 2022
 - Umbraco Hactoberfest &mdash; 2022
 - [CodeCabin](https://twitter.com/codecabin/status/1575786922601218048){:target="_blank"} &mdash; 2022
 - [Umbraco Backoffice Community Team](https://umbraco.com/blog/introducing-the-new-new-backoffice-community-team/){:target="_blank"} &mdash; 2022
