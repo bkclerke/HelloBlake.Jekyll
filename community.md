@@ -13,7 +13,7 @@ feature_image:
 
 **Blog Posts**
 
-- [How to Setup Azure Blob Storage with Umbraco](#){:target="_blank"} &mdash; 24 Days in Umbraco 2022
+- [How to Setup Azure Blob Storage with Umbraco](https://24days.in/umbraco-cms/2022/configure-azure-for-media/){:target="_blank"} &mdash; 24 Days in Umbraco 2022
 - [Newbie's Guide to Setting Up an Umbraco Website](https://archive.24days.in/umbraco-cms/2014/how-to-set-up-an-umbraco-site/){:target="_blank"} &mdash; 24 Days In Umbraco 2014
 
 **Community Involvement**
