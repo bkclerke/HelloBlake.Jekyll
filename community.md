@@ -7,7 +7,7 @@ feature_image:
 
 **Conferences**
 
-* Getting Started with Umbraco &mdash; UWestFest 2016
+* [Setting Up Your First Site](https://www.youtube.com/watch?v=mBZDXgdcSPU&ab_channel=uWestFest){:target="_blank"} with Umbraco &mdash; UWestFest 2016
 * Guest Appearance on [How we Run The Umbraco Open Source Project](https://vimeo.com/183479448){:target="_blank"} &mdash; Codegarden 2016
 * [Getting started with Umbraco](https://vimeo.com/132815032){:target="_blank"} - Codegarden 2015
 
@@ -19,6 +19,7 @@ feature_image:
 **Community Involvement**
 
 - [Umbraco Community Quiz](https://communityquiz.net/leaderboard/){:target="_blank"} Leaderboard &mdash; 2022
+- Umbraco 11 [Contribution](https://umbraco.com/blog/umbraco-11-release/){:target="_blank"}
 - Umbraco Hactoberfest &mdash; 2022
 - [CodeCabin](https://twitter.com/codecabin/status/1575786922601218048){:target="_blank"} &mdash; 2022
 - [Umbraco Backoffice Community Team](https://umbraco.com/blog/introducing-the-new-new-backoffice-community-team/){:target="_blank"} &mdash; 2022
