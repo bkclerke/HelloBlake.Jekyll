@@ -1,10 +1,17 @@
 ---
-layout: page
-title: Style Guide
-description: This is a style guide of the Scriptor Jekyll theme
+layout: post
+title: "Test Blog Post"
+description: "A description of the blog article goes here."
+date: 2022-05-27
+feature_image: images/blake-about.jpg 
+tags: [test]
+permalink: /blog/:title
+disqus_enabled: false
 ---
 
 This is a pragraph. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.
+
+<!--more-->
 
 # Heading 1
 
@@ -119,13 +126,13 @@ Inline `code` has `back-ticks around` it.
 
 Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:
 
-{% include image_full.html imageurl="/images/apple-watch-in-car.jpg" title="Apple" caption="This is the caption" %}
+{% include image_full.html imageurl="/images/blake-about.jpg" title="Apple" caption="This is the caption" %}
 
 Lorem ipsum dolor sit amet, `consectetuer adipiscing` elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero.
 
 ## Regular Image
 
-{% include image_caption.html imageurl="/images/apple-watch-in-car.jpg" title="Apple Super" caption="This is the caption" %}
+{% include image_caption.html imageurl="/images/blake-about.jpg" title="Apple Super" caption="This is the caption" %}
 
 Lorem ipsum dolor sit amet, `consectetuer adipiscing` elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Lorem ipsum dolor sit amet, `consectetuer adipiscing` elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero.
 
