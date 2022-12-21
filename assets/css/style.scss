@@ -54,3 +54,42 @@ $palette: (
 @import "site-footer";
 @import "animations";
 @import "prism";
+
+// Alerts
+.alert {
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0 0 1.66667em;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-warning {
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    color: #664d03;
+  }
+
+  &-info {
+    background-color: #cff4fc;
+    border-color: #b6effb;
+    color: #055160;
+  }
+
+  &-danger {
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    color: #842029;
+  }
+}
+
+// Custom
+.img-accent {
+  padding: 3px;
+  border: 1px solid #d7d7d7;
+}

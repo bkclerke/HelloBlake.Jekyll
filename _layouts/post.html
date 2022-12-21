@@ -18,6 +18,11 @@ layout: default
       {% endif %}
     </header><!-- .post-header -->
     <div class="post-content">
+      {% assign post_year = page.date | date: "%Y" | to_integer %}
+      {% assign last_year = 'now' | date: "%Y" | minus: 1 | to_integer %}
+      {% if post_year < last_year %}
+        {% include alert_warning.html %}
+      {% endif %}
       {{content}}
     </div><!-- .post-content -->
     <!-- <div class="post-share">
@@ -45,7 +50,9 @@ layout: default
   </article><!-- .post -->
 
   {% if site.disqus and site.disqus != "" %}
-    {% include disqus.html %}
+    {% if page.disqus_enabled == true %}
+      {% include disqus.html %}
+    {% endif %}
   {% endif %}
 
 </main><!-- .main-content -->
