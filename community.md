@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Around The Community
-description: Community Contributions by Blake Watt
+description: Community Contributions by Blake Watt.
 feature_image: 
+og_type: website
+og_image: images/blake-about.jpg 
 ---
 
 **Conferences**
