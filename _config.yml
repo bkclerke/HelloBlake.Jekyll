@@ -29,9 +29,9 @@ google_analytics: "G-SB3CZEHJ16"
 # Site navigation - each item must have a title and a url.
 navigation:
   - text: About
-    url: /about
+    url: /about/
   - text: Community
-    url: /community
+    url: /community/
   - text: LetsWriteCode
     url: https://letswritecode.net
 
@@ -56,7 +56,7 @@ paginate_path: '/page:num/'
 
 
 # Permalinks
-permalink: /:title
+permalink: /articles/:title/
 
 # Conversion
 markdown: kramdown

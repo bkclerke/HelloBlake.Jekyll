@@ -5,7 +5,6 @@ description: "A description of the blog article goes here."
 date: 2022-05-27
 feature_image: images/blake-about.jpg 
 tags: [test]
-permalink: /articles/:title
 disqus_enabled: false
 og_type: article
 og_image: images/blake-about.jpg 
