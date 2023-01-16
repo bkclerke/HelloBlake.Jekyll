@@ -20,6 +20,7 @@ og_image: images/blake-about.jpg
 
 **Community Involvement**
 
+- Umbraco [New Year's Reception](https://webapp.spotme.com/login/umbraco/nyr2023){:target="_blank"} &mdash; 2023
 - [Umbraco Community Quiz](https://communityquiz.net/leaderboard/){:target="_blank"} Leaderboard &mdash; 2022
 - Umbraco 11 [Contribution](https://umbraco.com/blog/umbraco-11-release/){:target="_blank"}
 - Umbraco Hactoberfest &mdash; 2022
