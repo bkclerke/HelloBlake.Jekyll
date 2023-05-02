@@ -3,6 +3,7 @@ layout: page
 title: About Blake Watt
 description: About Blake Watt Certified Umbraco Master.
 feature_image: images/blake-about.jpg
+image_alt: "A photo of Blake, smiling brunette with black square glasses on."
 og_type: website
 og_image: images/blake-about.jpg 
 ---
