@@ -4,6 +4,7 @@ title: "Test Blog Post"
 description: "A description of the blog article goes here."
 date: 2022-05-27
 feature_image: images/blake-about.jpg 
+image_alt: "A photo of Blake, smiling brunette with black square glasses on."
 tags: [test]
 disqus_enabled: false
 og_type: article
@@ -127,13 +128,13 @@ Inline `code` has `back-ticks around` it.
 
 Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:
 
-{% include image_full.html imageurl="/images/blake-about.jpg" title="Apple" caption="This is the caption" %}
+{% include image_full.html imageurl="/images/blake-about.jpg" imagealt="(Image Full Include) A photo of Blake, smiling brunette with black square glasses on." caption="This is the caption" %}
 
 Lorem ipsum dolor sit amet, `consectetuer adipiscing` elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero.
 
 ## Regular Image
 
-{% include image_caption.html imageurl="/images/blake-about.jpg" title="Apple Super" caption="This is the caption" %}
+{% include image_caption.html imageurl="/images/blake-about.jpg" imagealt="(Image with Caption Include) A photo of Blake, smiling brunette with black square glasses on." caption="This is the caption" %}
 
 Lorem ipsum dolor sit amet, `consectetuer adipiscing` elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Lorem ipsum dolor sit amet, `consectetuer adipiscing` elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero.
 
