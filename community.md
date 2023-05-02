@@ -9,6 +9,7 @@ og_image: images/blake-about.jpg
 
 **Conferences**
 
+* [Best Practices for Planning Scalable Websites](https://codegarden.umbraco.com/codegarden-program/speakers/){:target="_blank"} &mdash; Codegarden 2023
 * [Setting Up Your First Site](https://www.youtube.com/watch?v=mBZDXgdcSPU&ab_channel=uWestFest){:target="_blank"} with Umbraco &mdash; UWestFest 2016
 * Guest Appearance on [How we Run The Umbraco Open Source Project](https://vimeo.com/183479448){:target="_blank"} &mdash; Codegarden 2016
 * [Getting started with Umbraco](https://vimeo.com/132815032){:target="_blank"} - Codegarden 2015
