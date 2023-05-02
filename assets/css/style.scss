@@ -35,7 +35,7 @@ $palette: (
   accent:    {{ accent }},
   primary:   #6b747a,
   secondary: #2c343c,
-  meta:      #9ba6ad,
+  meta:      #6b747a,
   border:    #d7d7d7,
   bg:        #fbfbfb
 );
@@ -54,6 +54,7 @@ $palette: (
 @import "site-footer";
 @import "animations";
 @import "prism";
+@import "custom";
 
 // Alerts
 .alert {

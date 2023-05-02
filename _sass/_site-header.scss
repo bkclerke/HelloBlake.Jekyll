@@ -52,14 +52,15 @@
   display: inline-block;
   margin: 0 0 0 15px;
   a {
-    color: _palette(meta);
+    color: _palette(secondary);
     display: inline-block;
     font-size: 0.88889rem;
     font-weight: bold;
     padding: 5px 0;
     text-decoration: none;
-    &:hover {
+    &:hover, &:focus {
       color: _palette(accent);
+      text-decoration: underline;
     }
   }
 }
