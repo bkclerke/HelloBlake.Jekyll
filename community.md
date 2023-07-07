@@ -15,7 +15,7 @@ og_image: images/blake-about.jpg
 * [Getting started with Umbraco](https://vimeo.com/132815032){:target="_blank"} - Codegarden 2015
 
 **Blog Posts**
-
+- [Best Practices for Planning Scalable Websites](https://skrift.io/issues/best-practices-for-planning-scalable-websites/){:target="_blank"} &mdash; Skrift.io 2023
 - [How to Setup Azure Blob Storage with Umbraco](https://24days.in/umbraco-cms/2022/configure-azure-for-media/){:target="_blank"} &mdash; 24 Days in Umbraco 2022
 - [Newbie's Guide to Setting Up an Umbraco Website](https://archive.24days.in/umbraco-cms/2014/how-to-set-up-an-umbraco-site/){:target="_blank"} &mdash; 24 Days In Umbraco 2014
 
