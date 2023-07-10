@@ -12,7 +12,7 @@ lang: en-US
 title: "HelloBlake"
 
 # A description of your site for meta tag, search engine results.
-description: "Hello! I'm Blake Watt, Umbraco Certified Master, Web Developer & Technical Quality Assurance Engineer."
+description: "Hello! I'm Blake Watt, Umbraco MVP & Certified Master, Web Developer & Technical Quality Assurance Engineer."
 
 # The subpath of your site, e.g. /blog, for generating urls.
 baseurl: ""
