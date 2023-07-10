@@ -6,7 +6,7 @@ feature_image:
 og_type: website
 og_image: images/blake-about.jpg 
 ---
-b
+
 **Conferences**
 
 * [Best Practices for Planning Scalable Websites](https://youtu.be/mjueOtcTEWc){:target="_blank"} &mdash; Codegarden 2023
