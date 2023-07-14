@@ -1,16 +1,6 @@
 {
   "links": [
     {
-      "title": "Mastodon",
-      "icon": "fa-brands fa-mastodon",
-      "url": "https://mastodon.world/@helloblake"
-    },
-    {
-      "title": "Twitter",
-      "icon": "fa-brands fa-twitter",
-      "url": "https://twitter.com/designwithpink"
-    },
-    {
       "title": "GitHub",
       "icon": "fa-brands fa-github",
       "url": "https://github.com/bkclerke"
@@ -23,17 +13,12 @@
     {
       "title": "Discord",
       "icon": "fa-brands fa-discord",
-      "url": "http://discordapp.com/users/bkclerke#8804"
+      "url": "http://discordapp.com/users/bkclerke"
     },
     {
-      "title": "Pinterest",
-      "icon": "fa-brands fa-pinterest",
-      "url": "https://www.pinterest.com/bkclerke/"
-    },
-    {
-      "title": "Instagram",
+      "title": "Pixelfed",
       "icon": "fa-brands fa-instagram",
-      "url": "https://www.instagram.com/yzfr6girl/"
+      "url": "https://pixelfed.social/@Helloblake"
     }
   ]
 }
