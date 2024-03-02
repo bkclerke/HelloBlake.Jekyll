@@ -24,6 +24,7 @@ og_image: images/blake-about.jpg
 
 **Community Involvement**
 
+- [Umbraco US Foundation, Inc.](http://umbracousfoundation.org){:target="_blank"} Board Member &mdash; Established in 2024
 - [DeveloperWeek](https://www.linkedin.com/posts/umbraco_developerweek2024-umbraco-devweek2024-activity-7166770168562368512-0NUL?utm_source=share&utm_medium=member_desktop){:target="_blank"} with Umbraco HQ &mdash; 2024
 - [24 Days In Umbraco](https://24days.in/umbraco-cms/about/){:target="_blank"} Community Team &mdash; 2023
 - [Umbraco Hacktoberfest](https://community.umbraco.com/the-community-blog/hacktoberfest-2023-recap/){:target="_blank"} &mdash; 2023
