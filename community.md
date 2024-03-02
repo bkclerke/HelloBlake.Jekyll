@@ -9,10 +9,11 @@ og_image: images/blake-about.jpg
 
 **Conferences**
 
+* [Umbraco Panel Discussion](https://events.linuxfoundation.org/open-source-summit-north-america/){:target="_blank"} &mdash; Open Source Summit 2024
 * [Umbraco Panel Discussion](https://summit.umbraco.com/program/speakers/){:target="_blank"} &mdash; Umbraco US Summit 2023
 * [Best Practices for Planning Scalable Websites](https://youtu.be/mjueOtcTEWc){:target="_blank"} &mdash; Codegarden 2023
 * [Setting Up Your First Site](https://www.youtube.com/watch?v=mBZDXgdcSPU&ab_channel=uWestFest){:target="_blank"} with Umbraco &mdash; UWestFest 2016
-* Guest Appearance on [How we Run The Umbraco Open Source Project](https://vimeo.com/183479448){:target="_blank"} &mdash; Codegarden 2016
+* [How we Run The Umbraco Open Source Project](https://vimeo.com/183479448){:target="_blank"} Guest Appearance &mdash; Codegarden 2016
 * [Getting started with Umbraco](https://vimeo.com/132815032){:target="_blank"} - Codegarden 2015
 
 **Blog Posts**
@@ -23,6 +24,10 @@ og_image: images/blake-about.jpg
 
 **Community Involvement**
 
+- [DeveloperWeek](https://www.linkedin.com/posts/umbraco_developerweek2024-umbraco-devweek2024-activity-7166770168562368512-0NUL?utm_source=share&utm_medium=member_desktop){:target="_blank"} with Umbraco HQ &mdash; 2024
+- [24 Days In Umbraco](https://24days.in/umbraco-cms/about/){:target="_blank"} Community Team &mdash; 2023
+- [Umbraco Hacktoberfest](https://community.umbraco.com/the-community-blog/hacktoberfest-2023-recap/){:target="_blank"} &mdash; 2023
+- [UmbraCoffee Episode #280](https://www.youtube.com/live/Ccjzu38CEo8?si=kYMlT-WX5Nizpusp){:target="_blank"} &mdash; 2023
 - [Umbraco MVP](https://umbraco.com/blog/the-umbraco-2023-mvps/){:target="_blank"} &mdash; 2023
 - [Umbraco New Year's Reception](https://webapp.spotme.com/login/umbraco/nyr2023){:target="_blank"} &mdash; 2023
 - [Umbraco Community Quiz](https://communityquiz.net/leaderboard/){:target="_blank"} Leaderboard &mdash; 2022
