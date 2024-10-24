@@ -9,6 +9,7 @@ og_image: images/blake-about.jpg
 
 **Conferences**
 
+* [Best Practices for Planning Scalable Websites](https://umbracofestival.us/){:target="_blank"} &mdash; Umbraco US Festival 2024
 * [Umbraco Panel Discussion](https://events.linuxfoundation.org/open-source-summit-north-america/){:target="_blank"} &mdash; Open Source Summit 2024
 * [Umbraco Panel Discussion](https://summit.umbraco.com/program/speakers/){:target="_blank"} &mdash; Umbraco US Summit 2023
 * [Best Practices for Planning Scalable Websites](https://youtu.be/mjueOtcTEWc){:target="_blank"} &mdash; Codegarden 2023
