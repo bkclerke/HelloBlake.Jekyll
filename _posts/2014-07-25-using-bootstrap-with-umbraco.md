@@ -4,7 +4,7 @@ title: "Using Bootstrap With Umbraco"
 description: "Learn how to use Umbraco with Bootstrap by setting up your templates, style sheets, and scripting files to help you increase page load times."
 date: 2014-07-25
 feature_image: 
-tags: [umbraco4]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

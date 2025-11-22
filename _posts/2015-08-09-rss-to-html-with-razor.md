@@ -4,7 +4,7 @@ title: "RSS To HTML With Razor"
 description: "If you are trying to style an RSS feed on your Umbraco site, use this macro to get the HTML output you need."
 date: 2015-08-09
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

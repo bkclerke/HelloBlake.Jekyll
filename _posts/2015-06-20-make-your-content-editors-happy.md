@@ -4,7 +4,7 @@ title: "Make Your Content Editors Happy"
 description: "Find out how to make your Umbraco content editors happy with these tips!"
 date: 2015-06-20
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

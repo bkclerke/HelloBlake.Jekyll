@@ -4,7 +4,7 @@ title: "Document Type Compositions in Umbraco"
 description: "What you know, what you need to know and what is to come for Umbraco Document Type Compositions. Learn about it here and plan for the changes to come!"
 date: 2016-01-02
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

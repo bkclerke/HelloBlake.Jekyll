@@ -4,7 +4,7 @@ title: "Why Choose Umbraco for Your Next Web Project"
 description: "Ten reasons why you should choose Umbraco for your next web project."
 date: 2015-03-31
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

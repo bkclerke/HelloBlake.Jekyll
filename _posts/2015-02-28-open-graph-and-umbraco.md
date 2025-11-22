@@ -4,7 +4,7 @@ title: "Setting Up Open Graph in Umbraco"
 description: "Make sharing content via social media work better for you by learning how to setup Open Graph tags in your Umbraco site."
 date: 2015-02-28
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

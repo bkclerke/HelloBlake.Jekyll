@@ -4,7 +4,7 @@ title: "How To Setup Custom Error Pages in Umbraco"
 description: "How to setup custom 404 error pages in Umbraco 7, what does a 500 internal server error mean and some tips for what to put on your error pages to help your visitors."
 date: 2014-08-30
 feature_image: 
-tags: [umbraco4]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

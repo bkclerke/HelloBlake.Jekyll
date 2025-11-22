@@ -4,7 +4,7 @@ title: "Razor RSS Feed With Umbraco"
 description: "Here you will find the Razor markup to build your own RSS feed inside of Umbraco 7 and a few tips on some errors you may encounter when setting up your RSS feeds."
 date: 2014-09-05
 feature_image: 
-tags: [umbraco4]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

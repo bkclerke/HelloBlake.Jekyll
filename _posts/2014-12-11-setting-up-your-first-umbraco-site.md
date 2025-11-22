@@ -4,7 +4,7 @@ title: "Setting Up Your First Umbraco Site"
 description: "This is a beginner's guide to setting up your first Umbraco website."
 date: 2014-12-11
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

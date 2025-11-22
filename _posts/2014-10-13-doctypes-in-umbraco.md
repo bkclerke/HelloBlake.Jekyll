@@ -4,7 +4,7 @@ title: "Setting Up Document Types in Umbraco"
 description: "Here are some tips to how you can evaluate your website design and determine how to setup Umbraco’s Document Types to fit your needs."
 date: 2014-10-13
 feature_image: 
-tags: [umbraco4, umbraco7]
+tags: [umbraco]
 permalink: /articles/doctypes-in-umbraco/
 disqus_enabled: true
 ---

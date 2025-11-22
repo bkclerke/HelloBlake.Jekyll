@@ -4,7 +4,7 @@ title: "Why You Need The Umbraco Dictionary"
 description: "Here are a few good reasons to get started using the Umbraco Dictionary today and how to use it."
 date: 2022-12-23
 feature_image:
-tags: [umbraco11]
+tags: [umbraco]
 disqus_enabled: true
 og_type: article
 og_image: /images/posts/2022-12-23/og-dictionary.jpg

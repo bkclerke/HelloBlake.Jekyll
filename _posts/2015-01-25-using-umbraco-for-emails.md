@@ -4,7 +4,7 @@ title: "Using Umbraco for Emails"
 description: "You can use Umbraco to build out your recurring email campaigns quickly. Here you will find the statistics and learn how to set it up in Umbraco."
 date: 2015-01-25
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

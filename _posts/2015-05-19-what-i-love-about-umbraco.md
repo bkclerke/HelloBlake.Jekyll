@@ -4,7 +4,7 @@ title: "What I Love About Umbraco"
 description: "Video interview with Blake and find out what she loves about Umbraco."
 date: 2015-05-19
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

@@ -4,7 +4,7 @@ title: "Umbraco Razor XML Sitemap"
 description: "Get the code to create a dynamic sitemap for your Umbraco website that updates automatically with only the content you want."
 date: 2014-11-28
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

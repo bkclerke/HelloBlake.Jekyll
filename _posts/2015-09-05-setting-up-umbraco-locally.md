@@ -4,7 +4,7 @@ title: "Setting Up Umbraco Locally"
 description: "How to setup Umbraco locally with Microsoft SQL Server Management Studio and Visual Studio 2015 in this step-by-step tutorial."
 date: 2015-09-05
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 disqus_enabled: true
 ---
 

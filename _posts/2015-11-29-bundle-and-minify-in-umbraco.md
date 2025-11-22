@@ -4,7 +4,7 @@ title: "Bundle and Minify in Umbraco"
 description: "Use the built in Client Dependency Framework in Umbraco to bundle and minify your website scripts and stylesheets."
 date: 2015-11-29
 feature_image: 
-tags: [umbraco7]
+tags: [umbraco]
 permalink: /articles/using-the-umbraco-client-dependency-framework-to-bundle-and-minify/
 disqus_enabled: true
 ---
