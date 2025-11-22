@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Bootstrap With Umbraco</title>
+  <meta name="description" content="Learn how to use Umbraco with Bootstrap by setting up your templates, style sheets, and scripting files to help you increase page load times.">
+  <link rel="canonical" href="http://localhost:4000/articles/using-bootstrap-with-umbraco/">
+  <link rel="alternate" type="application/rss+xml" title="HelloBlake Feed"
+    href="http://localhost:4000/feed.xml">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+  
+  <!--Open Graph-->
+  <meta property="og:title" content="Using Bootstrap With Umbraco" />
+  <meta property="twitter:title" content="Using Bootstrap With Umbraco" />
+  <meta property="og:description" content="Learn how to use Umbraco with Bootstrap by setting up your templates, style sheets, and scripting files to help you increase page load times." />
+  <meta property="twitter:description" content="Learn how to use Umbraco with Bootstrap by setting up your templates, style sheets, and scripting files to help you increase page load times." />
+  <meta property="og:type" content="" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:url" content="http://localhost:4000/articles/using-bootstrap-with-umbraco/" />
+  <meta property="twitter:url" content="http://localhost:4000/articles/using-bootstrap-with-umbraco/" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable">Skip to Main Content</a>
+
+  <div id="page" class="site">
+    <div class="inner">
+      <header class="site-header">
+  
+  <p class="site-title"><a class="logo-text" href="/">HelloBlake</a></p>
+  
+  <nav class="site-navigation">
+    <div class="site-navigation-wrap">
+      <h2 class="screen-reader-text">Main navigation</h2>
+      <ul class="menu">
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/community/">Community</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/resume/">Resume</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/archive/">Archive</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="mailto:hi@helloblake.com">Contact</a>
+        </li>
+        
+      </ul><!-- .menu -->
+      <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
+          class="icon-close" aria-hidden="true"></span></button>
+    </div><!-- .site-navigation-wrap -->
+  </nav><!-- .site-navigation -->
+  <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+</header>
+
+
+      <div id="content">
+        <main class="main-content fadeInDown delay_075s">
+
+  <article class="post">
+    <header class="post-header">
+      <time class="post-date" datetime="2014-07-25">July 25, 2014</time>
+      <h1 class="post-title">Using Bootstrap With Umbraco</h1>
+      <div class="post-meta">
+        By <span class="post-author">Blake Watt</span><span class="post-tags"> in <a href="/archive/#umbraco4" rel="tag">umbraco4</a></span>
+      </div><!-- .post-meta -->
+      
+    </header><!-- .post-header -->
+    <div class="post-content">
+      
+      
+      
+        <div class="alert alert-warning" role="alert">
+    <p>This article is outdated and while some concepts may apply, the code samples may not work.</p>
+</div>
+      
+      <p>I’ve been working on a redesign of my wedding website using Bootstrap with Umbraco and in my research process I was curious to see how other people have handled setting up Bootstrap with Umbraco. I didn’t find too many articles so I decided that I would write down my process in the hopes that it helps others and maybe people can even help me improve.</p>
+
+<!--more-->
+
+<h2 id="my-expectations-of-you">My expectations of you</h2>
+
+<p>I’m going to assume that you have some experience with Umbraco and Bootstrap independently. We are going to keep this concentrated on how to use Umbraco and Bootstrap together which is mostly in our Settings section of Umbraco. We are going to be working with Templates and assuming that you already have a working knowledge of Umbraco Document Types and creating content within Umbraco. The instructions and razor/c# snippets you will see are for Umbraco 4.11.10. Please keep in mind that the process will be similar in newer versions of Umbraco, but your code will change.</p>
+
+<h2 id="setup-your-bootstrap-files">Setup your Bootstrap files</h2>
+
+<p>Once you have a good understanding of how your website will work and your document types are setup in Umbraco, it is time to start setting up your template and CSS files. GetBootstrap.com has an abundance of documentation on how to use and customize Bootstrap for your needs. When starting a build, I use Bootstrap’s CDN for my CSS and JavaScript needs until I’m done building my site. Once the site is completed I go back and customize Bootstrap and download only the bits and pieces of the framework that I need for my specific website. This saves time downloading resources on page load since my files typically tend to be smaller this way.</p>
+
+<p>When we begin setting up our template files in Umbraco we want to keep in mind the design. What pieces of the design are changing on the pages and what pieces are static. Typically you will always have some code that stays the same for your entire website. Usually this static code is your basic HTML markup. From my experience, the best way to start templates for your Umbraco site is to set up a “Master” template.</p>
+
+<p>Log into Umbraco and head over to your Settings section. Right click on Templates and select Create from your drop down menu.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-07-25/right-click-menu-01.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>In the modal window that displays, enter the name of your template, Master, and click Create. Your new template will display under your Template folder. Now let’s create a ‘child’ template underneath this Master template. Right click on the Master template and click Create. Name your new template “Homepage” and click Save. Your new template will appear underneath the Master template.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-07-25/templates-list-01.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Another way to confirm that your Homepage template is using the correct master template is by selecting the template and confirming the Master template drop down box has the correct template name listed. You can also see this reflected in the <code class="language-plaintext highlighter-rouge">MasterPageFile=”~/masterpages/Master.master”</code> or in newer versions of Umbraco the <code class="language-plaintext highlighter-rouge">@{ Layout = “Master.cshtml” }</code>.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-07-25/homepage-master-dropdown-01.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Before we go any further, let’s make sure that your Homepage document type is using the new Homepage template that we just created. In order to do this, stay in the Settings section in Umbraco and in the Document Types folder find your Homepage document type that you created. Click on your Homepage Document Type and you will see on the Info tab that there is an Allowed Templates checkbox area. Select your Homepage template that we just created, double check that your Default Template updated to say the Homepage template as well (it should do this automagically) and then click the Save icon.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-07-25/homepage-templates-01.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Now that your Homepage document type is using your Hompage template, lets make sure that you have a homepage in the Content section. Assuming this is a fresh Umbraco install, navigate to your Content section, right click on the Content folder in the top left and click Create in the drop down menu. Select your Homepage Document Type, give it a name, and click Create.</p>
+
+<p>Lets go back to our templates and start writing our markup on our Master template. Our master is going to contain our basic HTML markup for our website. My preferred starting point is a mix up between Bootstrap’s basic template and HTML 5 Boilerplate’s out of the box markup. Since Bootstrap comes with normalize I don’t include normalize.css.</p>
+
+<p>Let’s take a look at the markup I’ve used for my Master template. Templates have a toolbar that allow you to insert content placeholders, content areas, inline macros, macros, and Umbraco items. You will notice I’ve already inserted some content placeholders and an inline macro script. Some of these things may be a little above your skill level and that is okay. I did not know Razor when I started using Umbraco but as time goes on you get the hang of it with practice. They also include some helpful macro scripts out of the box.</p>
+
+<pre><code class="language-cshtml">&lt;%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %&gt;
+ 
+&lt;asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server"&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+	&lt;head&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+		&lt;title&gt;&lt;umbraco:Item field="pageTitleTag" useIfEmpty="pageName" runat="server" /&gt;&lt;/title&gt;
+ 
+		&lt;link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"&gt;
+		&lt;link rel="stylesheet" href="/css/main.css" &gt;
+		&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'&gt;		
+		
+		&lt;asp:ContentPlaceHolder Id="cp_head" runat="server"&gt;&lt;/asp:ContentPlaceHolder&gt;
+ 
+		&lt;!--[if lt IE 9]&gt;
+		&lt;script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;
+		&lt;script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+		&lt;![endif]--&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		
+		&lt;asp:ContentPlaceHolder Id="cp_content" runat="server"&gt;&lt;/asp:ContentPlaceHolder&gt;
+		
+		&lt;footer&gt;			
+			&lt;umbraco:Macro runat="server" language="cshtml"&gt;
+			&lt;div class="container"&gt;
+				&lt;div class="row"&gt;					
+					&lt;div class="col-xs-12 col-sm-6 col-sm-push-6"&gt;
+						@{ 
+							var pages = Model.AncestorOrSelf(1).Children.Where("Visible");
+							if(pages.Count() &gt; 0)
+							{
+								&lt;nav&gt;
+									&lt;ul&gt;
+										&lt;li&gt;&lt;a href="@Model.AncestorOrSelf(1).Url"&gt;Home&lt;/a&gt;&lt;/li&gt;
+										@foreach(var page in pages)
+										{
+										&lt;li&gt;&lt;a href="@page.Url"&gt;@page.Name&lt;/a&gt;&lt;/li&gt;
+										}
+									&lt;/ul&gt;
+								&lt;/nav&gt;
+							}
+						}
+					&lt;/div&gt;
+					&lt;div class="col-xs-12 col-sm-6 col-sm-pull-6"&gt;
+						&lt;a href="@Model.AncestorOrSelf(1).Url"&gt;&lt;img src="/css/images/logo.png" alt="B Loves K" class="logo"/&gt;&lt;/a&gt;
+						&lt;p&gt;&amp;copy; Copyright @DateTime.Now.Year Mr. &amp; Mrs. Smith&lt;br /&gt;Website by &lt;a href="http://www.helloblake.com" taget="_blank"&gt;HelloBlake&lt;/a&gt;.&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;/umbraco:Macro&gt;
+		&lt;/footer&gt;
+ 
+		&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;
+		&lt;script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+		
+		&lt;asp:ContentPlaceHolder Id="cp_scripts" runat="server"&gt;&lt;/asp:ContentPlaceHolder&gt;
+ 
+	&lt;/body&gt;
+&lt;/html&gt;
+&lt;/asp:Content&gt;
+</code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">asp:ContentPlaceHolder</code> is used as a placeholder for your ‘child’ templates that have the corresponding <code class="language-plaintext highlighter-rouge">asp:Content</code>. For most of my templates I typically setup at least 3 content placeholders including:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">cp_head</code> - used for adding page specific stylesheets to only the pages that require them</li>
+  <li><code class="language-plaintext highlighter-rouge">cp_content</code> - used for body copy and main content area of a website</li>
+  <li><code class="language-plaintext highlighter-rouge">cp_scripts</code> - used for adding page specific scripting files to only the pages that require them</li>
+</ol>
+
+<p>These 3 placeholders have worked pretty well in the past and usually are all I need for most of my Umbraco projects. You can change the names to whatever works for you, I’ve just stuck with using <code class="language-plaintext highlighter-rouge">cp_</code> for content placeholder and then specified the specific area it is for.</p>
+
+<p>Since I have these 3 content placeholders in my master that means that my child templates, in this case our Homepage template will need to have 3 corresponding <code class="language-plaintext highlighter-rouge">asp:Content</code> tags that contain the markup that will be inserted into my placeholders.</p>
+
+<p>The rest of the markup in the master is some standard HTML using the grid structure from Bootstrap. Their documentation can do wonders for explaining the specific classes in detail and how to setup the grids. It is a great resource and I recommend checking it out if you need more  help on how to set up grids or using Bootstrap in general.</p>
+
+<p>My footer nav contains an inline macro that is very simple for just populating a dynamic navigation list for me in my footer section. For this particular instance, I know that this will be a very small site and I won’t need to populate this same markup for the navigation anywhere else in the site, so I went with writing it inline on the Master template instead of using a Macro. If your site has a header and footer navigation that uses the same markup, using a Macro would be ideal since you won’t have to write the markup in two places. You would only need to update your markup in your .cshtml file and then your Macro is referencing that .cshtml file in multiple places. Using Macros can really help cut down on how much you have to code out by hand and you should take advantage of these benefits with your Umbraco site.</p>
+
+<p>Let’s take a look at the Homepage template now and insert our content areas. Here you will see a lot of the Bootstrap grid being used to structure our homepage. You will also notice the <code class="language-plaintext highlighter-rouge">umbraco:item field</code> being used. This references the corresponding property alias on the specified document type.</p>
+
+<pre><code class="language-cshtml">&lt;%@ Master Language="C#" MasterPageFile="~/masterpages/SEOMaster.master" AutoEventWireup="true" %&gt;
+ 
+&lt;asp:content ContentPlaceHolderId="cp_content" runat="server"&gt;
+	
+	&lt;umbraco:Macro runat="server" language="cshtml"&gt;
+		@{ var home = Model.AncestorOrSelf(1); }
+		&lt;header id="banner" class="welcome" data-bg="@(Model.MediaById(home.bannerImage).UmbracoFile)"&gt;
+			&lt;div class="container"&gt;
+				&lt;div class="row"&gt;
+					&lt;div class="col-md-6 col-md-offset-3 col-sm-12 text-center"&gt;
+						&lt;a href="@Model.AncestorOrSelf(1).Url"&gt;&lt;img src="/css/images/logo.png" alt="B Loves K" class="logo"/&gt;&lt;/a&gt;
+						&lt;img src="/css/images/mrmrstxt.png" alt="Mr and Mrs Smith's" class="smiths-txt"/&gt;
+						&lt;img src="/css/images/blogtxt.png" alt="Wedding Blog" class="blog-txt"/&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/header&gt;
+	&lt;/umbraco:Macro&gt;
+ 
+	&lt;section class="pink-bg section"&gt;
+		&lt;div class="container"&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="col-md-10 col-md-offset-1 col-sm-12 text-center"&gt;
+					&lt;h2&gt;&lt;umbraco:Item field="middleTitle" recursive="true" runat="server" /&gt;&lt;/h2&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class="cream-bg section"&gt;
+		&lt;div class="container"&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="col-md-10 col-md-offset-1 col-sm-12 text-center"&gt;
+					&lt;h2&gt;&lt;umbraco:Item field="bottomTitle" recursive="true" runat="server" /&gt;&lt;/h2&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/section&gt;
+&lt;/asp:content&gt;
+ 
+&lt;asp:content ContentPlaceHolderId="cp_scripts" runat="server"&gt;
+	&lt;script src="/scripts/main.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript"&gt;
+		var imgSRC = $("#banner").attr("data-bg");
+		$("#banner").backstretch(imgSRC);
+	&lt;/script&gt;
+&lt;/asp:content&gt;
+</code></pre>
+
+<p>In the markup, the <code class="language-plaintext highlighter-rouge">umbraco:item field=”yourAliasHere”</code> is what is taking the content that your end user has entered into content fields on the homepage and putting it on the Template. This is what connects your editable content to output into your markup. When you insert fields in Umbraco with the toolbar icon you will see that you are presented with a lot of options. The Insert Umbraco Page Field will have a drop down list that contains all of your custom property aliases (that you set up on your document types) as well as some built in aliases for referencing properties like the current page’s Name (pageName) or created date (createDate).</p>
+
+<p>The <strong>Alternative Field</strong> is used if your first field was empty. So if we forgot to enter our blog title text we could have an alternative field that shows up on the page instead of a blank title.</p>
+
+<p>The same goes for the <strong>Alternative Text</strong>. If your first choice is empty, this text will display instead.</p>
+
+<p><strong>Recursive</strong> is great for things that you only want to edit in one spot but need to appear throughout the site. An example would be our footer text. If our footer text was editable in Umbraco, I’d add a textbox multiple to my Homepage DocumentType called footerText and then put it on my Master template with recursive set to true. This way no matter where I am in the site, only my Homepage has this field but the page recursively looks up the Umbraco content tree to find this field and place the text there.</p>
+
+<p>This recursive functionality actually stems from the fact that everything saved in Umbraco is in an XML format. If you are familiar with this it will also make more sense but this is a more advanced topic I won’t get into right now.</p>
+
+<p>In my experience I haven’t used the other options so much but they do have some notes that explain what they do. You can also visit umbraco.TV’s templating section that exlains the Insert Umbraco page field dialog in detail.</p>
+
+<p>My homepage happens to be using a plugin called backstrech so I’m taking advantage of my <code class="language-plaintext highlighter-rouge">cp_scripts</code> placeholder by adding my scripts to only my Homepage in this area. This cuts my load times for other pages of my site since they don’t have load unnecessary scripting files that only the homepage uses. By now you probably have noticed that I load all my scripting files towards the end of the <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> tag. This is also to help increase page load times since the heavy lifting is done at the bottom of the page, after the HTML and CSS have already been loaded. Some projects may require you to load your scripts in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> so this placement is something you will need to consider on a project-by-project basis.</p>
+
+<h2 id="wrap-up">Wrap Up</h2>
+
+<p>This was a quick overview of how I initially set up my wedding website Master and Homepage Templates in Umbraco using Bootstrap. If you have any feedback, questions or suggestions on my Umbraco with Bootstrap process, let me know in the comments below. I’d love to hear how you organize your Umbraco website when you are working on a Bootstrap project.</p>
+
+    </div><!-- .post-content -->
+    <!-- <div class="post-share">
+      <span>Share:</span>
+      <a target="_blank"
+        href="https://twitter.com/intent/tweet?text=Using%20Bootstrap%20With%20Umbraco&amp;url=http://localhost:4000/articles/using-bootstrap-with-umbraco/" rel="noopener">Twitter</a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/using-bootstrap-with-umbraco/&amp;t=Using%20Bootstrap%20With%20Umbraco" rel="noopener">Facebook</a>
+    </div> --><!-- .share-post -->
+    <div class="author-box">
+      
+      <div class="author-avatar" style="background-image: url('/images/blake.jpg')"><span class="screen-reader-text">Blake Watt's Picture</span></div>
+      
+      <div class="author-details">
+        <h2 class="author-title">About Blake Watt</h2>
+        <div class="author-bio"><p>Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.</p>
+</div>
+        
+        <span class="author-location">Spokane, WA</span>
+        
+        
+        <span class="author-website"><a href="http://helloblake.com" target="_blank" rel="noopener">http://helloblake.com</a></span>
+        
+      </div><!-- .author-details -->
+    </div><!-- .author-box -->
+  </article><!-- .post -->
+
+  
+    
+      <div id="disqus_thread"></div>
+<script>    
+    var disqus_config = function () {
+    this.page.url = 'https://helloblake.com/articles/using-bootstrap-with-umbraco/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/articles/using-bootstrap-with-umbraco/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://helloblake.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//helloblake.disqus.com/count.js" async></script>
+    
+  
+
+</main><!-- .main-content -->
+      </div>
+      <footer class="site-footer">
+  <div class="offsite-links">
+    
+      
+<a href="https://github.com/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+  <span class="screen-reader-text">GitHub</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bkclerke/" target="_blank" rel="noopener">
+  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+  <span class="screen-reader-text">LinkedIn</span>
+</a>
+
+<a href="https://umbracocommunity.social/@helloblake" target="_blank" rel="me">
+  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+  <span class="screen-reader-text">Mastodon</span>
+</a>
+
+<a href="http://discordapp.com/users/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+  <span class="screen-reader-text">Discord</span>
+</a>
+
+
+    
+  </div><!-- .offsite-links -->
+  <div class="footer-bottom">
+    <div class="site-info">
+      <!-- 
+ -->
+      <p>&copy; 2025 HelloBlake</p>
+    </div><!-- .site-info -->
+    <a href="#page" id="back-to-top" class="back-to-top"><span class="screen-reader-text">Back to the top </span>&#8593;</a>
+  </div><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
+
+    </div><!-- .inner -->
+  </div><!-- .site -->
+
+  <!-- Scripts -->
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB3CZEHJ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SB3CZEHJ16');
+</script>
+  
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+</body>
+</html>

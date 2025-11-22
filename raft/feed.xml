@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>HelloBlake</title>
+        <description>Hello! I&apos;m Blake Watt, Umbraco MVP &amp; Certified Master, Web Developer &amp; Technical Quality Assurance Engineer.</description>
+        <link>http://localhost:4000/</link>
+        <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Fri, 21 Nov 2025 16:52:23 -0800</pubDate>
+        <lastBuildDate>Fri, 21 Nov 2025 16:52:23 -0800</lastBuildDate>
+        <generator>Jekyll v4.4.1</generator>
+        
+            <item>
+                <title>Codegarden 2023 Revisited</title>
+                <description>&lt;p&gt;Codegarden 2023 has come to a close this June, but as a speaker, my Codegarden experience started months before. It was a weight I was happy to bear but excited that it has been lifted and I’m happy to share my experience from a speaker’s perspective to inspire others to talk! Whether you are experienced or a total newbie, this community is the right place to start!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;looking-back&quot;&gt;Looking Back&lt;/h2&gt;
+
+&lt;p&gt;As of 2023, I’ve been to Codegarden a grand total of 3 times. In 2015, my first Codegarden event in Copenhagen, I was invited to speak by Niels H, the founder of Umbraco, who saw my 24 Days In Umbraco article on getting started with Umbraco. It was my first time going overseas, going to an Umbraco conference, and first time speaking! I celebrated with an Umbraco tattoo. In 2016, I came back to do my first PR, live on stage with Sebastian during his talk about how they run the open source project. Since then, a lot has changed, with Umbraco itself as a company and my own life experiences as well. However, there was one thing that did not change, the openness and friendliness of the Umbraco community.&lt;/p&gt;
+
+&lt;h2 id=&quot;call-for-speakers&quot;&gt;Call for Speakers&lt;/h2&gt;
+
+&lt;p&gt;For fun, I like to write down my goals for the year. I have even more fun when I check off these goals from my list, but on the 2023 goal list was to speak at a conference.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/post-it-goals.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;When the call for speakers opened up for Codegarden, I had no idea what I wanted to talk about, just that I wanted to share. My manager, Dennis Kardys, who is an amazing leader, motivator, and speaker was totally on board and supported this goal. So much so, that he even came up with a list of some topics that he thought I’d like to talk about. One of his topic suggestions was flexible pages vs. page types. This is something I have a lot of feelings, opinions, and beliefs on, however, I’m open to learning how others handle it and the use cases to adjust my strategy because sometimes there are times when it makes sense to change tactics for implementation. Thus, the talk submission draft began! Oh, and did I mention this was also 24 hours before the deadline for the call for speakers? Nothing like procrastination and a deadline to get you motivated! I had all but written off this goal for another year until the day before when we used my 1:1 meeting time to talk about how to structure a submission draft and I spent the afternoon and evening writing, rewriting, and tweaking my submission draft until it turned into something I was ready to submit.&lt;/p&gt;
+
+&lt;h2 id=&quot;preparing-a-presentation&quot;&gt;Preparing A Presentation&lt;/h2&gt;
+
+&lt;p&gt;Fast forward a month or so later and my talk got accepted. It was official, I was going to be announced as a speaker for Codegarden 2023. OMG! Now I have to really get it in gear because there is a legit deadline for an entire presentation I need to put together! This kicked off my codegarden experience and it was only April. The conference was in June! I spent a few weekends and randomly during evenings after work putting together examples and compiling the sticky notes that outlined the 3 takeaways I intended for the audience to take away from the talk. Let me tell you this board was a giant jumble of a hot mess, but it made sense in my brain, and that’s all I needed to get started with organizing my thoughts.&lt;/p&gt;
+
+&lt;p&gt;Before I knew it, gorgeous summer weekends were upon me, like we are talking epic paddle boarding weather.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/skip-paddle.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Then it was my birthday which meant a long week of a random road trip to the middle of nowhere in range of cell service for a hundred miles (or a gas station).&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/camp-spot.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;These amazing weekends were combined with some times I had to turn down going out so I could focus on my talk and practice speaking out loud, alone in my shed, standing in front of my computer. I practiced multiple times, recorded myself, wrote out my entire script, color-coded it, and timed it up with my slides as I practiced. This talk was different. This talk was me stepping out of my comfort zone to talk about something in a theoretical sense instead of actually building or training with something tangible to demonstrate. I was nervous, to say the least, and the nerves really started kicking into full swing the week before Codegarden. Apparently, that was when my brain decided to register that this was real life and it was happening. I wanted this talk to be great and I wanted to share what I had to say because I feel so passionately about going to bat for content editors, making sites accessible, and making something easy to maintain for years to come. Someone recently told me, “If it doesn’t make me nervous, is it even important?” and that really stood out to me. This is really important to me and this did make me very nervous.&lt;/p&gt;
+
+&lt;h2 id=&quot;traveling-part-1&quot;&gt;Traveling: Part 1&lt;/h2&gt;
+
+&lt;p&gt;I set off for Copenhagen airport the Sunday morning before Codegarden. Coming from Spokane, WA, I had to fly to Seattle, to Iceland, and then arrived in Copenhagen Monday afternoon where I met up with my mom! She traveled just as long coming from Florida. Once we linked up and grabbed our bags, we headed through the cluster of people in the train station to figure out where the train to Odense would depart from.&lt;/p&gt;
+
+&lt;p&gt;The trains have always been a challenge for me during Codegarden. I can’t for the life of me pronounce things correctly and in 2016, I actually boarded the wrong train, going the wrong way, only to be so late for the airport that I missed my flight and had to stay in Copenhagen another day. In fact, I’ve only ridden on trains when visiting Copenhagen. I don’t live in a big city and rarely use public transportation, and if so, it’s an Uber occasionally, so figuring out trains is a newer experience for me.&lt;/p&gt;
+
+&lt;p&gt;Turns out there was a strike going on this year and the trains were sort of a mess with scheduling adjustments on the fly. We had reserved seats but the train ended up being so crowded we stood the entire two-hour ride with our luggage before we made it to Odense St.&lt;/p&gt;
+
+&lt;p&gt;By the way, to the nice gentleman who helped catch me when I fell over, thank you. It was obvious I don’t have my sea legs and that one turn was just enough to send me toppling over.&lt;/p&gt;
+
+&lt;p&gt;Once we stepped off the train at Odense St. I knew exactly where we were and I saw some familiar faces! We were greeted by the lovely Matt &amp;amp; Lucy Brailsford and Andy from Umbraco HQ! They happened to be on the same train in a different area. We said hi briefly and mom and I headed towards the thankfully close, Hotel Odeon where we promptly cleaned up and passed out. We were two days into our trip, arriving at the hotel Monday around 5pm, and we had only just gotten to the hotel.&lt;/p&gt;
+
+&lt;h2 id=&quot;pre-party-day&quot;&gt;Pre-Party Day&lt;/h2&gt;
+
+&lt;p&gt;Tuesday morning I was up way too early for anyone who is used to the time zone and getting ready. Getting downstairs I immediately ran into young, but old, familiar faces! I hadn’t seen Arnold in over 8 years and I bee-lined to give him a hug and say hi like it was only last week we last spoke! He and Ronald also got to meet my mom, since she came along on this trip to check out the town and do all the touristy things while I was at the conference. We ate breakfast with friends and said hi as familiar faces started to slowly pour in. The event was getting ever closer!&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/hca-house.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;After walking around town through the shops and train station for a bit, I set off to practice my talk yet again. I ran through it a couple of times, looking at my slides, and making sure that I had them split up enough that if the notes were too small on the screen, I would just be able to hit the next slide and see the rest of my notes while the main screen remained unchanged. These are the little things that you don’t think of until the last minute when prepping. I figured it would be better safe than sorry since my fail-safe is to go back to my notes when I get nervous and forget who I am and why I am here.&lt;/p&gt;
+
+&lt;p&gt;I was beat by the time the pre-party event was about to happen. Jet lag is real and I’m an inexperienced traveler who loves her sleep. I dragged myself up from practicing and told my mom I was going to go hang out for a bit and I’d be back soon. By the way, that was the theme the entire week, saying I’d be back soon or I was leaving and then not actually making any progress until three hours later. It is so hard to leave! The pre-party was fun and Hawaiian themed. The HQ team had hula skirts and passed out colorful flowers to the community. More and more people arrived all evening and it was so much fun to catch up and see so many people who I’ve not seen in years, as well as meeting so many new people! It is awesome to be in the company of fellow nerds, and I say that with all the love because these people are my extended nerdy family! They understand what it means to work with this tech and be involved in this community and you can truly nerd out and talk for hours over all sorts of similar interesting things about Umbraco and then learn more about everyone’s hobbies! There is even an HQ team member who has been on tv for his diving skills. Yea, not the first hobby I would’ve guessed but super cool no doubt! Can you guess who? Here is a hint, he is good with numbers!&lt;/p&gt;
+
+&lt;p&gt;As the evening drew on, I started to say goodbyes however made no progress towards the door. Two hours later into the evening I was given an “out” to go and I sneakily made my way out of the party. It was the only way to actually get home and get some rest since it was too hard to say bye quickly because its just too much fun to talk to everyone!&lt;/p&gt;
+
+&lt;h2 id=&quot;codegarden-day-1&quot;&gt;Codegarden Day 1&lt;/h2&gt;
+
+&lt;p&gt;Over the years, Umbraco has grown and changed ownership since the last time I attended an event. However, at this year’s annual Codegarden conference, I was thrilled to see that the fun vibes and open community were still at the forefront. I don’t have a ton of other conference experiences to compare this one too, but the gist is that this tech conference is like none other. The inclusivity of diverse beautiful people with backgrounds in all sorts of areas of the tech industry is amazing. Even better you can always walk up to anyone to say hi and talk with them as if you have been friends for years, even if you have only just met. It is truly a really great place to meet new people and say hi to ones you have not seen in years as if it was only yesterday.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/emma-cg-keynote.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;The first day was busy, walking up the venue being greeted with high-fives and seeing the gold painted man out front was pretty welcoming! The day started off with a rush and ended just as much on the high note as it started. There were so many good talks, and during the opening keynote, I got to go on stage with fellow Umbraco MVPs to get our awards! I’ve never actually thought that becoming an MVP was an attainable goal, I mean just look at the previous MVPs, they did such amazing work with developing packages and maintaining them, submitting code fixes to the core, implementing property editors that got merged into the core… it set the bar very high. I wish I knew that much back-end dev code to build cool stuff to give away and teach people how to do things! I would totally do it all the time if I could! I was definitely surprised to get awarded, because I just don’t feel that smart (imposter syndrome, right?). I am super honored though, and I can’t wait to continue finding more ways to get involved and help teach and grow the community that I really love.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/mvp-list.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;The first day after the keynote was a blur, going from room to room to see talk after talk, which mind you, was in another building so getting from room to room I did feel like I needed to move it, but I was able to socialize and find some buddies to see talks with while on the go!&lt;/p&gt;
+
+&lt;p&gt;Lunch was great, have you had bread in Denmark? It’s quite amazing, all of it. Can’t get enough and highly recommend!&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/blake-laura.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;I managed to make it to some of the talks I thought were not going to be recorded, Laura’s talk was great about the compassionate developer in open-source and the Strangler Fig Pattern (which I can never seem to remember the name unless I look it up) was a pretty interesting concept for how to go about a rebuild. I made it to Matt’s talk about Fun with Flags and Westbrook’s talk about scaling up and down with web components, which included a really cool demo of a web component in the Umbraco backoffice to apply photoshop effects to your media right in the CMS!&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/backoffice-community-team.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;I see such great things coming for umbraco with this new backoffice and I’m super excited about it! Which of course lead me to attending Jacob’s talk about exploring the new backoffice. I am again honored to be on the community team for the Umbraco backoffice to help out here where I can with this new implementation and the last talk of the day I attended was the amazing talk about fix the six with Danny and Molly.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/fix-the-six.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;I love the passion they bring to their talk and you can really feel how committed they are to this cause by listening to their talk. I wish it was recorded, but it does turn out that it was recorded at a previous event. These six things they brought up should be on everyones radar and we should be educating our clients to be aware and take action on improving their website accessibility, starting with the basics and content that they can manage themselves.&lt;/p&gt;
+
+&lt;p&gt;Once the talks were over, the LIVE recording of Candid contrib took place on stage and I was happy to be in the audience! I can’t say how inspiring it is to see more women in tech too, and even seeing the photo of this years women of codegarden was incredible, since the last time I was there was in 2016 and it was a much, much smaller group in the photo. It was really insightful to hear about how passionate people are to teach and help grow the community. It is really inspiring. I wish there was more of a tech community where I lived so I could get involved with some volunteering. I’d love to spread the word of Umbraco and teach.&lt;/p&gt;
+
+&lt;p&gt;The evening went on, late im sure, however I did sneak out and watch the Awards on the live stream from my hotel room because I was so tired by dinner time. I wanted to be well rested and on top of my game for Thursday because that was my talking day!&lt;/p&gt;
+
+&lt;h2 id=&quot;codegarden-day-2-presentation-day--bingo-night&quot;&gt;Codegarden Day 2: Presentation Day &amp;amp; Bingo Night&lt;/h2&gt;
+
+&lt;p&gt;Well needless to say, I was a bit restless Wed night, and was up at 4am again. I read through my talk a couple times in the morning in the hotel lobby while eating breakfast with my mom. To say I was stressing out was an understatement. I barely ate and of course had a tummy ache up until my talk. Most people don’t know this, but during my public speaking course in college, when I gave my speech in front of the class, I started crying. Yup. I cried in front of everyone during my speech. Nerves get the best of me. Im happy to report that there were no tears during my presentation in front of about 50 people this time!&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-full caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/blake-presenting-01.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;I was able to hit up some good talks Thursday, but I found a few were happening at the same time so I just hoped to catch the recording (once I figure out what was recorded). I started my morning off with Jacobs mental health in technology talk, going to Matt’s talk on e-commerce in Umbraco, to Lee’s finding contentment talk, which I had to dip a few minutes early to make it to my talk next. I was even more nervous after seeing how many people showed up. My mom was able to come by too, and she recorded it for me from the audience.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-full caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/blake-presenting-02.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Once my talk was over, I felt like I was finally able to really enjoy the event with this weight lifted off my shoulders I could breathe! I came to share and I did it and what’s more, I’d do it again! Thankfully after my talk it was lunch time, and there were still a couple of really good talks to catch too. I caught Nikolaj’s talk about testing with playwright and Dave’s talk about models builder. I hope to watch the recording (if there is one) of Jonah Andersson’s talk about the importance of mentorship and communities in tech. She was truly inspiring just to see her talk about something she is so passionate about.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/bingo-night-dinner.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;After the talks, it was time for the infamous Bingo Night! Anyone who has been to Codegarden before knows Bingo Night is a total crazy, who knows what is going to happen next, kind of evening! Between the slow-mo videos of things flying at peoples faces, the competition rock, paper, scissors, jenga, and the nintendo game, I’m not sure which part was my favorite but I can honestly say that none of it was actually expected aside from actually playing Umbraco bingo. It was so much fun. I didn’t know that jenga could be such a competitive sport but I was surprised. It’s hard to even sum up the craziness, this is one of those things where you just need to be there to experience it!&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/blake-sophie.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;I was also finally able to catch up with Sophie by dinner time as we sat together at the bingo table. We had been trying to say hi and meet up since we got there but running between talks and trying to catch people actually proved to be a bit challenging. We played the hammer game, which I’m still shocked someone came up with a game that involves drinking and hammering.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/gibe-hammer-time.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;That doesn’t sound like a good combination at all, even when sober! I had a lovely evening hanging out with everyone and the Gibe team. I actually had made it to midnight before I was saying my goodbyes. I’m not much a night owl, I rarely stay up passed 9pm (and if I do, I’m dead tired), so midnight was good for me. I ended up walking back into the venue to get my stuff when I realized there was a dance floor! AND a really good DJ! … Needless to say, I didn’t get back to my hotel until about 3:30am. That seemed to be the running theme for my evenings once my talk was done, I’d say I’d leave and then 2 or 3 hours later I’d actually make it out. We had such a blast. Not sure how else to describe it.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/dance-crew.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;codegarden-day-3&quot;&gt;Codegarden: Day 3&lt;/h2&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/hackathon.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Hackathon day is upon us! I was not mentally prepared to get into some code given I had little sleep the previous night but it was fun to watch. Being the last day of the event, things were beginning to wind down, however there were still a couple good talks to catch and I was able to see Elise Bentley’s, Kenn’s, and Irina’s talk before the closing announcements and goodbyes. I must say, I totally have had technology be ‘creepy’ and that was a really relatable topic (&lt;em&gt;I’m looking at you Alexa&lt;/em&gt;).&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/hotel-patio-01.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;With the evening winding down, a group of us ended up heading back to the hotel to take a break and meetup again downstairs in the evening. I was tempted to catch up on my sleep since I was running on 3 hours and a nap was much needed but I opted for cleaning up and being social one last time and I am so glad I did. Friday evening ended up being just as random as bingo night! As we sat outside the hotel at the table, we had some soccer fans come up who were renting the conference room to celebrate the soccer game. They were all decked out in their soccer gear and the boss man even came over and randomly confetti cannoned us on the patio.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2023-07-10/hotel-patio-02.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;I’ve never been confetti cannoned a day in my life until the Umbraco conference. The confetti cannon had been a big thing, all week at the conference, made for some really great pictures too, and now randomly at the hotel here we are being confetti cannoned by a stranger! How random is this?! Then he runs back inside and comes back out with a bunch of beers and they were all so kind and kept inviting us to go party with them to watch the game and drink. There were about 10 of us at the table outside and this entire time we could not stop laughing! It was hilarious because it was so random and as each one of the soccer fans came out one by one to meet us all and talk to us, they ended up going around our circle 3 separate time asking everyone where they were from because we had such a diverse group of people from all over the world. It was so funny to see their reactions and they were absolutely so friendly! After hours of talking, once again 2 hours past when I said I was going to go back up to the room, I ended up heading back up at midnight. Mom actually stayed and went out to the bars with the group of soccer fans and was out super late with them (pulling a me on Thursday night). It was quite a hilarious and random evening just hanging out and it was nice to get that time to say goodbyes before most people were headed back home.&lt;/p&gt;
+
+&lt;h2 id=&quot;traveling-part-2&quot;&gt;Traveling: Part 2&lt;/h2&gt;
+
+&lt;p&gt;Saturday morning rolled around quick and it was hard to get out of bed in the morning. We were up and off early to catch the train, thankfully this time we were able to get seats. I said my goodbyes and left mom at central station. She headed off to finish out her traveling trip and I headed towards the airport and made it with plenty of time to spare. I was dreading a long day of travel but trying to stay awake for as long as I could so I could sleep on the plane.&lt;/p&gt;
+
+&lt;p&gt;Take off time was finally here and within 5 minutes of being on the plane while people were still boarding, I was asleep… and about 5 minutes later I woke up to everyone being de-boarded from the plane. We hadn’t even moved yet and they were telling us they needed to fix the plane. &lt;strong&gt;**&lt;em&gt;Sigh.&lt;/em&gt;&lt;/strong&gt;** Fast forward 5 hours from when I arrived at the airport, I was now being told that they were cancelling the flight. After waiting in the customer service line for over an hour, I was rebooked for the same flight the next day and had a hotel room set for the evening. I should’ve stayed with my mom, but it was easier to stay at the hotel close to the airport.&lt;/p&gt;
+
+&lt;p&gt;Sunday went smoothly up until I got back into the states, where customs took so long that I missed my connecting flight. Thankfully they were able to rebook me on the next flight out which was an hour later so I was able to get home sunday by midnight. It was a long trip back and I really don’t enjoy the airplane traveling part of trips, but I am happy to do it to take part in some awesome community events.&lt;/p&gt;
+</description>
+                <pubDate>Mon, 10 Jul 2023 00:00:00 -0700</pubDate>
+                <link>http://localhost:4000/articles/codegarden2023/</link>
+                <guid isPermaLink="true">http://localhost:4000/articles/codegarden2023/</guid>
+                
+                <category>community</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>Why You Need The Umbraco Dictionary</title>
+                <description>&lt;p&gt;When setting up a content management system, it is important to make content editable within the CMS. In some cases the content may be utilized in multiple places throughout the site in a macro, or doesn’t warrant having its own property on a content page. &lt;!--more--&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;make-content-editable&quot;&gt;Make Content Editable&lt;/h2&gt;
+
+&lt;p&gt;Take a search input for example. It’s likely your content has a search page specifically setup with its own template to render search results, however, the search input label, placeholder and submit button are usually strings that are less often updated after the initial setup. While these could be properties on the search page, these types of properties are better suited to be managed somewhere else and not clutter the content page with properties that will be rarely updated.&lt;/p&gt;
+
+&lt;h2 id=&quot;translate-your-content&quot;&gt;Translate Your Content&lt;/h2&gt;
+
+&lt;p&gt;Enter the Umbraco Dictionary. The Umbraco Dictionary is perfectly suited to handle the needs of allowing content editors to update content that would typically be “hard-coded” into a template. Utilizing the Dictionary also allows for the ability to customize the content based on the localization information.&lt;/p&gt;
+
+&lt;p&gt;If you have a multi-lingual website and are utilizing the Umbraco Dictionary items in your templates, when your website is loaded using a different language, your dictionary items will utilize the content specified for that language. This makes one less thing you need to worry about and future proofs your website for multi-lingual support.&lt;/p&gt;
+
+&lt;h2 id=&quot;deploy-less&quot;&gt;Deploy Less&lt;/h2&gt;
+
+&lt;p&gt;Another benefit of utilizing the Umbraco Dictionary is that when you no longer have “hard-coded” text values in your macros or templates, you won’t have to do a deployment for a simple text change. Looking at the deployment process as a whole and taking into account the multiple environments that changes get pushed through, the QA process, scheduling a deployment and verifying that deployment was sucessful. There is a lot of time and effort cross-department that goes into a deployment. You can save a lot of valuable time with allowing content editors the ability to utilize content from the Dictionary to make text changes instead of “hard-coding” text inside of your views.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-the-dictionary&quot;&gt;Using the Dictionary&lt;/h2&gt;
+
+&lt;p&gt;Using our search example, in the Umbraco Dictionary, we could create a group called Search to house a few dictionary items to handle editing these values in the CMS including:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Search.Placeholder&lt;/li&gt;
+  &lt;li&gt;Search.Label&lt;/li&gt;
+  &lt;li&gt;Search.Button&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The Umbraco Dictionary can be found in the Translation section of Umbraco and creating new dictionary items is as easy as creating the rest of the content within the content trees. To create a new dictionary item, simply right-click on the Dictionary, click Create, enter your dictionary item name, and click Create. Your new item will display in the Translation Tree.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2022-12-23/dictionary-items.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Once you have created your dictionary item, you will see a text area that displays next to your localization language for your site. The more languages you have configured, the more text areas you will see. Each text area allows the content editor the ability to configure the text that displays when this dictionary item is rendered in the code. Enter your text in the text area and click Save to save your changes.&lt;/p&gt;
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2022-12-23/dictionary-item-value.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;displaying-dictionary-items&quot;&gt;Displaying Dictionary Items&lt;/h2&gt;
+
+&lt;p&gt;As a developer setting up the view that displays your dictionary items, the way to reference this value is simply with the name of the dictionary item.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cshtml&quot;&gt;@Umbraco.GetDictionaryValue(&quot;Search.Button&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You also have the ability to enter some fallback text if your dictionary item is empty. Your code would then look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cshtml&quot;&gt;@Umbraco.GetDictionaryValue(&quot;Search.Button&quot;, &quot;Submit Your Search&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I hope you can utilize the power of the Umbraco Dictionary on your own website. If you are looking for more information on using the dictionary, you can check out the official Umbraco documentation about &lt;a href=&quot;https://docs.umbraco.com/umbraco-cms/fundamentals/data/dictionary-items&quot; target=&quot;_blank&quot;&gt;Dictionary Items&lt;/a&gt; here.&lt;/p&gt;
+
+&lt;p&gt;And to leave you with a parting word of wisdom when building your sites, remember not all content needs to be edited in the content section but your content should be editable from the CMS.&lt;/p&gt;
+</description>
+                <pubDate>Fri, 23 Dec 2022 00:00:00 -0800</pubDate>
+                <link>http://localhost:4000/articles/umbraco-dictionary/</link>
+                <guid isPermaLink="true">http://localhost:4000/articles/umbraco-dictionary/</guid>
+                
+                <category>umbraco11</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>Codegarden 2016 Wrap Up</title>
+                <description>&lt;p&gt;As a testament to how awesome the Umbraco community is, I felt the need to have share my Codegarden experience. &lt;!--more--&gt; I love this community and there are some who deserve so much thanks from me for making this trip possible this year. You see, I actually had no intention of going codegarden16 this year. I know, what was I thinking? The decision had more to do with the fact that I have had a lot of life changing events going on in the past few months and the expense of the trip is just out of my reach this year. Needless to say, I had been keeping an eye on the speaker list for the conference to check out the lineup of awesome speakers and I sent out a tweet just stating how I’d love to go this year but maybe next year I’d make it. I had no idea that it would turn out to become a hashtag on twitter, #getblaketocg16. @drobar asked me why I couldn’t make it and to be quite honest it was lack of funds. We all know it is expensive to travel. Then @umbraco got involved retweeting that if I could make it over they would find me a place to stay. Well “The Dutch Guys” saw this and almost immediately offered me a place to stay with them at “The Dutch House”. I seriously owe so much more than the thanks I can give to these guys who made this trip happen for me this year. Thank you so much Arnold, Richard, Martijn, and Jeroen for letting me stay with you guys and making this trip happen for me this year. I truly appreciate it.&lt;/p&gt;
+
+&lt;p&gt;Codegarden15 was just the beginning of quite a few “firsts” for me, including things like presenting in front of an audience, traveling overseas, and attending Umbraco conferences. However, codegarden16 has added a few more new experiences to my list. I’ve never traveled alone before so I was extremely nervous on the flight over. I don’t do well with anxiety and it gets to the point where I almost want to just go home and hide, so getting my ass on the plane was a big step for me. The trip over was long and made even longer by all the delays and the fact that by the time I arrived in Copenhagen, my luggage was still hanging out in London. This made for a nice long waiting session at the baggage claim to get my luggage that was on the next flight over. Fun stuff, let me tell you, especially when I could’ve been hanging out at HQ! Once I got my luggage, I hopped on the train, fell asleep and woke up at Odense (jet lag sucks). It was a little late, dark and cool outside but I started the short walk towards HQ. As I got closer I figured out the noise I was hearing as I turned the corner was from all the Umbracians hanging out outside of HQ! There were a ton of people pre-partying! I was so happy to have made and immediately started checking out Arnold’s car that he had vinyled with the Dutch Umbraco User Group info and it looked pretty sweet! After stowing my luggage, I made some rounds of passing out free hugs and long overdue hello’s to my friends! I was so stoked to have made it over in one piece by myself. Once I made it inside HQ, I was really impressed with how nice it was in their space. I’ve never visited HQ before and it was nice of them to open the doors up to us to come party. There are 3 stories and glass walls everywhere and there was also a hidden ladies room, thanks Niels! The back room was huge and it appeared to be an old engine room that was just crowded with people and a bar. The wall was loaded with all sorts of lights and switches. I’m not exactly sure what that used to power or if it still does power anything but it was cool to see. Upstairs were desks where I assume the magic happens, you know that is what developers are good at, magic! The third floor was home to the pretty fantastic foosball table. I had to check out the action going on there, I love foosball! Not too long after last call I headed back to the house with the the dutch guys in the official duug car. Lucky for me Odense is small and everything is so close so we were home within 10 minutes and I was passed out within the hour. That day of traveling wore me out.&lt;/p&gt;
+
+&lt;h2 id=&quot;conference-day&quot;&gt;Conference Day&lt;/h2&gt;
+
+&lt;p&gt;The first morning was tough (let’s be honest it was more than just the first morning), I love sleep and getting up with only a few hours of sleep was pretty rough for me but I managed. There are some who came farther than I did, I can’t imagine how tired they probably felt. In the mornings the dutch guys liked to jump into the ice cold pool to wake up. I however slept through these festivities because that is just crazy. The pool was freezing and I don’t know how they were able to handle that. After getting ready we grabbed breakfast at the gas station by the house and headed to the venue. First let me say, breakfast at a gas station is something else on my list of firsts. In the states, you don’t eat gas station food (at least where I’ve been), unless it’s a last resort and if you have to eat it, I hope you have an iron stomach.&lt;/p&gt;
+
+&lt;p&gt;The venue this year is very much in sort of an industrial style area. There are a few nice walks around though and parks as well. The venue itself was huge! The team did a great job in setting up the venue too, I hear they were there till about 4AM working on setting up everything the days before the event! Their hard work showed though, the venue was very well laid out and put together with the multiple areas for talks, coffee, drinks, and some fake grass outside made it nice to hang around. Walking into the venue you had he entrance room on the left, the lounge, coffee and swag to your right (got to get the swag) and continuing on you had the bar area in the middle, the backroom on the left off to the side and in the back of the venue you had the main area. There was a very strong theme of wood this year. They built so many accent items and neat light shows to accent the areas too. There was plenty of room for everyone and plenty of room to grow. They made a good choice moving the location to DOK5000 in Odense. If I had any gripe, the only thing I could say is that it is a bit far from the airport and not being a native, I have a hard time with navigating the trains. Maybe we can get a map or a guide to navigating the area in detail at a later time?&lt;/p&gt;
+
+&lt;p&gt;Day one kicked off with a Keynote speech from the chief unicorn himself about where Umbraco was going and the features upcoming and let me tell you, if you missed this, watch the videos when they come out. There are some really great features being implemented in the core in the next few versions and version 8 sounds very nice too! Spoiler alert, nested content is coming to the core too (YASSSS)! If you haven’t used this package you should definitely check it out. It is a very powerful, simple way to add some more content into your doctypes while keeping your content tree organized. All the sessions and from what I hear all the workshops were really great this year. I didn’t attend the workshops as they cut into a lot of the session time but I loved the talks that I attended, there were some really great talks about personalization with Umbraco from Janusz Stabik, Andy Butland and Theo Paraskevopoulos. I’ve seen Theo speak a few times prior to this and he really does an excellent job at this subject and these presentations really tied well into each other. There is also a really good talk from Sebastiaan about how they run the Umbraco open source project and yours truly got to submit her first pull request on stage (it was all Sebastiaan but I love that he gives me some credit)! I was happy to help out by being the guinea pig for this since I’ve never actually submitted a pull request before. To be honest I find it completely intimidating and I had no idea what I was doing. I thought it was more complicated but as it turns out, submitting a pull request is actually pretty easy (so my time was very brief) and I really think the hardest part was getting everything installed. I tried git for windows originally but it didn’t appear to be working on my machine so Sebastiaan had me install Git Extensions and that installed everything that was needed in order to do my first pull request! Check it out if you are interested in learning how to contribute, it is pretty easy to get started, take it from the newbie!&lt;/p&gt;
+
+&lt;p&gt;The food was quite excellent and the after party the first day was a lot of fun. Those of us from the states, I feel like I can speak for most of us when I say this, were a little concerned yet mesmerized by the crazy log nail game at Heidi’s bar. I don’t know if you have seen this, but it is a log, with some long nails that you hammer into the log with 1 hit at a time. I think the rule is you can’t aim at the nail, you just set the hammer down next to it and try your luck with accuracy or try to look macho and hit it hard but that seemed to result in missing more often. Slow and steady wins the race! I know when I walked into the bar I was curious to see what everyone was standing around looking at and when I saw what it was I was just like “what the hell is this?”. Nails and hammers don’t belong in a bar back home; it would probably result in a lawsuit of some kind. It was pretty entertaining though, it kept a good bit of drunk people entertained for quite a while, I know I stayed out later than normal mostly watching the nail game and chatting with people. A good time was had.&lt;/p&gt;
+
+&lt;p&gt;You know what they say about bingo night… well all of it is true! Ridiculously random craziness and it was nothing short of that this year. I still didn’t win but the prizes to be had were pretty cool (you see what I did there?) and the grand prize was a pretty epic Umbracula castle bounce house. Talk about epic! Seriously though, what happens at bingo stays at bingo so this is just one of those things you have to experience. It is worth it. I actually managed to stay out pretty late this night and eventually around 1AM everyone had enough to drink that they started dancing and that was entertaining! I need those this girl can’t dance songs, you know the ones that tell you what to do for the steps cause I’m no good at dancing, though I think I just need some lessons from Erica, she is a free spirit!&lt;/p&gt;
+
+&lt;p&gt;The third day was composed of the open space sessions. These were really great and the community had some great talks to share. I finally got to attend one of Bob’s infamous work life balance open space sessions. I find this one a big priority in my life now that I’ve transitioned into working from home, I really need to find that balance. It was good to hear how other people work and handle their balance and that they have similar issues that I face as well. It is refreshing. I also attended the skrift.io open space and the making codegarden better session. It was nice to have some community input and see those being heard and giving feedback and suggestions. This community is so open and while there were a few things this year that some were not fully supportive of, the event really turned out to be very nice and fun as always. If there is one thing you can count on, it is having a good time, meeting new people, and making more friends. The final day is always full of goodbyes and hugs to those new and old friends that you will have to come back to visit again next year! Safe travels to all as you make your journeys from across the globe and I wish you best of luck in navigating and short layover times! Personally, I totally failed at the train and missed my flight so I’m stuck in Copenhagen another night but taking advantage of the extra time to play with some new Umbraco things and check out UaaS. &lt;a href=&quot;https://twitter.com/search?q=getblaketocg16&amp;amp;src=typed_query&quot; target=&quot;_blank&quot;&gt;#getblaketocg16&lt;/a&gt; was a success thanks to the community and now I’m working on getting Blake home.&lt;/p&gt;
+</description>
+                <pubDate>Mon, 20 Jun 2016 00:00:00 -0700</pubDate>
+                <link>http://localhost:4000/articles/codegarden16/</link>
+                <guid isPermaLink="true">http://localhost:4000/articles/codegarden16/</guid>
+                
+                <category>community</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>Document Type Compositions in Umbraco</title>
+                <description>&lt;p&gt;Umbraco 7.2 introduced us to a new concept of Document Type Compositions. You may have seen this while you were in the back office building new sites, but what does it truly mean for you and how you build sites? To answer this, it helps to understand where this concept is coming from.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;previous-nested-inheritance-setup&quot;&gt;Previous “Nested Inheritance” Setup&lt;/h2&gt;
+
+&lt;p&gt;Typically, in the past, when you build Umbraco websites you have the ability to “nest” Document Types under a “Master” Document Type. This nested structure allows you to inherit properties from the parent Document Type. This parent/child relationship is clearly visible in the back office (tree-like structure). For example, a simple site structure might look similar to this:&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2016-01-02/doc-type-nested-structure.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;compositions-explained&quot;&gt;Compositions Explained&lt;/h2&gt;
+
+&lt;p&gt;With the addition of compositions, you have the ability to not only inherit properties from nested Document Types (that tree-like structure) but you can also Compose from Document Types. This is technically almost the same thing as nesting with a few differences, which we will get to. With Compositions you select which Document Types you would like to “inherit” properties from. So while you can’t clearly see this structure in the back office, it is viewable when checking out the Structure tab to see what Document Type Compositions are checked.&lt;/p&gt;
+
+&lt;p&gt;If you are using a mixed setup taking advantage of nesting and using compositions you will see a checklist similar to this:&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2016-01-02/ex-comp-list-checked-72.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;The grayed out Document Type Composition Master is a parent to the particular Document Type we are looking at. By default, this means that this Document Type will inherit the properties from the Master Document Type and unless we move it (which is really easy to do in v 7.4) this is what you get. The other Document Type, Banner, is checked and just using the compositions as intended which also says we want the properties setup on the Banner Document Type to be on this Document Type too.&lt;/p&gt;
+
+&lt;p&gt;With the new Document Type Editor in version 7.4 (currently in beta) you have a different editor all together, but the compositions are still the checkboxes allowing you to select which Document Type’s properties you would like to compose from.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2016-01-02/ex-comp-list-74.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;umbraco-74-beta-changes&quot;&gt;Umbraco 7.4 (Beta) Changes&lt;/h2&gt;
+
+&lt;p&gt;In Umbraco 7.4 changes were proposed. The beta version completely got rid of the nested inheritance setup that a lot of us have been accustomed to using for a very long time and went the route of only compositions. There are some good reasons some have their reservations about moving fully to compositions just yet and Dave started up a thread on our asking the community their opinions on this improvement. &lt;a href=&quot;https://our.umbraco.org/forum/core/general/73809-no-more-master-doctypes-in-74-beta-is-this-really-an-improvement#comment-236822&quot; target=&quot;_blank&quot;&gt;Long thread short&lt;/a&gt;, the core team listened to the community and is implementing a solution to keep both styles of back office setup, for now. (YAY!)&lt;/p&gt;
+
+&lt;h3 id=&quot;how-do-these-changes-affect-your-workflow&quot;&gt;How do these changes affect your workflow?&lt;/h3&gt;
+
+&lt;p&gt;You are probably wondering what this changes, and does it really affect you. It is a big change for some, going from a very rigid structure of inheritance with parent/child relationships to a structure that is actually quite liberating! With an inheritance structure, you see the relationships but with compositions not so much… well at least until Offroad Code gave us Umbraco Backoffice Visualizations (Thank you!).&lt;/p&gt;
+
+&lt;p&gt;Really this is a minor complaint considering the vast amount of configuration options that compositions give us. Those who have worked with larger Umbraco site setups know the struggle is very real when it comes time to expand on a site, or when a client wants a different setup and it requires reworking the Document Types. Before compositions, this was a major pain because moving Document Types just wasn’t that easy. It was do-able, but with workarounds and a lot of time invested in copying, switching, republishing, etc. The nested process requires a lot of thinking into the whole setup as you breakdown what can be reused and therefore on Master (aka Parent) Document Types and what should be on its own child Document Type. With Compositions, you still have to think about these things, but making changes and restructuring your Document Types is as easy as checking boxes. That is a huge improvement! I think the only ‘con’ I can see with this, is making sure that you check all the compositions that are necessary for a Document Type, and really in the grand scheme of things, I think we can manage this.&lt;/p&gt;
+
+&lt;h3 id=&quot;ill-admit-it-these-changes-made-me-nervous&quot;&gt;I’ll admit it, these changes made me nervous.&lt;/h3&gt;
+
+&lt;p&gt;I’ll be first to admit, seeing that nested inheritance was going away in the beta was really off-putting. I’ve been using Umbraco for years and one of the things I really love about their UI is seeing relationships and locations of Document Types, Templates, Content Items. It actually really helped me to understand learning razor a bit better too, but I gave the beta a shot and I’ve been playing with it, reworking test sites, upgrading older sites, messing around with my blog and I think going full on Compositions will just be a step forward for the flexibility in building sites in Umbraco. We do technically keep the same ‘inheriting’ functionality in a sense, just with the ability to inherit or “compose” from more Document Types quicker.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-summary-go-try-out-74&quot;&gt;In Summary, go try out 7.4!&lt;/h2&gt;
+
+&lt;p&gt;While 7.4 is still in beta, this has been an overview of just one aspect of the changes being made. There are a few UI updates to the grid and some excellent improvements to the Media section that I think you are really going to like, so go download it! Play with it! Embrace the compositions! Try out Folders! Umbraco is only getting better.&lt;/p&gt;
+</description>
+                <pubDate>Sat, 02 Jan 2016 00:00:00 -0800</pubDate>
+                <link>http://localhost:4000/articles/document-type-compositions-in-umbraco/</link>
+                <guid isPermaLink="true">http://localhost:4000/articles/document-type-compositions-in-umbraco/</guid>
+                
+                <category>umbraco7</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>Bundle and Minify in Umbraco</title>
+                <description>&lt;p&gt;When building websites there are a few general best practice items to help you get the best performance out of your website. When using Umbraco you have some handy features built in like the Client Dependency Framework (CDF) that can help optimize your site.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The CDF manages your scripts and stylesheets for your web application, including minifying, compressing and caching. To learn more about the framework check out the documentation that Shannon Deminick has put together on Github.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-1-determine-your-setup&quot;&gt;Step 1: Determine Your Setup&lt;/h2&gt;
+
+&lt;p&gt;There are a couple ways you can go about setting up scripts on your website and you should take the time to evaluate what will work best for your site needs. Typically I load only the scripts that are needed on the pages or templates that require them. For example, you have a slider on your homepage, but not on any other page in your site. Well you won’t really need the scripts and styles for the slider on every single page of your site so you only want to have those files referenced on the homepage template.&lt;/p&gt;
+
+&lt;p&gt;For some, the scripts that you use may be so well compressed that it wouldn’t make a noticeable impact to bundle all your scripts into a single minified script on every page.  You will need to determine this impact based on your site and the files you are loading.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-add-your-using-statement&quot;&gt;Step 2: Add Your Using Statement&lt;/h2&gt;
+
+&lt;p&gt;Using Umbraco 7, it is pretty straight forward in setting up your files to be bundled. Take a look at your Master template. Typically this is the template with your core markup on it, markup that is used throughout your entire website. The first thing you need to do is add the using statement for the client dependency to your template.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@using ClientDependency.Core.Mvc&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-add-your-scripts-and-stylesheets&quot;&gt;Step 3: Add Your Scripts and Stylesheets&lt;/h2&gt;
+
+&lt;p&gt;Now that Umbraco knows that we are using the Client Dependency, we need to add our files. Underneath the Layout = null; markup, lets add the following code with the relative paths to our files we need. Your code should look similar to this. Your file paths may be different depending on your website setup.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cshtml&quot;&gt;@{
+     Layout = null;
+     Html.RequiresCss(&quot;~/css/bootstrap-3.3.5.min.css&quot;, 1);
+     Html.RequiresCss(&quot;~/scripts/less/main.min.css&quot;, 2);
+     Html.RequiresJs(&quot;~/scripts/jquery-1.10.1.min.js&quot;, 1);
+     Html.RequiresJs(&quot;~/scripts/bootstrap-3.3.5.min.js&quot;, 2);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The numbers after the file path indicate what order the scripts and stylesheets should load in. If you didn’t have this, you could end up in a situation where jquery loads last and therefore none of your plugins that require this library work since it hasn’t been loaded yet.&lt;/p&gt;
+
+&lt;p&gt;There are multiple ways to add files, you could reference an entire folder with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Html.RequiresJsFolder(&quot;~/Js/Controls/&quot;);&lt;/code&gt; or reference an entire bundle with MVC. You can also check out the wiki for more information on how to do these things too.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-render-your-css-and-scripts&quot;&gt;Step 4: Render Your CSS and Scripts&lt;/h2&gt;
+
+&lt;p&gt;On your template, you will need to determine where you want your scripts and style sheets to load. To render your CSS on the template you will need to add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Html.Raw(Html.RenderCssHere())&lt;/code&gt; in the head tag of your markup.&lt;/p&gt;
+
+&lt;p&gt;Typically I load the scripts last on the page body so towards the footer you would place &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Html.Raw(Html.RenderJsHere())&lt;/code&gt; to render your scripts.&lt;/p&gt;
+
+&lt;p&gt;The client dependency is going to know what to put here based on the RequresCss and RequiresJs files that you added in step 2.&lt;/p&gt;
+
+&lt;p&gt;You can repeat these steps in order to add more files that are needed on some of the inner pages of your website. This depends on how you determined to setup your files in step 1. Don’t forget to order your main styles and scripts if you go this route as the innerpages that are added appear to load before the master page files that are added.&lt;/p&gt;
+
+&lt;h2 id=&quot;debugging-your-scripts-and-styles&quot;&gt;Debugging Your Scripts and Styles&lt;/h2&gt;
+
+&lt;p&gt;In your web config file, when debug is set to true, the CDF knows not to bundle all your scripts together just yet. This helps for testing your site and making sure you have all your scripts and stylesheets referenced. Once you set debug to false, typically in production environments, the CDF will bundle and minify your scripts and stylesheets on the page and cache them until you make changes to the files or update the version number for the CDF in the client dependency config file.&lt;/p&gt;
+
+&lt;p&gt;As you can see, it is pretty easy to use the client dependency framework built into Umbraco in order to bundle and minify your scripts and stylesheets. If you are looking for specifics on the CDF itself, &lt;a href=&quot;https://github.com/Shazwazza/ClientDependency&quot; target=&quot;_blank&quot;&gt;check out the documentation&lt;/a&gt; and feel free to leave a comment if you have any questions!&lt;/p&gt;
+</description>
+                <pubDate>Sun, 29 Nov 2015 00:00:00 -0800</pubDate>
+                <link>http://localhost:4000/articles/using-the-umbraco-client-dependency-framework-to-bundle-and-minify/</link>
+                <guid isPermaLink="true">http://localhost:4000/articles/using-the-umbraco-client-dependency-framework-to-bundle-and-minify/</guid>
+                
+                <category>umbraco7</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>Setting Up Umbraco Locally</title>
+                <description>&lt;p&gt;There are a lot of ways to setup Umbraco locally. This is a step-by-step on setting up a database in SQL Server Management Studio and configuring Umbraco to run locally. &lt;!--more--&gt; Here is what you will need to get started:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Umbraco Version Zip Files&lt;/li&gt;
+  &lt;li&gt;Microsoft Visual Studio&lt;/li&gt;
+  &lt;li&gt;SQL Server Management Studio&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I am going to assume you have these programs installed and have downloaded the required files needed for Umbraco. These instructions will be using Visual Studio 2015 on Windows 10 with SQL Server 2014 Management Studio.&lt;/p&gt;
+
+&lt;p&gt;First let’s create our database that we will need for our site. Open SQL Server Management Studio and right click on Databases.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/new-db.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Name your database in the Database name field. In this case I’ll use &lt;em&gt;example&lt;/em&gt;. Click Okay.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/db-name.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;You will notice that the new database will show up in your Databases folder in the Object Explorer.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/new-db-list.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;In the Security &amp;gt; Logins section of Management Studio, create a new user by right clicking on Logins and clicking New Login.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/new-db-user.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Type in your new login name in the Login name field, click SQL Server authentication, and uncheck Enforce password policy. Type in your password in the Password field and confirm it. For Default database, select your database that you just created.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/new-login-1.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Remember your credentials! You are going to need these when we setup Umbraco later. Click OK when you are finished.&lt;/p&gt;
+
+&lt;p&gt;Let’s go back to your database in Management Studio and go to Security &amp;gt; Users. Right click on Users and select New User…&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/new-db-user.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Enter your username in both User name and Login name fields. In my case, I’ll use &lt;em&gt;example_user&lt;/em&gt;. Enter dbo in the Default Schema field.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/user-setup-1.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;In Owned Schemas, select the &lt;em&gt;db_owner&lt;/em&gt; schema.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/user-setup-2.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;In Membership select &lt;em&gt;db_owner&lt;/em&gt; as the role.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/user-setup-3.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Click OK once you have these settings configured.&lt;/p&gt;
+
+&lt;p&gt;We are done with Management studio for now, let’s extract our Umbraco CMS files where we would like to have our site. I use the default Projects folder that Visual Studio creates so I am going to extract my Umbraco.CMS.7.2.8 zip into my C:/Documents/Visual Studio 2015/Projects/example folder.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/projects-folder.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;With my files extracted open up Visual Studio and go to File &amp;gt; Open &amp;gt; Web Site.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/vs-open-site.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Navigate to the folder where you extracted your Umbraco files and select the folder. In my case I am selecting example.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/file-system.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Click Open and Visual Studio will load your website. Start debugging your website by either hitting F5, or the play icon in the toolbar.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/vs-debug.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Visual Studio will take a moment to build your website and it will open in the browser. You may be prompted to Modify your web config file to enable debugging, click Okay.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/vs-debug-prompt.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;When it is finished you will be presented with the Umbraco install screen. Enter your name, email and password. Check or Uncheck the news checkbox, this is your preference, and click the Customize button.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/install-step-1.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Next we are going to configure our database. Select Microsoft SQL Server from the Database type drop down list.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/install-step-2.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;We are now presented with our options to configure our database. Here we need to enter our Server name, Database name, database Login and Password. This is where you will need your credentials that you setup earlier.&lt;/p&gt;
+
+&lt;p&gt;For my example I am going to enter my server name, which you can find in Management Studio or by typing in the command prompt window SQLCMD –L to get your database name. This is something that you would have setup when you installed Management Studio.&lt;/p&gt;
+
+&lt;p&gt;Management Studio:&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/sql-server-name.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;CMD Prompt:&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/cmd.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;My Database name was example so I am going to enter that in the Database name field. My user was example_user so I am putting that in the Login field and entering the password I created for this user into the Password field.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/install-step-2-b.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Once you have filled out all the information, click Continue. If your information was correct Umbraco will display a Install a starter website prompt. You can chose to either install a starter website or click No thanks. Once Umbraco finishes setting up your website you will be taken straight into the back office. This is where the fun begins!&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-09-05/backoffice.jpg&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+</description>
+                <pubDate>Sat, 05 Sep 2015 00:00:00 -0700</pubDate>
+                <link>http://localhost:4000/articles/setting-up-umbraco-locally/</link>
+                <guid isPermaLink="true">http://localhost:4000/articles/setting-up-umbraco-locally/</guid>
+                
+                <category>umbraco7</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>RSS To HTML With Razor</title>
+                <description>&lt;p&gt;Here is a simple macro that you can use to pull in your RSS feed and output an HTML unordered list. The functionality is simple and setup is minimal.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;In Umbraco 7, navigate to your Developer section and right click on Partial View Macro Files and Click Create.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-08-09/create-macro.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Name your new macro what works for you. Here I’ve named this RSS2List. Keep the Create Macro checkbox selected and Create your new macro.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-08-09/name-macro.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Now that we have our new macro created, Let’s add some parameters to it to make this even more customizable for your users. Expand the Macros area in the Developer section and click on the Parameters tab. We need to create 2 new parameters to allow us some extra flexibility and re-usability with this macro, just in case we want to use it multiple times in our site for different RSS feeds. Create the following two parameters on your macro and click the Save button when you are finished.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-08-09/parameters.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Now that we have our macro setup, lets add the following code to your partial view macro file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cshtml&quot;&gt;@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using System.Xml;
+ 
+@{
+    var url = &quot;&quot;;
+    if (Model.MacroParameters[&quot;rssUrl&quot;].ToString() != &quot;&quot;)
+    {
+        url = Model.MacroParameters[&quot;rssUrl&quot;].ToString();
+    }
+ 
+    int i = 1;
+    var amt = 5;
+    if(Model.MacroParameters[&quot;amount&quot;].ToString() != &quot;&quot;)
+    {
+        amt = Int32.Parse(Model.MacroParameters[&quot;amount&quot;].ToString());
+    }
+ 
+    if (url != &quot;&quot;)
+    {
+        XmlDocument xml = new XmlDocument();
+        xml.Load(url);
+        XmlNodeList nodes = xml.SelectNodes(&quot;//item&quot;);
+ 
+        &amp;lt;ul class=&quot;rss-list&quot;&amp;gt;
+            @foreach (XmlNode node in nodes)
+            {
+                if (i &amp;lt;= amt)
+                {
+                    var title = node.SelectSingleNode(&quot;title&quot;).InnerText;
+                    var link = node.SelectSingleNode(&quot;link&quot;).InnerText;
+                    &amp;lt;li&amp;gt;
+                        &amp;lt;a href=&quot;@link&quot; target=&quot;_blank&quot;&amp;gt;@title&amp;lt;/a&amp;gt;
+                    &amp;lt;/li&amp;gt;
+                }
+ 
+                i++;
+            }
+        &amp;lt;/ul&amp;gt;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can either put this macro directly into a template and fill out the parameters like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Umbraco.RenderMacro(&quot;RSS2List&quot;, new { rssUrl = &quot;http://www.myrssfeed.com/&quot;, amount = &quot;10&quot; })&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Or you can choose to allow the Macro in the rich text editor by selecting the Use in richtext editor and the grid checkbox on the Macro properties tab of the macro itself.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-08-09/macro-properties.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;Either way will allow you to setup templates that have built in feeds or allow users to add a feed into the rich text editor and display a feed that they choose. The outputted markup is just an un-ordered list with a class of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.rss-list&lt;/code&gt;. The list items contain the name of the rss item as a link to the item. This list can be styled in the CSS of your site to give a consistent look for your users. You can use css targeting to figure out where they have put it if it is in either a main content area or a sidebar and style it accordingly.&lt;/p&gt;
+
+&lt;p&gt;Hopefully this gets you what you need. Enjoy!&lt;/p&gt;
+</description>
+                <pubDate>Sun, 09 Aug 2015 00:00:00 -0700</pubDate>
+                <link>http://localhost:4000/articles/rss-to-html-with-razor/</link>
+                <guid isPermaLink="true">http://localhost:4000/articles/rss-to-html-with-razor/</guid>
+                
+                <category>umbraco7</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>Make Your Content Editors Happy</title>
+                <description>&lt;p&gt;There were many great talks this year at Code Garden and one hit really close to home for me because it involves what I do every day at work. Dave Woestenborghs’s talk on making your content editors happy had a lot of excellent points to help people setup content editor friendly Umbraco sites and I thought this would be an excellent topic for a blog post. Here are some takeaways from his talk with my own experience mixed in.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Setting up your Umbraco website starts with your Document Types. I can’t begin to stress how important it is to set these up properly to save everyone time in the future when updating the website. This initial phase probably takes the longest with the planning and evaluation but it has the most impact on your back office and can either help or hinder the amount of code you have to write. This setup is also going to be what the editor’s see when they manage their content and that makes this step even more important!&lt;/p&gt;
+
+&lt;h2 id=&quot;choose-the-right-properties&quot;&gt;Choose the right properties&lt;/h2&gt;
+
+&lt;p&gt;When you setup your document types there are some things to remember when thinking about your content editors. First you need to make sure you use the correct property editors, this is something you determine in your initial design evaluation. Using the correct property editors is going to reduce the amount of properties you need on a document type and make it less confusing for your editors.&lt;/p&gt;
+
+&lt;p&gt;For example, the difference between a textstring or a content picker. These two fields do something completely different and return different values but can both be used as setting link URLs. A textstring can be used to give an editor the freedom to put in their own link, which could be to a media item or a third-party website, whereas the content picker can be used to set a link to a particular content page within the site. Knowing what your editors needs are and if you may need to limit their choices based on design would allow you to determine which property you would need for this item.&lt;/p&gt;
+
+&lt;h2 id=&quot;customize-your-properties&quot;&gt;Customize your properties&lt;/h2&gt;
+
+&lt;p&gt;When you get familiar with the Data Types available in Umbraco your setup becomes simpler because you have a better understanding of what is available to you and how to take advantage of it. One of the more commonly used data types in Umbraco is the Rich Text Editor. The RTE is a great tool and allows your editors to have a lot of control, but sometimes that can be too much control. There are cases where you may need to limit the functionality of the editor, for example, creating a simple editor or removing the ability to insert macros. You can customize the RTE in the Umbraco developer section. By changing the options allowed on the RTE toolbar you can add or remove functionality that the editors can use. You can also setup the image sizes when they are inserted with the RTE. This can default images to the largest size and then let the editor scale them down as needed.&lt;/p&gt;
+
+&lt;p&gt;The RTE also lets you assign a style sheet. This feature in particular is very useful and should almost always be setup to give your editors some styling options for their text. Common properties include header tags, aligning images, color options, and button link styles.&lt;/p&gt;
+
+&lt;p&gt;Enter, user style sheet…&lt;/p&gt;
+
+&lt;p&gt;For those of us who use Visual Studio, or another IDE to write code (that is anything besides Umbraco’s editor) the user style sheet comes in handy. The user style sheet is usually very simple and just includes an import rule of the main css file used by the site.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@import url(&apos;/css/main.css&apos;);&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Having the user style sheet setup allows developers to modify the css without worrying that Umbraco is going to overwrite their file with a cached version when a style is added to the RTE (it happens).&lt;/p&gt;
+
+&lt;p&gt;By assigning the user style sheet to the RTE we can define the users’ allowed styles here.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-06-20/user-style-sheet.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;p&gt;We can also specify how the user style displays in the RTE. For example, say you have a button class that has been added to a link in the RTE. The button style has white text. When the user sees this rendered in the RTE they can no longer see the button text because the white color blends in with the white RTE background. Technically, this has the initial desired effect because we want the user styles to display how they appear on the front end of the site, but this one in particular needs to show differently so that the user can still see their content. This is where you would modify the user style sheet to change the color of the button class.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;
+    &lt;p&gt;&lt;i class=&quot;fa-solid fa-circle-info&quot;&gt;&lt;/i&gt; &lt;strong&gt;TIP:&lt;/strong&gt; The user style sheet is only used by the RTE, the website does not reference the user style sheet.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&apos;/css/main.css&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ 
+&lt;span class=&quot;nc&quot;&gt;.mceContentBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.mceEditorIframe&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;#FFFFFF&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;!important&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* EDITOR PROPERTIES - PLEASE DON&apos;T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.btn&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;btn-primary&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;#000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once you update the user style sheet and refresh Umbraco, the user will see the updated button color in their RTE while the front end of the website remains the desired white color.&lt;/p&gt;
+
+&lt;p&gt;Setting up these properties can be very helpful to your editors but fair warning, if you give an editor too many options it can get confusing and even messy. You know that whole saying about “give them an inch and they take a mile”? It happens, so just keep it in mind and make sure you point it out while you are training your editors so they know there are some expectations.&lt;/p&gt;
+
+&lt;h2 id=&quot;group-your-properties&quot;&gt;Group your properties&lt;/h2&gt;
+
+&lt;p&gt;When you are setting up your document types, you can group your properties by tabs. This is a simple way to keep things organized on your document types and makes it easier for your editors to find things. For example, you have can have a Footer tab that includes all the properties related to your website’s footer and a Content tab that includes properties for the basic content on the page.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;
+    &lt;p&gt;&lt;i class=&quot;fa-solid fa-circle-info&quot;&gt;&lt;/i&gt; &lt;strong&gt;TIP:&lt;/strong&gt; A good way to setup your properties is by how they appear on the front end of your website. You should also try to organize tabs this way too when possible.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;describe-your-properties&quot;&gt;Describe your properties&lt;/h2&gt;
+
+&lt;p&gt;Document types allow you to add a description on your properties. When you are adding a new property, fill out the Description textbox in order to show a note below the label. This note can help your users in figuring out what to do with this property if it may not be entirely obvious. You can use these notes for things like listing image dimensions, or letting the editor know that if the field is empty the name will be used as a backup.&lt;/p&gt;
+
+&lt;h2 id=&quot;use-descriptive-labels&quot;&gt;Use descriptive labels&lt;/h2&gt;
+
+&lt;p&gt;Use naming conventions that are easy to understand. Don’t label your properties with your company jargon that only people who work on your team can understand. Save that for your aliases. Your property labels need to be simple and easily understood by your editors who usually aren’t as technical savvy as developers.&lt;/p&gt;
+
+&lt;p&gt;You can also apply this concept to naming your macros that are allowed in the RTE. They don’t have to be super long, just something that quickly gets the point across like Bios List. Just keep it simple!&lt;/p&gt;
+
+&lt;h2 id=&quot;using-packages&quot;&gt;Using Packages&lt;/h2&gt;
+
+&lt;p&gt;There are plenty of helpful packages out there that can help improve your editors experience and make setting up Umbraco sites a bit easier but be wary of using too many packages. Typically I may install anywhere from 1 to 3 packages on my site setups. I am not a big fan of using a ton of packages and I would prefer to write my own code if it is something within my realm of know how.&lt;/p&gt;
+
+&lt;p&gt;A few awesome (FREE) packages from the Umbraco community include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Archetype&lt;/li&gt;
+  &lt;li&gt;Doc Type Grid Editor&lt;/li&gt;
+  &lt;li&gt;Nested Content&lt;/li&gt;
+  &lt;li&gt;Bookshelf&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’ve found some of these very helpful when setting up Umbraco installs and if you haven’t heard of them you should definitely check them out. Have any other tips you’d like to share that I didn’t cover here? Let me know in the comments below!&lt;/p&gt;
+</description>
+                <pubDate>Sat, 20 Jun 2015 00:00:00 -0700</pubDate>
+                <link>http://localhost:4000/articles/make-your-content-editors-happy/</link>
+                <guid isPermaLink="true">http://localhost:4000/articles/make-your-content-editors-happy/</guid>
+                
+                <category>umbraco7</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>What I Love About Umbraco</title>
+                <description>&lt;p&gt;Video interview with me, Blake, on what I love about Umbraco. Take a minute and check it out, you may find we have some things in common.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/zvnXUvwvOsY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&quot;transcript&quot;&gt;Transcript:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;What is Umbraco?&lt;/strong&gt; Umbraco is a content management system built on the .net framework and used by major sites around the world including Microsoft, Wired, Heinz, and Vogue.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Why do we use it?&lt;/strong&gt; Umbraco offers a completely customizable solution to designers and developers alike. It also has a remarkably simple user interface which allows content editors to easily manage their website.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What do I like about Umbraco?&lt;/strong&gt; I love Umbraco because of its versatility, plain and simple.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Why did you become certified?&lt;/strong&gt; I became a certified Umbraco developer because the course offered me the opportunity to meet with other Umbraco developers and learn how Umbraco works and see how other people use it.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What makes Umbraco different from other CMSs?&lt;/strong&gt; With Umbraco you don’t have to take someone else’s creation and try to fit your design into it. You get the opportunity to craft a custom user experience, not only for your end users but your content editors. You build the CMS, you mold it to your user’s needs, and you create their experience with it.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What are next steps after Umbraco certification?&lt;/strong&gt; DiscoverTec is currently working on becoming a certified Umbraco partner. They are investing in our education and sending more people to the Umbraco Masterclasses to get certified.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What do you like most about Umbraco?&lt;/strong&gt; What I like most about Umbraco is the community. They have an extremely helpful community full of people who share knowledge and have a common goal.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;What do you like most about working at DT?&lt;/strong&gt; What I like most about working at DiscoverTec is that they support our education and growth by sending us to conferences, training events, and funding our certifications so that we can better support them and our clients.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+                <pubDate>Tue, 19 May 2015 00:00:00 -0700</pubDate>
+                <link>http://localhost:4000/articles/what-i-love-about-umbraco/</link>
+                <guid isPermaLink="true">http://localhost:4000/articles/what-i-love-about-umbraco/</guid>
+                
+                <category>umbraco7</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>Why Choose Umbraco for Your Next Web Project</title>
+                <description>&lt;p&gt;If you are new to Umbraco or looking for good reasons as to why to use Umbraco for your next web project then look no further! Here you will find some of the top reasons why Umbraco is a great choice, and you may even learn a think or two about some Umbraco features. Take a look, and leave a comment if you have some favorite Umbraco features you would like to share.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;core-functionality&quot;&gt;Core functionality&lt;/h2&gt;
+
+&lt;p&gt;Umbraco is very user friendly and easy to learn for content editors, designers, and developers alike. In just a few minutes you can have Umbraco up and ready to go. Umbraco allows your editors to easily create, edit, delete, and organize your content. The content is organized in a tree-like structure that gives you a hierarchy and makes it easy to find your content where some content management systems just give you an area with all your pages and you have to hunt for them with no visual cues of their hierarchy or properties.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-03-31/u-core-functionality.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;the-editor&quot;&gt;The editor&lt;/h2&gt;
+
+&lt;p&gt;Main content on your pages are edited with the rich text editor. Umbraco uses the Tiny MCE WYSIWYG editor that provides many options for formatting your content including applying basic styles, adding/changing images, and updating links. This type of editor is common in content management systems but what sets Umbraco apart is the ability to customize the properties that your editors can manage. When your Umbraco site is set up properly by an Umbraco Certified Developer, you can be certain that you are getting the most control over your site content as possible. Properties that can be easily managed include things like text strings, media pickers, content pickers, image croppers, and multi-node tree pickers. These are just some of the common data types used in Umbraco to allow editors the most control when managing their content.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-03-31/u-editor.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;managing-assets&quot;&gt;Managing assets&lt;/h2&gt;
+
+&lt;p&gt;In common content management systems you will find there is typically a library area designated to manage your website assets or media. Navigating these areas isn’t always user friendly as you are just presented with image thumbnails and no organization. Imagine having to upload multiple images and documents for a single blog post. Now imagine having to do this more than once a day. Coming back to find these images and use them in your content is going to take some time.&lt;/p&gt;
+
+&lt;p&gt;Umbraco really shines in its ability to easily manage assets within your website. The Media section in Umbraco is as simple as drag-and-drop. You can create folders for organization and easily see all the files in a tree-like structure as well as being presented with thumbnails of the images. Umbraco automatically knows what type of file you have uploaded and sets the media item to that type. You are also given the ability to create media items manually if you’d like, but the drag-and-drop feature will really save your editors a lot of time in this area.&lt;/p&gt;
+
+&lt;p&gt;The growing demand for making sites mobile friendly has shown a trend towards image heavy sites where typically you see images as focal points for content or as large background images. Umbraco has a nifty feature built in for image cropping where you can upload a single image, determine what sizes you want the image to appear at and even set the focal point of the image so that that area is centered. This is a feature that will need to be setup by your developer but it unlocks a lot of potential and gives your editors full control over their media on their site.&lt;/p&gt;
+
+&lt;h2 id=&quot;search&quot;&gt;Search&lt;/h2&gt;
+
+&lt;p&gt;Umbraco utilizes the lucence as its search and indexing engine. This is a very powerful and quick search tool that is very easy to implement in sites. The back office search in Umbraco is also very quick to find any content item that contains your search value in order to help your content editors find things even more quickly. You don’t have to worry about manually indexing your content in your site, Umbraco handles this for you and you can be sure that your search is always up-to-date and ready to find things quickly.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-03-31/u-search.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;customization&quot;&gt;Customization&lt;/h2&gt;
+
+&lt;p&gt;With most content management systems on the market, you will notice that you get a lot of fluff out of the box. You login to your site and there is so much stuff there that you don’t even know where to begin to look for things. You will also often find that if you want any feature on your site that wasn’t included in your theme, that it will be very time consuming to get that feature implemented. This is because you are taking someone else’s box, already filled with things and trying to add your own stuff into the mix. Essentially, trying to cram too many things into one box. These content management systems typically do not make it easy for content editors to manage content because it is simply hard to find where you need to go to start.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Umbraco is different. Customization is what sets Umbraco apart from any other content management system on the market today.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With Umbraco you don’t start off with clutter, in fact it’s just the opposite, you start out with nothing. Umbraco can be customized to fit your personalized website. No two Umbraco instances are set up the same. This customizability gives Umbraco the ability to be molded into a friendly user experience for content editors, and makes it less of a hassle to manage website content. This also allows for developers to easily extend Umbraco to work with other third-party applications or new custom features.&lt;/p&gt;
+
+&lt;h2 id=&quot;user-interaction&quot;&gt;User Interaction&lt;/h2&gt;
+
+&lt;p&gt;Most websites, if not all are equipped with some sort of form or feedback request from their visitors asking them to contact the company for whatever reason. At DiscoverTec we have built a custom form handler package that gives the editor a great deal of control over how their forms work. While leaving the complicated bits to the back end developers, editors can easily manage who their form emails to, the from address, the email template, send out user confirmation emails, and confirmation pages. For those who aren’t clients of DiscoverTec, Umbraco has built a very useful tool called Forms. This is the integration of their Contour system built right into Umbraco. The feature is a paid feature but your users will find it incredibly easy to setup and manage forms with this tool. This package even gives them the ability to add or edit form fields, choose the validation on fields, and the workflow associated with the form on submission.&lt;/p&gt;
+
+&lt;p&gt;If your Umbraco site has been built using the members feature, then content editors also manage their website users from within Umbraco easily. Members are setup for each user registered on your site and the data for their profile is then saved and easily accessible in the Members section of Umbraco. The Members API is built into Umbraco for developers to make use of this feature when building out this functionality in a site. How the members are setup is completely determined by the client’s needs.&lt;/p&gt;
+
+&lt;h2 id=&quot;roles-and-permissions&quot;&gt;Roles and permissions&lt;/h2&gt;
+
+&lt;p&gt;Since Umbraco is so customizable, it can scale quite easily to manage small or large websites, including the roles and permissions for people who manage the website. Umbraco’s User section allows editors who have access to this section to setup users who can manage anything with Umbraco. You can choose to only allow people access to certain sections, such as content and media, or limit them to a particular media folder and maybe just the ability to edit the blog on your site. You can also set permissions for users who just edit content and then send it to the publisher to be reviewed. All permissions are completely customizable in Umbraco by either setting up a user type as needed or editing your specific user’s permissions. Not only do you get the customization with roles and permissions, but you can also subscribe to email notifications on when content is updated. You actually can pick which individual item you would like to be notified of or choose them all! Be warned, depending on your amount of users managing the site it could be a lot of emails if you subscribe to everything.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-03-31/u-permissions.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-03-31/u-users.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;versioning&quot;&gt;Versioning&lt;/h2&gt;
+
+&lt;p&gt;With the user roles, permissions, and notifications setup you never have to worry about making changes to your site accidentally. However if something were to slip through the cracks, Umbraco has a handy roll back feature, as well as an audit trail so that you can find out where things slipped. You can easily see what changes were made and when by color coded edits in the roll back history. This allows you to quickly see what was removed and what was added in this version history.&lt;/p&gt;
+
+&lt;figure class=&quot;image-card width-wide caption&quot;&gt;
+  &lt;img src=&quot;/images/posts/2015-03-31/u-rollback.png&quot; alt=&quot;&quot; class=&quot;img-accent&quot; /&gt;
+  
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;multi-website-support&quot;&gt;Multi-website support&lt;/h2&gt;
+
+&lt;p&gt;Umbraco allows you to setup as many sites in one single install as you like. Fair warning though, with any content management system this can become limited because of performance issues. With that said, there have been proven cases where 40+ different high traffic sites have been implemented from a single Umbraco installation. If you don’t believe me, you should check out Umbraco’s annual CodeGarden conference. It is amazing what you will learn there from the speakers there.&lt;/p&gt;
+
+&lt;h2 id=&quot;multilingual-support&quot;&gt;Multilingual support&lt;/h2&gt;
+
+&lt;p&gt;One of the more common reasons to have multiple sites on one Umbraco installation is for multilingual purposes. Umbraco supports multilingual sites right ‘out of the box’. Some config settings will need to be modified but any Certified Umbraco Developer can help you implement this feature into Umbraco without compromising your website’s performance. Umbraco’s HQ has also been working on a versioning system for individual pages where you can easily manage the different language versions of one page, right from the same content item in Umbraco. This was actually demo’ed at CodeGarden14 by Niels Hartvig, chief Unicorn and founder of Umbraco.&lt;/p&gt;
+</description>
+                <pubDate>Tue, 31 Mar 2015 00:00:00 -0700</pubDate>
+                <link>http://localhost:4000/articles/why-choose-umbraco-for-your-next-web-project/</link>
+                <guid isPermaLink="true">http://localhost:4000/articles/why-choose-umbraco-for-your-next-web-project/</guid>
+                
+                <category>umbraco7</category>
+                
+                
+            </item>
+        
+    </channel>
+</rss>

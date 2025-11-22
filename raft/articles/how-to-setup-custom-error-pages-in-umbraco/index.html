@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How To Setup Custom Error Pages in Umbraco</title>
+  <meta name="description" content="How to setup custom 404 error pages in Umbraco 7, what does a 500 internal server error mean and some tips for what to put on your error pages to help your v...">
+  <link rel="canonical" href="http://localhost:4000/articles/how-to-setup-custom-error-pages-in-umbraco/">
+  <link rel="alternate" type="application/rss+xml" title="HelloBlake Feed"
+    href="http://localhost:4000/feed.xml">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+  
+  <!--Open Graph-->
+  <meta property="og:title" content="How To Setup Custom Error Pages in Umbraco" />
+  <meta property="twitter:title" content="How To Setup Custom Error Pages in Umbraco" />
+  <meta property="og:description" content="How to setup custom 404 error pages in Umbraco 7, what does a 500 internal server error mean and some tips for what to put on your error pages to help your v..." />
+  <meta property="twitter:description" content="How to setup custom 404 error pages in Umbraco 7, what does a 500 internal server error mean and some tips for what to put on your error pages to help your v..." />
+  <meta property="og:type" content="" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:url" content="http://localhost:4000/articles/how-to-setup-custom-error-pages-in-umbraco/" />
+  <meta property="twitter:url" content="http://localhost:4000/articles/how-to-setup-custom-error-pages-in-umbraco/" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable">Skip to Main Content</a>
+
+  <div id="page" class="site">
+    <div class="inner">
+      <header class="site-header">
+  
+  <p class="site-title"><a class="logo-text" href="/">HelloBlake</a></p>
+  
+  <nav class="site-navigation">
+    <div class="site-navigation-wrap">
+      <h2 class="screen-reader-text">Main navigation</h2>
+      <ul class="menu">
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/community/">Community</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/resume/">Resume</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/archive/">Archive</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="mailto:hi@helloblake.com">Contact</a>
+        </li>
+        
+      </ul><!-- .menu -->
+      <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
+          class="icon-close" aria-hidden="true"></span></button>
+    </div><!-- .site-navigation-wrap -->
+  </nav><!-- .site-navigation -->
+  <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+</header>
+
+
+      <div id="content">
+        <main class="main-content fadeInDown delay_075s">
+
+  <article class="post">
+    <header class="post-header">
+      <time class="post-date" datetime="2014-08-30">August 30, 2014</time>
+      <h1 class="post-title">How To Setup Custom Error Pages in Umbraco</h1>
+      <div class="post-meta">
+        By <span class="post-author">Blake Watt</span><span class="post-tags"> in <a href="/archive/#umbraco4" rel="tag">umbraco4</a></span>
+      </div><!-- .post-meta -->
+      
+    </header><!-- .post-header -->
+    <div class="post-content">
+      
+      
+      
+        <div class="alert alert-warning" role="alert">
+    <p>This article is outdated and while some concepts may apply, the code samples may not work.</p>
+</div>
+      
+      <p>There are a lot of different error codes that can be returned when you hit something on the internet that no longer exists or you don’t have access to. Typical error messages that I’ve run across (chances are you have too) include the dreaded 500 internal server error (I hate when I see these), 403 forbidden, and probably the most common 404 not found errors.</p>
+
+<!--more-->
+
+<h2 id="500-errors-explained">500 Errors Explained</h2>
+
+<p>500 errors usually require some more work to get fixed and involve making sure that you have your detailed error reporting turned on in IIS and/or ASP.NET. Personally if I can’t figure out if this happened from a change I just made or if I can’t interpret the detailed error message myself I ask a back-end developer for help! It’s okay to ask for help sometimes if you need it. Don’t be afraid! Ask someone who knows, and then ask them to explain it to you in terms that you can understand so that if you run across this problem in the future you can try to fix it yourself. Unfortunately since this error is on the server before Umbraco gets started, usually a pretty fatal error, you can’t use Umbraco’s error handling to display a page for this error.</p>
+
+<h2 id="403-error-details">403 Error Details</h2>
+
+<p>403 errors happen when you have come across a page or file online that you don’t have access to. More details about the different types of 403 substatus errors you can come across are here.</p>
+
+<h2 id="umbraco-custom-404-error-pages">Umbraco Custom 404 Error Pages</h2>
+
+<p>The most common error I plan for when I’m setting up an Umbraco site is a 404 error. Sometimes mistakes happen when typing in a URL or if a redirect isn’t working properly after a restructure of a website.</p>
+
+<p>Setting up error pages in Umbraco is actually pretty easy. First you need to decide what errors you want to set up pages for. Here I have a 404 textpage setup with some basic information stating that the page can’t be found and I give the user some alternatives like searching for something or going back home to try to find what they are looking for.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-08-30/404-page.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Once you have your error page setup in Umbraco, navigate to your properties tab and get the ID for your new page. We want to keep this handy because we are going to need it for the next step.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-08-30/404-page-properties.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Let’s go in our file system and navigate to the umbracosettings.config file in the config folder. Umbraco has done a great job at commenting the file so you can try to figure out what some things do in this file. The <code class="language-plaintext highlighter-rouge">&lt;errors&gt;</code> section will appear at the top of the config file. The <code class="language-plaintext highlighter-rouge">&lt;error404&gt;</code> tag is where we are going to define the ID for our custom error page that we have setup for 404 errors. The culture option defines which language you are setting this error page for. When you have a multilingual site you can setup different pages in each language and have those multilingual versions of your errors redirect to the specified page’s ID.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;errors&gt;
+      &lt;error404&gt;1113&lt;/error404&gt;
+      
+        &lt;!--&lt;error404&gt;
+            &lt;errorPage culture="default"&gt;1&lt;/errorPage&gt;
+            &lt;errorPage culture="en-US"&gt;200&lt;/errorPage&gt;
+        &lt;/error404&gt;--&gt;
+       
+    &lt;/errors&gt;
+</code></pre></div></div>
+
+<p>In our code we have setup our <code class="language-plaintext highlighter-rouge">&lt;error404&gt;</code> to point to our custom 404 page. Since this site isn’t multilingual I’ve left off the culture. In the commented version you can see the option <code class="language-plaintext highlighter-rouge">culture=”default”</code> which tells Umbraco to use this page for the default language.</p>
+
+<p>Now if you have your files saved on your site you may notice that your new error page isn’t showing up just yet. With IIS 7.5+ you need to add a line to your web.config in order to let your custom errors show up. Add <code class="language-plaintext highlighter-rouge">&lt;httpErrors existingResponse="PassThrough"/&gt;</code> to your web.config file at the end of the <code class="language-plaintext highlighter-rouge">system.webServer</code> section.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;system.webServer&gt;
+     {...}
+     &lt;httpErrors existingResponse="PassThrough"/&gt;
+&lt;/system.webServer&gt;
+</code></pre></div></div>
+
+<p>Once you have done this, try navigating to a page that you know doesn’t exist. You should see Umbraco displays your custom error page title tag and content, but the URL will remain what the user has typed in that doesn’t actually exist.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-08-30/not-found-page.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Congratulations! That wasn’t too bad was it? What errors do you typically setup custom error pages for? Sound off in the comments below! Thanks for visiting.</p>
+
+    </div><!-- .post-content -->
+    <!-- <div class="post-share">
+      <span>Share:</span>
+      <a target="_blank"
+        href="https://twitter.com/intent/tweet?text=How%20To%20Setup%20Custom%20Error%20Pages%20in%20Umbraco&amp;url=http://localhost:4000/articles/how-to-setup-custom-error-pages-in-umbraco/" rel="noopener">Twitter</a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/how-to-setup-custom-error-pages-in-umbraco/&amp;t=How%20To%20Setup%20Custom%20Error%20Pages%20in%20Umbraco" rel="noopener">Facebook</a>
+    </div> --><!-- .share-post -->
+    <div class="author-box">
+      
+      <div class="author-avatar" style="background-image: url('/images/blake.jpg')"><span class="screen-reader-text">Blake Watt's Picture</span></div>
+      
+      <div class="author-details">
+        <h2 class="author-title">About Blake Watt</h2>
+        <div class="author-bio"><p>Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.</p>
+</div>
+        
+        <span class="author-location">Spokane, WA</span>
+        
+        
+        <span class="author-website"><a href="http://helloblake.com" target="_blank" rel="noopener">http://helloblake.com</a></span>
+        
+      </div><!-- .author-details -->
+    </div><!-- .author-box -->
+  </article><!-- .post -->
+
+  
+    
+      <div id="disqus_thread"></div>
+<script>    
+    var disqus_config = function () {
+    this.page.url = 'https://helloblake.com/articles/how-to-setup-custom-error-pages-in-umbraco/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/articles/how-to-setup-custom-error-pages-in-umbraco/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://helloblake.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//helloblake.disqus.com/count.js" async></script>
+    
+  
+
+</main><!-- .main-content -->
+      </div>
+      <footer class="site-footer">
+  <div class="offsite-links">
+    
+      
+<a href="https://github.com/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+  <span class="screen-reader-text">GitHub</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bkclerke/" target="_blank" rel="noopener">
+  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+  <span class="screen-reader-text">LinkedIn</span>
+</a>
+
+<a href="https://umbracocommunity.social/@helloblake" target="_blank" rel="me">
+  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+  <span class="screen-reader-text">Mastodon</span>
+</a>
+
+<a href="http://discordapp.com/users/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+  <span class="screen-reader-text">Discord</span>
+</a>
+
+
+    
+  </div><!-- .offsite-links -->
+  <div class="footer-bottom">
+    <div class="site-info">
+      <!-- 
+ -->
+      <p>&copy; 2025 HelloBlake</p>
+    </div><!-- .site-info -->
+    <a href="#page" id="back-to-top" class="back-to-top"><span class="screen-reader-text">Back to the top </span>&#8593;</a>
+  </div><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
+
+    </div><!-- .inner -->
+  </div><!-- .site -->
+
+  <!-- Scripts -->
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB3CZEHJ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SB3CZEHJ16');
+</script>
+  
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+</body>
+</html>

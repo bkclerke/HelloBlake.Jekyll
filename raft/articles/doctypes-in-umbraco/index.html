@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting Up Document Types in Umbraco</title>
+  <meta name="description" content="Here are some tips to how you can evaluate your website design and determine how to setup Umbraco’s Document Types to fit your needs.">
+  <link rel="canonical" href="http://localhost:4000/articles/doctypes-in-umbraco/">
+  <link rel="alternate" type="application/rss+xml" title="HelloBlake Feed"
+    href="http://localhost:4000/feed.xml">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+  
+  <!--Open Graph-->
+  <meta property="og:title" content="Setting Up Document Types in Umbraco" />
+  <meta property="twitter:title" content="Setting Up Document Types in Umbraco" />
+  <meta property="og:description" content="Here are some tips to how you can evaluate your website design and determine how to setup Umbraco’s Document Types to fit your needs." />
+  <meta property="twitter:description" content="Here are some tips to how you can evaluate your website design and determine how to setup Umbraco’s Document Types to fit your needs." />
+  <meta property="og:type" content="" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:url" content="http://localhost:4000/articles/doctypes-in-umbraco/" />
+  <meta property="twitter:url" content="http://localhost:4000/articles/doctypes-in-umbraco/" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable">Skip to Main Content</a>
+
+  <div id="page" class="site">
+    <div class="inner">
+      <header class="site-header">
+  
+  <p class="site-title"><a class="logo-text" href="/">HelloBlake</a></p>
+  
+  <nav class="site-navigation">
+    <div class="site-navigation-wrap">
+      <h2 class="screen-reader-text">Main navigation</h2>
+      <ul class="menu">
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/community/">Community</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/resume/">Resume</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/archive/">Archive</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="mailto:hi@helloblake.com">Contact</a>
+        </li>
+        
+      </ul><!-- .menu -->
+      <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
+          class="icon-close" aria-hidden="true"></span></button>
+    </div><!-- .site-navigation-wrap -->
+  </nav><!-- .site-navigation -->
+  <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+</header>
+
+
+      <div id="content">
+        <main class="main-content fadeInDown delay_075s">
+
+  <article class="post">
+    <header class="post-header">
+      <time class="post-date" datetime="2014-10-13">October 13, 2014</time>
+      <h1 class="post-title">Setting Up Document Types in Umbraco</h1>
+      <div class="post-meta">
+        By <span class="post-author">Blake Watt</span><span class="post-tags"> in <a href="/archive/#umbraco4" rel="tag">umbraco4</a>, <a href="/archive/#umbraco7" rel="tag">umbraco7</a></span>
+      </div><!-- .post-meta -->
+      
+    </header><!-- .post-header -->
+    <div class="post-content">
+      
+      
+      
+        <div class="alert alert-warning" role="alert">
+    <p>This article is outdated and while some concepts may apply, the code samples may not work.</p>
+</div>
+      
+      <p>When you are getting started with Umbraco, inevitably you will have to setup your DocTypes. Setting these up properly will help you keep your site organized and manageable as your site grows. DocTypes are powerful tools in Umbraco that are completely customizable to the data you need on your website.</p>
+
+<!--more-->
+
+<h2 id="the-design">The Design</h2>
+
+<p>The initial concept of what data you need in your website will begin with the design. Some designers may just take a website and run with it, not envisioning how the design is actually going to work when it is built out. The idea behind my Umbraco process for setup begins with the website design itself. During the design I keep in mind how Umbraco works so I can combine a nice experience with the least amount of work for the end user maintaining the website.</p>
+
+<h2 id="the-setup">The Setup</h2>
+
+<p>Here is the re-design of my wedding website.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-10-13/hp-explain.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>The homepage was designed with Bootstrap’s 12 column grid in Photoshop. I took the homepage design and divided it up to figure out what I wanted to be editable for this particular “Homepage” DocumentType. The design is really simple so there isn’t going to be much editable content on the homepage of this website. Looking at the design we can determine that the properties on this document type are:</p>
+
+<ol>
+  <li><em>Media Picker</em> for the background image</li>
+  <li><em>Textstring</em> for the blog section title</li>
+  <li><em>Textstring</em> for the gallery section title</li>
+</ol>
+
+<p>The rest of the content is dynamic, which a macro can be used for. Familiarizing yourself with the different DataTypes in Umbraco will help you to figure out what properties you will need to use. The footer section of the design has a dynamic navigation and static content footer that will be incorporated into the Master template since it is the same on every page throughout the site.</p>
+
+<p>Now that we know what properties are needed, let’s set up our document type in Umbraco. Head over to the Settings section and right click on Document Types and name your new document type. You can choose whether to create a matching template or not and choose a master document type. First we are going to setup a Master document type without a template or master. From my experience with Umbraco it has worked best to setup a master document type that contains a “Content” and an “SEO” tab.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-10-13/master-tabs.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>The content tab is left blank so that any document types that are children of the master will inherit this tab and you can put the page’s content properties on that tab. For basic purposes it’s best to setup a page title tag and meta description fields on your SEO tab.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-10-13/master-properties.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Once you have your master document type setup with the general properties that all pages will inherit, it’s time to make our custom Homepage DocumentType. Make sure that when you create your new document type that it is a child of the Master DocumentType. Doing so will make sure that your properties on the master are inherited by the new document type.</p>
+
+<p>To create a new property on your document type, click “Click here to add a new property”.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-10-13/add-new-property.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>When creating your new property there are a few things that you need to fill out including:</p>
+
+<ol>
+  <li>Name – try to use something that obviously states what the field is to be used for.</li>
+  <li>Alias – this will auto populate once you name your field. Camel casing is required. You will use this alias to reference this field in your templates and macroscripts.</li>
+  <li>Type – this is where you pick the datatype that you want this field to be. Datatypes are built into Umbraco.</li>
+  <li>Tab – use the drop down to select which tab you want this new property to appear on.</li>
+  <li>Mandatory (optional) – you can mark this field as required so that the document won’t publish unless this field is completed.</li>
+  <li>Validation (optional) – use a regular expression to validate the input of this field.</li>
+  <li>Description (optional) – use this to write a description about this field. The description will appear below the label in Umbraco on the node.</li>
+</ol>
+
+<p>Once you have your properties added to your document type, double check that you have saved your changes.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-10-13/homepage-properties.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Since this is the homepage we don’t need to bother checking any options on the structure tab (version 4).</p>
+
+<p><em>In version 7 you will have the checkbox available that allows this node at the root level. To keep things simple for your webmasters, check this box for only the nodes you wish to have at the root level, typically this will only be your homepage.</em></p>
+
+<p>The structure tab is where you select which document types will be allowed to be children of the selected document type. For example, after the homepage document type is created we would need to setup our textpage document type. The homepage would need to allow the textpage document type on this structure tab before you can create a textpage underneath the homepage in the Content section.</p>
+
+<p>The info tab is where you can choose basic information for your new document type. The Name and alias are setup automatically when you create a new document type in Umbraco and give it a name. The Icon and Thumbnail (version 4) drop down lists are available to select your image for when you create a new document in the Content section. The icon will appear in the tree next to your new website content.</p>
+
+<p><em>In version 7 you have the Icon that you can select for your content but no thumbnail is required.</em></p>
+
+<p><strong>Tip:</strong> If you want to add your own custom icons for Umbraco version 4 you can upload your images into the <code class="language-plaintext highlighter-rouge">umbraco/images/umbraco</code> or <code class="language-plaintext highlighter-rouge">umbraco/images/thumbnails</code> folders in order to use your new icons from the drop down menus. The umbraco folder contains the small icons and the thumbnails is where you would put your larger thumbnail images that correspond with your new icons. The thumbnail image is only shown at the time of creating a new document type in Umbraco.</p>
+
+<p>The description of your document type will appear when you create a new document in the Content section. Allowed Templates lets you assign templates to be used with this document type. Just know that your template will need to correspond to the data on your document type. You can also select the default template to be used with this new document type (if you have multiple allowed templates).</p>
+
+<p>Once you have your document type customized and setup it’s time to create it in the content section. In our case we are set to go but if you have other document types you are trying to make in the Content section and don’t see them in your list when you right click and hit Create, then go back to the Settings section and check the Allowed Child Node Types in the structure tab to make sure you have permission to make your new document.</p>
+
+<p>Try to keep your document types organized and not overly complicated for your users who are going to be managing the site. Remember to use the descriptions for your properties if you need to since this can help improve your users experience when managing content in Umbraco.</p>
+
+<p>How do you setup your DocumentTypes? Do you have any tips to share in the comments below? I’d love to hear!</p>
+
+    </div><!-- .post-content -->
+    <!-- <div class="post-share">
+      <span>Share:</span>
+      <a target="_blank"
+        href="https://twitter.com/intent/tweet?text=Setting%20Up%20Document%20Types%20in%20Umbraco&amp;url=http://localhost:4000/articles/doctypes-in-umbraco/" rel="noopener">Twitter</a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/doctypes-in-umbraco/&amp;t=Setting%20Up%20Document%20Types%20in%20Umbraco" rel="noopener">Facebook</a>
+    </div> --><!-- .share-post -->
+    <div class="author-box">
+      
+      <div class="author-avatar" style="background-image: url('/images/blake.jpg')"><span class="screen-reader-text">Blake Watt's Picture</span></div>
+      
+      <div class="author-details">
+        <h2 class="author-title">About Blake Watt</h2>
+        <div class="author-bio"><p>Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.</p>
+</div>
+        
+        <span class="author-location">Spokane, WA</span>
+        
+        
+        <span class="author-website"><a href="http://helloblake.com" target="_blank" rel="noopener">http://helloblake.com</a></span>
+        
+      </div><!-- .author-details -->
+    </div><!-- .author-box -->
+  </article><!-- .post -->
+
+  
+    
+      <div id="disqus_thread"></div>
+<script>    
+    var disqus_config = function () {
+    this.page.url = 'https://helloblake.com/articles/doctypes-in-umbraco/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/articles/doctypes-in-umbraco/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://helloblake.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//helloblake.disqus.com/count.js" async></script>
+    
+  
+
+</main><!-- .main-content -->
+      </div>
+      <footer class="site-footer">
+  <div class="offsite-links">
+    
+      
+<a href="https://github.com/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+  <span class="screen-reader-text">GitHub</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bkclerke/" target="_blank" rel="noopener">
+  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+  <span class="screen-reader-text">LinkedIn</span>
+</a>
+
+<a href="https://umbracocommunity.social/@helloblake" target="_blank" rel="me">
+  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+  <span class="screen-reader-text">Mastodon</span>
+</a>
+
+<a href="http://discordapp.com/users/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+  <span class="screen-reader-text">Discord</span>
+</a>
+
+
+    
+  </div><!-- .offsite-links -->
+  <div class="footer-bottom">
+    <div class="site-info">
+      <!-- 
+ -->
+      <p>&copy; 2025 HelloBlake</p>
+    </div><!-- .site-info -->
+    <a href="#page" id="back-to-top" class="back-to-top"><span class="screen-reader-text">Back to the top </span>&#8593;</a>
+  </div><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
+
+    </div><!-- .inner -->
+  </div><!-- .site -->
+
+  <!-- Scripts -->
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB3CZEHJ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SB3CZEHJ16');
+</script>
+  
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+</body>
+</html>

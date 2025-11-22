@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting Up Umbraco Locally</title>
+  <meta name="description" content="How to setup Umbraco locally with Microsoft SQL Server Management Studio and Visual Studio 2015 in this step-by-step tutorial.">
+  <link rel="canonical" href="http://localhost:4000/articles/setting-up-umbraco-locally/">
+  <link rel="alternate" type="application/rss+xml" title="HelloBlake Feed"
+    href="http://localhost:4000/feed.xml">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+  
+  <!--Open Graph-->
+  <meta property="og:title" content="Setting Up Umbraco Locally" />
+  <meta property="twitter:title" content="Setting Up Umbraco Locally" />
+  <meta property="og:description" content="How to setup Umbraco locally with Microsoft SQL Server Management Studio and Visual Studio 2015 in this step-by-step tutorial." />
+  <meta property="twitter:description" content="How to setup Umbraco locally with Microsoft SQL Server Management Studio and Visual Studio 2015 in this step-by-step tutorial." />
+  <meta property="og:type" content="" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:url" content="http://localhost:4000/articles/setting-up-umbraco-locally/" />
+  <meta property="twitter:url" content="http://localhost:4000/articles/setting-up-umbraco-locally/" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable">Skip to Main Content</a>
+
+  <div id="page" class="site">
+    <div class="inner">
+      <header class="site-header">
+  
+  <p class="site-title"><a class="logo-text" href="/">HelloBlake</a></p>
+  
+  <nav class="site-navigation">
+    <div class="site-navigation-wrap">
+      <h2 class="screen-reader-text">Main navigation</h2>
+      <ul class="menu">
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/community/">Community</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/resume/">Resume</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/archive/">Archive</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="mailto:hi@helloblake.com">Contact</a>
+        </li>
+        
+      </ul><!-- .menu -->
+      <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
+          class="icon-close" aria-hidden="true"></span></button>
+    </div><!-- .site-navigation-wrap -->
+  </nav><!-- .site-navigation -->
+  <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+</header>
+
+
+      <div id="content">
+        <main class="main-content fadeInDown delay_075s">
+
+  <article class="post">
+    <header class="post-header">
+      <time class="post-date" datetime="2015-09-05">September 5, 2015</time>
+      <h1 class="post-title">Setting Up Umbraco Locally</h1>
+      <div class="post-meta">
+        By <span class="post-author">Blake Watt</span><span class="post-tags"> in <a href="/archive/#umbraco7" rel="tag">umbraco7</a></span>
+      </div><!-- .post-meta -->
+      
+    </header><!-- .post-header -->
+    <div class="post-content">
+      
+      
+      
+        <div class="alert alert-warning" role="alert">
+    <p>This article is outdated and while some concepts may apply, the code samples may not work.</p>
+</div>
+      
+      <p>There are a lot of ways to setup Umbraco locally. This is a step-by-step on setting up a database in SQL Server Management Studio and configuring Umbraco to run locally. <!--more--> Here is what you will need to get started:</p>
+
+<ol>
+  <li>Umbraco Version Zip Files</li>
+  <li>Microsoft Visual Studio</li>
+  <li>SQL Server Management Studio</li>
+</ol>
+
+<p>I am going to assume you have these programs installed and have downloaded the required files needed for Umbraco. These instructions will be using Visual Studio 2015 on Windows 10 with SQL Server 2014 Management Studio.</p>
+
+<p>First let’s create our database that we will need for our site. Open SQL Server Management Studio and right click on Databases.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/new-db.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Name your database in the Database name field. In this case I’ll use <em>example</em>. Click Okay.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/db-name.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>You will notice that the new database will show up in your Databases folder in the Object Explorer.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/new-db-list.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>In the Security &gt; Logins section of Management Studio, create a new user by right clicking on Logins and clicking New Login.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/new-db-user.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Type in your new login name in the Login name field, click SQL Server authentication, and uncheck Enforce password policy. Type in your password in the Password field and confirm it. For Default database, select your database that you just created.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/new-login-1.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Remember your credentials! You are going to need these when we setup Umbraco later. Click OK when you are finished.</p>
+
+<p>Let’s go back to your database in Management Studio and go to Security &gt; Users. Right click on Users and select New User…</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/new-db-user.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Enter your username in both User name and Login name fields. In my case, I’ll use <em>example_user</em>. Enter dbo in the Default Schema field.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/user-setup-1.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>In Owned Schemas, select the <em>db_owner</em> schema.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/user-setup-2.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>In Membership select <em>db_owner</em> as the role.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/user-setup-3.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Click OK once you have these settings configured.</p>
+
+<p>We are done with Management studio for now, let’s extract our Umbraco CMS files where we would like to have our site. I use the default Projects folder that Visual Studio creates so I am going to extract my Umbraco.CMS.7.2.8 zip into my C:/Documents/Visual Studio 2015/Projects/example folder.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/projects-folder.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>With my files extracted open up Visual Studio and go to File &gt; Open &gt; Web Site.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/vs-open-site.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Navigate to the folder where you extracted your Umbraco files and select the folder. In my case I am selecting example.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/file-system.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Click Open and Visual Studio will load your website. Start debugging your website by either hitting F5, or the play icon in the toolbar.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/vs-debug.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Visual Studio will take a moment to build your website and it will open in the browser. You may be prompted to Modify your web config file to enable debugging, click Okay.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/vs-debug-prompt.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>When it is finished you will be presented with the Umbraco install screen. Enter your name, email and password. Check or Uncheck the news checkbox, this is your preference, and click the Customize button.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/install-step-1.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Next we are going to configure our database. Select Microsoft SQL Server from the Database type drop down list.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/install-step-2.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>We are now presented with our options to configure our database. Here we need to enter our Server name, Database name, database Login and Password. This is where you will need your credentials that you setup earlier.</p>
+
+<p>For my example I am going to enter my server name, which you can find in Management Studio or by typing in the command prompt window SQLCMD –L to get your database name. This is something that you would have setup when you installed Management Studio.</p>
+
+<p>Management Studio:</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/sql-server-name.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>CMD Prompt:</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/cmd.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>My Database name was example so I am going to enter that in the Database name field. My user was example_user so I am putting that in the Login field and entering the password I created for this user into the Password field.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/install-step-2-b.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Once you have filled out all the information, click Continue. If your information was correct Umbraco will display a Install a starter website prompt. You can chose to either install a starter website or click No thanks. Once Umbraco finishes setting up your website you will be taken straight into the back office. This is where the fun begins!</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-09-05/backoffice.jpg" alt="" class="img-accent" />
+  
+</figure>
+
+    </div><!-- .post-content -->
+    <!-- <div class="post-share">
+      <span>Share:</span>
+      <a target="_blank"
+        href="https://twitter.com/intent/tweet?text=Setting%20Up%20Umbraco%20Locally&amp;url=http://localhost:4000/articles/setting-up-umbraco-locally/" rel="noopener">Twitter</a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/setting-up-umbraco-locally/&amp;t=Setting%20Up%20Umbraco%20Locally" rel="noopener">Facebook</a>
+    </div> --><!-- .share-post -->
+    <div class="author-box">
+      
+      <div class="author-avatar" style="background-image: url('/images/blake.jpg')"><span class="screen-reader-text">Blake Watt's Picture</span></div>
+      
+      <div class="author-details">
+        <h2 class="author-title">About Blake Watt</h2>
+        <div class="author-bio"><p>Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.</p>
+</div>
+        
+        <span class="author-location">Spokane, WA</span>
+        
+        
+        <span class="author-website"><a href="http://helloblake.com" target="_blank" rel="noopener">http://helloblake.com</a></span>
+        
+      </div><!-- .author-details -->
+    </div><!-- .author-box -->
+  </article><!-- .post -->
+
+  
+    
+      <div id="disqus_thread"></div>
+<script>    
+    var disqus_config = function () {
+    this.page.url = 'https://helloblake.com/articles/setting-up-umbraco-locally/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/articles/setting-up-umbraco-locally/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://helloblake.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//helloblake.disqus.com/count.js" async></script>
+    
+  
+
+</main><!-- .main-content -->
+      </div>
+      <footer class="site-footer">
+  <div class="offsite-links">
+    
+      
+<a href="https://github.com/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+  <span class="screen-reader-text">GitHub</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bkclerke/" target="_blank" rel="noopener">
+  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+  <span class="screen-reader-text">LinkedIn</span>
+</a>
+
+<a href="https://umbracocommunity.social/@helloblake" target="_blank" rel="me">
+  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+  <span class="screen-reader-text">Mastodon</span>
+</a>
+
+<a href="http://discordapp.com/users/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+  <span class="screen-reader-text">Discord</span>
+</a>
+
+
+    
+  </div><!-- .offsite-links -->
+  <div class="footer-bottom">
+    <div class="site-info">
+      <!-- 
+ -->
+      <p>&copy; 2025 HelloBlake</p>
+    </div><!-- .site-info -->
+    <a href="#page" id="back-to-top" class="back-to-top"><span class="screen-reader-text">Back to the top </span>&#8593;</a>
+  </div><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
+
+    </div><!-- .inner -->
+  </div><!-- .site -->
+
+  <!-- Scripts -->
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB3CZEHJ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SB3CZEHJ16');
+</script>
+  
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+</body>
+</html>

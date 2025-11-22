@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bundle and Minify in Umbraco</title>
+  <meta name="description" content="Use the built in Client Dependency Framework in Umbraco to bundle and minify your website scripts and stylesheets.">
+  <link rel="canonical" href="http://localhost:4000/articles/using-the-umbraco-client-dependency-framework-to-bundle-and-minify/">
+  <link rel="alternate" type="application/rss+xml" title="HelloBlake Feed"
+    href="http://localhost:4000/feed.xml">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+  
+  <!--Open Graph-->
+  <meta property="og:title" content="Bundle and Minify in Umbraco" />
+  <meta property="twitter:title" content="Bundle and Minify in Umbraco" />
+  <meta property="og:description" content="Use the built in Client Dependency Framework in Umbraco to bundle and minify your website scripts and stylesheets." />
+  <meta property="twitter:description" content="Use the built in Client Dependency Framework in Umbraco to bundle and minify your website scripts and stylesheets." />
+  <meta property="og:type" content="" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:url" content="http://localhost:4000/articles/using-the-umbraco-client-dependency-framework-to-bundle-and-minify/" />
+  <meta property="twitter:url" content="http://localhost:4000/articles/using-the-umbraco-client-dependency-framework-to-bundle-and-minify/" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable">Skip to Main Content</a>
+
+  <div id="page" class="site">
+    <div class="inner">
+      <header class="site-header">
+  
+  <p class="site-title"><a class="logo-text" href="/">HelloBlake</a></p>
+  
+  <nav class="site-navigation">
+    <div class="site-navigation-wrap">
+      <h2 class="screen-reader-text">Main navigation</h2>
+      <ul class="menu">
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/community/">Community</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/resume/">Resume</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/archive/">Archive</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="mailto:hi@helloblake.com">Contact</a>
+        </li>
+        
+      </ul><!-- .menu -->
+      <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
+          class="icon-close" aria-hidden="true"></span></button>
+    </div><!-- .site-navigation-wrap -->
+  </nav><!-- .site-navigation -->
+  <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+</header>
+
+
+      <div id="content">
+        <main class="main-content fadeInDown delay_075s">
+
+  <article class="post">
+    <header class="post-header">
+      <time class="post-date" datetime="2015-11-29">November 29, 2015</time>
+      <h1 class="post-title">Bundle and Minify in Umbraco</h1>
+      <div class="post-meta">
+        By <span class="post-author">Blake Watt</span><span class="post-tags"> in <a href="/archive/#umbraco7" rel="tag">umbraco7</a></span>
+      </div><!-- .post-meta -->
+      
+    </header><!-- .post-header -->
+    <div class="post-content">
+      
+      
+      
+        <div class="alert alert-warning" role="alert">
+    <p>This article is outdated and while some concepts may apply, the code samples may not work.</p>
+</div>
+      
+      <p>When building websites there are a few general best practice items to help you get the best performance out of your website. When using Umbraco you have some handy features built in like the Client Dependency Framework (CDF) that can help optimize your site.</p>
+
+<!--more-->
+
+<p>The CDF manages your scripts and stylesheets for your web application, including minifying, compressing and caching. To learn more about the framework check out the documentation that Shannon Deminick has put together on Github.</p>
+
+<h2 id="step-1-determine-your-setup">Step 1: Determine Your Setup</h2>
+
+<p>There are a couple ways you can go about setting up scripts on your website and you should take the time to evaluate what will work best for your site needs. Typically I load only the scripts that are needed on the pages or templates that require them. For example, you have a slider on your homepage, but not on any other page in your site. Well you won’t really need the scripts and styles for the slider on every single page of your site so you only want to have those files referenced on the homepage template.</p>
+
+<p>For some, the scripts that you use may be so well compressed that it wouldn’t make a noticeable impact to bundle all your scripts into a single minified script on every page.  You will need to determine this impact based on your site and the files you are loading.</p>
+
+<h2 id="step-2-add-your-using-statement">Step 2: Add Your Using Statement</h2>
+
+<p>Using Umbraco 7, it is pretty straight forward in setting up your files to be bundled. Take a look at your Master template. Typically this is the template with your core markup on it, markup that is used throughout your entire website. The first thing you need to do is add the using statement for the client dependency to your template.</p>
+
+<p><code class="language-plaintext highlighter-rouge">@using ClientDependency.Core.Mvc</code></p>
+
+<h2 id="step-3-add-your-scripts-and-stylesheets">Step 3: Add Your Scripts and Stylesheets</h2>
+
+<p>Now that Umbraco knows that we are using the Client Dependency, we need to add our files. Underneath the Layout = null; markup, lets add the following code with the relative paths to our files we need. Your code should look similar to this. Your file paths may be different depending on your website setup.</p>
+
+<pre><code class="language-cshtml">@{
+     Layout = null;
+     Html.RequiresCss("~/css/bootstrap-3.3.5.min.css", 1);
+     Html.RequiresCss("~/scripts/less/main.min.css", 2);
+     Html.RequiresJs("~/scripts/jquery-1.10.1.min.js", 1);
+     Html.RequiresJs("~/scripts/bootstrap-3.3.5.min.js", 2);
+}
+</code></pre>
+
+<p>The numbers after the file path indicate what order the scripts and stylesheets should load in. If you didn’t have this, you could end up in a situation where jquery loads last and therefore none of your plugins that require this library work since it hasn’t been loaded yet.</p>
+
+<p>There are multiple ways to add files, you could reference an entire folder with <code class="language-plaintext highlighter-rouge">@Html.RequiresJsFolder("~/Js/Controls/");</code> or reference an entire bundle with MVC. You can also check out the wiki for more information on how to do these things too.</p>
+
+<h2 id="step-4-render-your-css-and-scripts">Step 4: Render Your CSS and Scripts</h2>
+
+<p>On your template, you will need to determine where you want your scripts and style sheets to load. To render your CSS on the template you will need to add <code class="language-plaintext highlighter-rouge">@Html.Raw(Html.RenderCssHere())</code> in the head tag of your markup.</p>
+
+<p>Typically I load the scripts last on the page body so towards the footer you would place <code class="language-plaintext highlighter-rouge">@Html.Raw(Html.RenderJsHere())</code> to render your scripts.</p>
+
+<p>The client dependency is going to know what to put here based on the RequresCss and RequiresJs files that you added in step 2.</p>
+
+<p>You can repeat these steps in order to add more files that are needed on some of the inner pages of your website. This depends on how you determined to setup your files in step 1. Don’t forget to order your main styles and scripts if you go this route as the innerpages that are added appear to load before the master page files that are added.</p>
+
+<h2 id="debugging-your-scripts-and-styles">Debugging Your Scripts and Styles</h2>
+
+<p>In your web config file, when debug is set to true, the CDF knows not to bundle all your scripts together just yet. This helps for testing your site and making sure you have all your scripts and stylesheets referenced. Once you set debug to false, typically in production environments, the CDF will bundle and minify your scripts and stylesheets on the page and cache them until you make changes to the files or update the version number for the CDF in the client dependency config file.</p>
+
+<p>As you can see, it is pretty easy to use the client dependency framework built into Umbraco in order to bundle and minify your scripts and stylesheets. If you are looking for specifics on the CDF itself, <a href="https://github.com/Shazwazza/ClientDependency" target="_blank">check out the documentation</a> and feel free to leave a comment if you have any questions!</p>
+
+    </div><!-- .post-content -->
+    <!-- <div class="post-share">
+      <span>Share:</span>
+      <a target="_blank"
+        href="https://twitter.com/intent/tweet?text=Bundle%20and%20Minify%20in%20Umbraco&amp;url=http://localhost:4000/articles/using-the-umbraco-client-dependency-framework-to-bundle-and-minify/" rel="noopener">Twitter</a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/using-the-umbraco-client-dependency-framework-to-bundle-and-minify/&amp;t=Bundle%20and%20Minify%20in%20Umbraco" rel="noopener">Facebook</a>
+    </div> --><!-- .share-post -->
+    <div class="author-box">
+      
+      <div class="author-avatar" style="background-image: url('/images/blake.jpg')"><span class="screen-reader-text">Blake Watt's Picture</span></div>
+      
+      <div class="author-details">
+        <h2 class="author-title">About Blake Watt</h2>
+        <div class="author-bio"><p>Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.</p>
+</div>
+        
+        <span class="author-location">Spokane, WA</span>
+        
+        
+        <span class="author-website"><a href="http://helloblake.com" target="_blank" rel="noopener">http://helloblake.com</a></span>
+        
+      </div><!-- .author-details -->
+    </div><!-- .author-box -->
+  </article><!-- .post -->
+
+  
+    
+      <div id="disqus_thread"></div>
+<script>    
+    var disqus_config = function () {
+    this.page.url = 'https://helloblake.com/articles/using-the-umbraco-client-dependency-framework-to-bundle-and-minify/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/articles/using-the-umbraco-client-dependency-framework-to-bundle-and-minify/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://helloblake.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//helloblake.disqus.com/count.js" async></script>
+    
+  
+
+</main><!-- .main-content -->
+      </div>
+      <footer class="site-footer">
+  <div class="offsite-links">
+    
+      
+<a href="https://github.com/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+  <span class="screen-reader-text">GitHub</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bkclerke/" target="_blank" rel="noopener">
+  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+  <span class="screen-reader-text">LinkedIn</span>
+</a>
+
+<a href="https://umbracocommunity.social/@helloblake" target="_blank" rel="me">
+  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+  <span class="screen-reader-text">Mastodon</span>
+</a>
+
+<a href="http://discordapp.com/users/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+  <span class="screen-reader-text">Discord</span>
+</a>
+
+
+    
+  </div><!-- .offsite-links -->
+  <div class="footer-bottom">
+    <div class="site-info">
+      <!-- 
+ -->
+      <p>&copy; 2025 HelloBlake</p>
+    </div><!-- .site-info -->
+    <a href="#page" id="back-to-top" class="back-to-top"><span class="screen-reader-text">Back to the top </span>&#8593;</a>
+  </div><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
+
+    </div><!-- .inner -->
+  </div><!-- .site -->
+
+  <!-- Scripts -->
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB3CZEHJ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SB3CZEHJ16');
+</script>
+  
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+</body>
+</html>

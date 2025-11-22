@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why You Need The Umbraco Dictionary</title>
+  <meta name="description" content="Here are a few good reasons to get started using the Umbraco Dictionary today and how to use it.">
+  <link rel="canonical" href="http://localhost:4000/articles/umbraco-dictionary/">
+  <link rel="alternate" type="application/rss+xml" title="HelloBlake Feed"
+    href="http://localhost:4000/feed.xml">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+  
+  <!--Open Graph-->
+  <meta property="og:title" content="Why You Need The Umbraco Dictionary" />
+  <meta property="twitter:title" content="Why You Need The Umbraco Dictionary" />
+  <meta property="og:description" content="Here are a few good reasons to get started using the Umbraco Dictionary today and how to use it." />
+  <meta property="twitter:description" content="Here are a few good reasons to get started using the Umbraco Dictionary today and how to use it." />
+  <meta property="og:type" content="article" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:url" content="http://localhost:4000/articles/umbraco-dictionary/" />
+  <meta property="twitter:url" content="http://localhost:4000/articles/umbraco-dictionary/" />
+  <meta property="og:locale" content="en_US" />
+  
+  <meta property="og:image" content="http://localhost:4000/images/posts/2022-12-23/og-dictionary.jpg" />
+  <meta property="twitter:image" content="http://localhost:4000/images/posts/2022-12-23/og-dictionary.jpg" />
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable">Skip to Main Content</a>
+
+  <div id="page" class="site">
+    <div class="inner">
+      <header class="site-header">
+  
+  <p class="site-title"><a class="logo-text" href="/">HelloBlake</a></p>
+  
+  <nav class="site-navigation">
+    <div class="site-navigation-wrap">
+      <h2 class="screen-reader-text">Main navigation</h2>
+      <ul class="menu">
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/community/">Community</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/resume/">Resume</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/archive/">Archive</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="mailto:hi@helloblake.com">Contact</a>
+        </li>
+        
+      </ul><!-- .menu -->
+      <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
+          class="icon-close" aria-hidden="true"></span></button>
+    </div><!-- .site-navigation-wrap -->
+  </nav><!-- .site-navigation -->
+  <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+</header>
+
+
+      <div id="content">
+        <main class="main-content fadeInDown delay_075s">
+
+  <article class="post">
+    <header class="post-header">
+      <time class="post-date" datetime="2022-12-23">December 23, 2022</time>
+      <h1 class="post-title">Why You Need The Umbraco Dictionary</h1>
+      <div class="post-meta">
+        By <span class="post-author">Blake Watt</span><span class="post-tags"> in <a href="/archive/#umbraco11" rel="tag">umbraco11</a></span>
+      </div><!-- .post-meta -->
+      
+    </header><!-- .post-header -->
+    <div class="post-content">
+      
+      
+      
+        <div class="alert alert-warning" role="alert">
+    <p>This article is outdated and while some concepts may apply, the code samples may not work.</p>
+</div>
+      
+      <p>When setting up a content management system, it is important to make content editable within the CMS. In some cases the content may be utilized in multiple places throughout the site in a macro, or doesn’t warrant having its own property on a content page. <!--more--></p>
+
+<h2 id="make-content-editable">Make Content Editable</h2>
+
+<p>Take a search input for example. It’s likely your content has a search page specifically setup with its own template to render search results, however, the search input label, placeholder and submit button are usually strings that are less often updated after the initial setup. While these could be properties on the search page, these types of properties are better suited to be managed somewhere else and not clutter the content page with properties that will be rarely updated.</p>
+
+<h2 id="translate-your-content">Translate Your Content</h2>
+
+<p>Enter the Umbraco Dictionary. The Umbraco Dictionary is perfectly suited to handle the needs of allowing content editors to update content that would typically be “hard-coded” into a template. Utilizing the Dictionary also allows for the ability to customize the content based on the localization information.</p>
+
+<p>If you have a multi-lingual website and are utilizing the Umbraco Dictionary items in your templates, when your website is loaded using a different language, your dictionary items will utilize the content specified for that language. This makes one less thing you need to worry about and future proofs your website for multi-lingual support.</p>
+
+<h2 id="deploy-less">Deploy Less</h2>
+
+<p>Another benefit of utilizing the Umbraco Dictionary is that when you no longer have “hard-coded” text values in your macros or templates, you won’t have to do a deployment for a simple text change. Looking at the deployment process as a whole and taking into account the multiple environments that changes get pushed through, the QA process, scheduling a deployment and verifying that deployment was sucessful. There is a lot of time and effort cross-department that goes into a deployment. You can save a lot of valuable time with allowing content editors the ability to utilize content from the Dictionary to make text changes instead of “hard-coding” text inside of your views.</p>
+
+<h2 id="using-the-dictionary">Using the Dictionary</h2>
+
+<p>Using our search example, in the Umbraco Dictionary, we could create a group called Search to house a few dictionary items to handle editing these values in the CMS including:</p>
+
+<ol>
+  <li>Search.Placeholder</li>
+  <li>Search.Label</li>
+  <li>Search.Button</li>
+</ol>
+
+<p>The Umbraco Dictionary can be found in the Translation section of Umbraco and creating new dictionary items is as easy as creating the rest of the content within the content trees. To create a new dictionary item, simply right-click on the Dictionary, click Create, enter your dictionary item name, and click Create. Your new item will display in the Translation Tree.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2022-12-23/dictionary-items.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Once you have created your dictionary item, you will see a text area that displays next to your localization language for your site. The more languages you have configured, the more text areas you will see. Each text area allows the content editor the ability to configure the text that displays when this dictionary item is rendered in the code. Enter your text in the text area and click Save to save your changes.</p>
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2022-12-23/dictionary-item-value.png" alt="" class="img-accent" />
+  
+</figure>
+
+<h2 id="displaying-dictionary-items">Displaying Dictionary Items</h2>
+
+<p>As a developer setting up the view that displays your dictionary items, the way to reference this value is simply with the name of the dictionary item.</p>
+
+<pre><code class="language-cshtml">@Umbraco.GetDictionaryValue("Search.Button")
+</code></pre>
+
+<p>You also have the ability to enter some fallback text if your dictionary item is empty. Your code would then look something like this:</p>
+
+<pre><code class="language-cshtml">@Umbraco.GetDictionaryValue("Search.Button", "Submit Your Search")
+</code></pre>
+
+<p>I hope you can utilize the power of the Umbraco Dictionary on your own website. If you are looking for more information on using the dictionary, you can check out the official Umbraco documentation about <a href="https://docs.umbraco.com/umbraco-cms/fundamentals/data/dictionary-items" target="_blank">Dictionary Items</a> here.</p>
+
+<p>And to leave you with a parting word of wisdom when building your sites, remember not all content needs to be edited in the content section but your content should be editable from the CMS.</p>
+
+    </div><!-- .post-content -->
+    <!-- <div class="post-share">
+      <span>Share:</span>
+      <a target="_blank"
+        href="https://twitter.com/intent/tweet?text=Why%20You%20Need%20The%20Umbraco%20Dictionary&amp;url=http://localhost:4000/articles/umbraco-dictionary/" rel="noopener">Twitter</a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/umbraco-dictionary/&amp;t=Why%20You%20Need%20The%20Umbraco%20Dictionary" rel="noopener">Facebook</a>
+    </div> --><!-- .share-post -->
+    <div class="author-box">
+      
+      <div class="author-avatar" style="background-image: url('/images/blake.jpg')"><span class="screen-reader-text">Blake Watt's Picture</span></div>
+      
+      <div class="author-details">
+        <h2 class="author-title">About Blake Watt</h2>
+        <div class="author-bio"><p>Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.</p>
+</div>
+        
+        <span class="author-location">Spokane, WA</span>
+        
+        
+        <span class="author-website"><a href="http://helloblake.com" target="_blank" rel="noopener">http://helloblake.com</a></span>
+        
+      </div><!-- .author-details -->
+    </div><!-- .author-box -->
+  </article><!-- .post -->
+
+  
+    
+      <div id="disqus_thread"></div>
+<script>    
+    var disqus_config = function () {
+    this.page.url = 'https://helloblake.com/articles/umbraco-dictionary/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/articles/umbraco-dictionary/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://helloblake.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//helloblake.disqus.com/count.js" async></script>
+    
+  
+
+</main><!-- .main-content -->
+      </div>
+      <footer class="site-footer">
+  <div class="offsite-links">
+    
+      
+<a href="https://github.com/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+  <span class="screen-reader-text">GitHub</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bkclerke/" target="_blank" rel="noopener">
+  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+  <span class="screen-reader-text">LinkedIn</span>
+</a>
+
+<a href="https://umbracocommunity.social/@helloblake" target="_blank" rel="me">
+  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+  <span class="screen-reader-text">Mastodon</span>
+</a>
+
+<a href="http://discordapp.com/users/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+  <span class="screen-reader-text">Discord</span>
+</a>
+
+
+    
+  </div><!-- .offsite-links -->
+  <div class="footer-bottom">
+    <div class="site-info">
+      <!-- 
+ -->
+      <p>&copy; 2025 HelloBlake</p>
+    </div><!-- .site-info -->
+    <a href="#page" id="back-to-top" class="back-to-top"><span class="screen-reader-text">Back to the top </span>&#8593;</a>
+  </div><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
+
+    </div><!-- .inner -->
+  </div><!-- .site -->
+
+  <!-- Scripts -->
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB3CZEHJ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SB3CZEHJ16');
+</script>
+  
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+</body>
+</html>

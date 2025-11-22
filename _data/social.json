@@ -3,22 +3,26 @@
     {
       "title": "GitHub",
       "icon": "fa-brands fa-github",
-      "url": "https://github.com/bkclerke"
+      "url": "https://github.com/bkclerke",
+      "rel": "noopener"
     },
     {
       "title": "LinkedIn",
       "icon": "fa-brands fa-linkedin",
-      "url": "https://www.linkedin.com/in/bkclerke/"
+      "url": "https://www.linkedin.com/in/bkclerke/",
+      "rel": "noopener"
+    },
+    {
+      "title": "Mastodon",
+      "icon": "fa-brands fa-mastodon",
+      "url": "https://umbracocommunity.social/@helloblake",
+      "rel": "me"
     },
     {
       "title": "Discord",
       "icon": "fa-brands fa-discord",
-      "url": "http://discordapp.com/users/bkclerke"
-    },
-    {
-      "title": "Pixelfed",
-      "icon": "fa-brands fa-instagram",
-      "url": "https://pixelfed.social/@Helloblake"
+      "url": "http://discordapp.com/users/bkclerke",
+      "rel": "noopener"
     }
   ]
 }

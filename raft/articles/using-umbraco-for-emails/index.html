@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Umbraco for Emails</title>
+  <meta name="description" content="You can use Umbraco to build out your recurring email campaigns quickly. Here you will find the statistics and learn how to set it up in Umbraco.">
+  <link rel="canonical" href="http://localhost:4000/articles/using-umbraco-for-emails/">
+  <link rel="alternate" type="application/rss+xml" title="HelloBlake Feed"
+    href="http://localhost:4000/feed.xml">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+  
+  <!--Open Graph-->
+  <meta property="og:title" content="Using Umbraco for Emails" />
+  <meta property="twitter:title" content="Using Umbraco for Emails" />
+  <meta property="og:description" content="You can use Umbraco to build out your recurring email campaigns quickly. Here you will find the statistics and learn how to set it up in Umbraco." />
+  <meta property="twitter:description" content="You can use Umbraco to build out your recurring email campaigns quickly. Here you will find the statistics and learn how to set it up in Umbraco." />
+  <meta property="og:type" content="" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:url" content="http://localhost:4000/articles/using-umbraco-for-emails/" />
+  <meta property="twitter:url" content="http://localhost:4000/articles/using-umbraco-for-emails/" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable">Skip to Main Content</a>
+
+  <div id="page" class="site">
+    <div class="inner">
+      <header class="site-header">
+  
+  <p class="site-title"><a class="logo-text" href="/">HelloBlake</a></p>
+  
+  <nav class="site-navigation">
+    <div class="site-navigation-wrap">
+      <h2 class="screen-reader-text">Main navigation</h2>
+      <ul class="menu">
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/community/">Community</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/resume/">Resume</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/archive/">Archive</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="mailto:hi@helloblake.com">Contact</a>
+        </li>
+        
+      </ul><!-- .menu -->
+      <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
+          class="icon-close" aria-hidden="true"></span></button>
+    </div><!-- .site-navigation-wrap -->
+  </nav><!-- .site-navigation -->
+  <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+</header>
+
+
+      <div id="content">
+        <main class="main-content fadeInDown delay_075s">
+
+  <article class="post">
+    <header class="post-header">
+      <time class="post-date" datetime="2015-01-25">January 25, 2015</time>
+      <h1 class="post-title">Using Umbraco for Emails</h1>
+      <div class="post-meta">
+        By <span class="post-author">Blake Watt</span><span class="post-tags"> in <a href="/archive/#umbraco7" rel="tag">umbraco7</a></span>
+      </div><!-- .post-meta -->
+      
+    </header><!-- .post-header -->
+    <div class="post-content">
+      
+      
+      
+        <div class="alert alert-warning" role="alert">
+    <p>This article is outdated and while some concepts may apply, the code samples may not work.</p>
+</div>
+      
+      <p>Umbraco is a powerful tool that can be used for more than just managing your website. You can also utilize Umbraco for your email marketing needs. Customizing Umbraco for emails can save you a lot of time when it comes to building out those recurring emails for newsletters and other events.</p>
+
+<!--more-->
+
+<p>Here you will find general statistics of this campaign in particular as well as how it was setup in Umbraco.</p>
+
+<h2 id="the-design">The Design</h2>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/newsletter-january-2015.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>The initial design of this newsletter layout was chosen based on previous analytical data provided from prior email campaigns. One of the strongest determining factors was the amount of opens the email had on mobile devices. The iPhone took the lead in the email client list with 32.6%, following up with the iPad. It is apparent that people are consuming this data on the go so there isn’t much time to capture their attention.</p>
+
+<p>With this in mind, this email was designed so that it would scroll easily, get to the point with strong titles, have quick previews, and large buttons.</p>
+
+<h2 id="the-setup">The Setup</h2>
+
+<p>Now that you have seen the design, let’s start with the document types. Always organize your document types! This email design has been divided into 4 Document Types.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/doc-types.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>No 1. <strong>Email Folder</strong> – This document type is allowed at the root and acts as our man email folder. All the emails will be children of this node in the content tree.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/email-folder-doctype-properties.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>No 2. <strong>Email</strong> – This is where our email will live. We’ve given the editor the ability to add a main article here which has different styling than just the boxes.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/email-doctype-properties.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>No 3. <strong>Email Section</strong> – This is where we’ve broken out the different section boxes for content items in the email. This setup allows the user to create as many different sections as they want. The template for this will generate the HTML for the box and apply the color styles to the headers and buttons based on the user’s selection on the content node.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/email-section-doctype-properties.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>No 4. <strong>Email Section Testimonial</strong> – This will be used for our testimonial section. The layout of this area is different than a regular section and had different properties which required a document type of its own.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/email-testimonial-doctype-properties.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Now that we have our document types setup we need the HTML markup itself. Since this is just a one page email, it’s best to just have one template assigned to the Email document type. Below is the code used for the Email template.</p>
+
+<p><em>Note: Please note that this was written in Umbraco version 7.</em></p>
+
+<pre><code class="language-cshtml">@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+ 
+@{
+	var home = CurrentPage.AncestorOrSelf(1); 
+ 	@* Default Red *@
+	var color = "#c51432";
+	var border = "#990033";
+	if(CurrentPage.HasValue("color"))
+	{
+		color = "#" + CurrentPage.color;
+	}
+	if(color == "#6abc45")
+	{
+		@* Light Green *@
+		border = "#4C9E28";
+	}
+	else if(color == "#0069cb")
+	{
+		@* Blue *@
+		border = "#0033CC";
+	}
+	else if(color == "#ffae00")
+	{
+		@* Yellow *@
+		border = "#B9802B";
+	}
+	else if(color == "#7336")
+	{
+		@* Dark Green *@
+		color = "#007336";
+		border = "#004C24";
+	}
+ }
+ 
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt; 
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;
+	&lt;title&gt;@Umbraco.Field("pageTitleTag", altFieldAlias: "pageName")&lt;/title&gt;
+	&lt;style type="text/css"&gt;
+		/* Based on The MailChimp Reset INLINE: Yes. */  
+		/* Client-specific Styles */
+		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+		body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; font-family:Arial, sans-serif; font-size:14px; line-height:18px; color:#898989; } 
+		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */  
+		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+		/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
+		#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+		/* End reset */
+ 
+		/* Some sensible defaults for images
+		Bring inline: Yes. */
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+		a img {border:none;} 
+		.image_fix {display:block;}
+ 
+		/* Yahoo paragraph fix
+		Bring inline: Yes. */
+		p {margin: 1em 0;}
+        
+		/* Outlook 07, 10 Padding issue fix
+		Bring inline: No.*/
+		table td {border-collapse: collapse;}
+ 
+		/* Remove spacing around Outlook 07, 10 tables
+		Bring inline: Yes */
+		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+ 
+		/* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email and make sure to bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+		Bring inline: Yes. */
+		a {color:#464646; text-decoration:underline; }
+	    a:hover {text-decoration:none; }
+	    /*a.button {color:#FFFFFF; font-weight:bold; font-family:Arial, sans-serif; -webkit-text-shadow:0 1px 0 #000; text-shadow:0 1px 0 #000; text-decoration:none; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; border:2px solid #990033; background-color:#C51432; padding:5px 10px; }*/
+ 
+		/* DISCOVERTEC */
+        h1, h2, h3, h4, h5, h6 {font-size:24px; font-family:Arial, sans-serif; font-weight:bold; margin:0; }
+			
+	&lt;/style&gt;
+ 
+	&lt;!--[if gte mso 9]&gt;
+		&lt;style&gt;
+		/* Target Outlook 2007 and 2010 */
+		&lt;/style&gt;
+	&lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="background-color:#1E1E1E;"&gt;
+        &lt;tr&gt;
+            &lt;td align="center"&gt;
+                &lt;p style="color:#ccc;"&gt;Trouble viewing this email? &lt;a href="@Request.Url" style="color:#ccc;"&gt;View it in your browser&lt;/a&gt;.&lt;/p&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+	    &lt;tr&gt;
+		    &lt;td valign="top"&gt;
+		        &lt;table cellpadding="0" cellspacing="0" border="0" align="center" style="width:700px; font-family:Arial, sans-serif; font-size:12px; line-height:18px; color:#898989;"&gt;
+ 
+                    &lt;!-- HEADER --&gt;
+			        &lt;tr style="background-color:#EBECE6; border-bottom:1px solid #e2e3dd;"&gt;
+				        &lt;td width="75" valign="top" style="padding:10px 0;"&gt;&lt;/td&gt;
+                        &lt;td width="550" valign="top" style="padding:10px 0;"&gt;
+                            &lt;table&gt;
+                                &lt;tr style="color:#c51432;"&gt;
+                                    &lt;td width="275" style="text-align:left;"&gt;
+                                        &lt;a href="#" target="_blank"&gt;&lt;img src="@Umbraco.Media(home.logo).Url" alt="" /&gt;&lt;/a&gt;
+                                    &lt;/td&gt;
+                                    &lt;td width="275" style="text-align:right;"&gt;
+                                        &lt;span style="font-size:24px; line-height:28px;"&gt;@home.headerText&lt;/span&gt;&lt;br /&gt;&lt;span style="font-size:36px; line-height:38px; font-weight:bold;"&gt;@home.phoneNumber&lt;/span&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/table&gt;
+                        &lt;/td&gt;
+                        &lt;td width="75" valign="top" style="padding:10px 0;"&gt;&lt;/td&gt;
+			        &lt;/tr&gt;
+ 
+                    &lt;!-- BODY --&gt;
+                    &lt;tr style="background-color:#FFFFFF;"&gt;
+				        &lt;td width="75" valign="top" style="padding:20px 0;"&gt;&lt;/td&gt;
+                        &lt;td width="550" valign="top" style="padding:20px 0;"&gt;
+		
+							@if(CurrentPage.HasValue("mainArticleImage"))
+							{
+								&lt;img src="@Umbraco.Media(CurrentPage.mainArticleImage).Url" alt="" /&gt;
+							}
+ 
+							@if(CurrentPage.HasValue("mainArticleSubTitle")){&lt;h1 style="color:@color !important; margin:.5em 0; font-size:24px;"&gt;@CurrentPage.mainArticleSubTitle&lt;/h1&gt;}
+ 
+                            @Umbraco.Field("mainArticleBodyText")
+							
+							@if(CurrentPage.HasValue("mainArticleButtonLink") &amp;&amp; CurrentPage.HasValue("mainArticleButtonText"))
+							{
+								&lt;table width="550" cellspacing="0" cellpadding="0"&gt;
+									&lt;tr&gt;										
+										&lt;td align="center" width="250" height="40" bgcolor="@color" style="border:2px solid @border; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #FFFFFF; display: block; text-shadow:0 1px 1px #000;"&gt;
+											&lt;a href="@Umbraco.Field("mainArticleButtonLink")" target="_blank" style="font-size:16px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block"&gt;&lt;span style="color: #FFFFFF"&gt;@Umbraco.Field("mainArticleButtonText")&lt;/span&gt;&lt;/a&gt;
+										&lt;/td&gt;
+										&lt;td width="300"&gt;&lt;/td&gt;
+									&lt;/tr&gt;
+								&lt;/table&gt;
+							}
+ 
+                            @Html.Partial("EmailSections")
+ 
+                            &lt;table width="100%"&gt;&lt;tr&gt;&lt;td height="25" width="100%"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+                        &lt;/td&gt;
+                        &lt;td width="75" valign="top" style="padding:20px 0;"&gt;&lt;/td&gt;
+			        &lt;/tr&gt;
+ 
+                    &lt;!-- FOOTER --&gt;
+                    &lt;tr style="background-color:#EBECE6; border-top:1px solid #e2e3dd;"&gt;
+				        &lt;td width="75" valign="top"&gt;&lt;/td&gt;
+                        &lt;td width="550" valign="top" style="font-size:11px; text-align:center;"&gt;
+                            &lt;p&gt;If you no longer wish to receive these emails, &lt;unsubscribe&gt;unsubscribe here&lt;/unsubscribe&gt;.&lt;/p&gt;
+                            &lt;p&gt;&amp;copy; @DateTime.Now.Year Company Name&lt;/p&gt;
+                        &lt;/td&gt;
+                        &lt;td width="75" valign="top"&gt;&lt;/td&gt;
+			        &lt;/tr&gt;
+ 
+					&lt;tr&gt;
+						&lt;td height="25"&gt;&lt;/td&gt;
+					&lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Now that we have our basic markup written, we need to tell Umbraco how to handle displaying all the sections. I’ve broke this out into a partial view called “EmailSections.cshtml” which you will see rendered in the template.</p>
+
+<p><em>Note: The following code was written for version 7 for internal use. The intended functionality was that every section would have a button and hyperlink so there are no checks for these, just output. This could end up showing empty if the fields are not marked required on the document type.</em></p>
+
+<pre><code class="language-cshtml">@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+ 
+@{
+    var sections = CurrentPage.Children;
+ 
+    foreach (var item in sections)
+    {
+		@* Default Red *@
+        var color = "#c51432";
+        var border = "#990033";
+        if(item.HasValue("color"))
+        {
+            color = "#" + item.color;
+        }
+		if(color == "#6abc45")
+		{
+			@* Light Green *@
+			border = "#4C9E28";
+		}
+		else if(color == "#0069cb")
+		{
+			@* Blue *@
+			border = "#0033CC";
+		}
+		else if(color == "#ffae00")
+		{
+			@* Yellow *@
+			border = "#B9802B";
+		}
+		else if(color == "#7336")
+		{
+			@* Dark Green *@
+			color = "#007336";
+			border = "#004C24";
+		}
+        
+		if(item.DocumentTypeAlias == "EmailSection")
+		{
+			&lt;table width="100%"&gt;&lt;tr&gt;&lt;td height="25" width="100%"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+			&lt;table width="100%"&gt;
+				&lt;tr style="background-color:@color; color:#FFFFFF;"&gt;
+					&lt;th colspan="5"&gt;&lt;h1 style="color:#FFFFFF !important; margin:.5em 0; font-size:24px;"&gt;&lt;strong&gt;@if(item.HasValue("sectionTitle")){@item.sectionTitle}else{@item.Name}&lt;/strong&gt;&lt;/h1&gt;&lt;/th&gt;
+				&lt;/tr&gt;				
+				&lt;tr style="background-color:#EBEBEB;"&gt;
+					&lt;td width="15"&gt;&lt;/td&gt;
+					&lt;td width="200" valign="top" align="center" style="padding:25px 0;"&gt;
+						@if(item.HasValue("image"))
+						{
+							&lt;a href="@item.buttonLink" target="_blank"&gt;
+								&lt;img src="@Umbraco.Media(item.image).Url" alt="@item.sectionTitle" /&gt;
+							&lt;/a&gt;
+						}
+					&lt;/td&gt;
+					&lt;td width="15"&gt;&lt;/td&gt;
+					&lt;td width="290" valign="top" style="padding:25px 0; color:#464646; font-size:14px; line-height:1.5em;"&gt;
+						@if(item.HasValue("subTitle")){&lt;h2 style="color:@color !important; margin:0; font-size:24px;"&gt;&lt;strong&gt;@item.subTitle&lt;/strong&gt;&lt;/h2&gt;}
+						@item.bodyText
+						&lt;table width="290" cellspacing="0" cellpadding="0"&gt;
+							&lt;tr&gt;
+								&lt;td align="center" width="290" height="40" bgcolor="@color" style="border:2px solid @border; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #FFFFFF; display: block; text-shadow:0 1px 1px #000;"&gt;
+									&lt;a href="@item.buttonLink" target="_blank" style="font-size:16px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block"&gt;&lt;span style="color: #FFFFFF"&gt;@item.buttonText&lt;/span&gt;&lt;/a&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/table&gt;
+					&lt;/td&gt;
+					&lt;td width="30"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		}
+		else if(item.DocumentTypeAlias == "EmailSectionTestimonial")
+		{
+			&lt;table width="100%"&gt;&lt;tr&gt;&lt;td height="25" width="100%"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+			&lt;table width="100%"&gt;
+				&lt;tr style="background-color:@color; color:#FFFFFF;"&gt;
+					&lt;th colspan="5"&gt;&lt;h1 style="color:#FFFFFF !important; margin:.5em 0; font-size:24px;"&gt;&lt;strong&gt;@if(item.HasValue("sectionTitle")){@item.sectionTitle}else{@item.Name}&lt;/strong&gt;&lt;/h1&gt;&lt;/th&gt;
+				&lt;/tr&gt;
+				&lt;tr style="background-color:#EBEBEB;"&gt;
+					&lt;td width="30"&gt;&lt;/td&gt;
+					&lt;td width="75" valign="top" align="center" style="padding:25px 0;"&gt;
+						&lt;a href="@item.buttonLink" target="_blank"&gt;
+							&lt;img src="@Umbraco.Media(1062).Url" alt="Testimonial" /&gt;
+						&lt;/a&gt;
+					&lt;/td&gt;
+					&lt;td width="20"&gt;&lt;/td&gt;
+					&lt;td width="395" valign="top" style="padding:25px 0; color:#464646; font-size:14px; line-height:1.5em;"&gt;
+						&lt;img src="@Umbraco.Media(1063).Url" alt="5 Stars" /&gt;
+						@item.bodyText
+						&lt;table width="395" cellspacing="0" cellpadding="0"&gt;
+							&lt;tr&gt;
+								&lt;td width="195"&gt;&lt;/td&gt;
+								&lt;td align="center" width="200" height="40" bgcolor="@color" style="border:2px solid @border; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #FFFFFF; display: block; text-shadow:0 1px 1px #000;"&gt;
+									&lt;a href="@item.buttonLink" target="_blank" style="font-size:16px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block"&gt;&lt;span style="color: #FFFFFF"&gt;@item.buttonText&lt;/span&gt;&lt;/a&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/table&gt;
+					&lt;/td&gt;
+					&lt;td width="30"&gt;&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		}
+    }
+}
+</code></pre>
+
+<h2 id="the-content">The Content</h2>
+
+<p>So now that we are setup in Umbraco, let’s create our content nodes and see how our tree looks for our new email.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/content-tree.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Our Email Folder is at our root, acting as a container for our marketing site. This has our general information on it. We have our email as a child, and the email sections as children to the email.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/testimonial-content-node.png" alt="" class="img-accent" />
+  
+</figure>
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/emails-content-node.png" alt="" class="img-accent" />
+  
+</figure>
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/section-content-node.png" alt="" class="img-accent" />
+  
+</figure>
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-01-25/email-content-node.png" alt="" class="img-accent" />
+  
+</figure>
+
+<h2 id="the-benefits">The Benefits</h2>
+
+<p>Once you have everything setup in Umbraco you will be on your way to building out emails much quicker than working straight in your markup. The initial setup of Umbraco will take you a bit longer to get the emails built but the time you will make up in the recurring tasks will greatly outweigh this extra effort put into the start. Building your emails into Umbraco can also alleviate some of the work load for more technical team members. For example, you have some not-as-technical people who aren’t familiar with HTML that could go into Umbraco and build emails quickly to send out versus having a developer go into the markup and create new emails every time. You are looking at less headaches, less errors in updating specific content (i.e. title tags) and easier task handling with this route. I highly recommend that you create your recurring web marketing material in Umbraco.</p>
+
+<h2 id="the-stats">The Stats</h2>
+
+<p>This email campaign has performed pretty well with an open rate of 30.99%, representing a little over 3,811 opens and 5.51% clicking on a link. The amount of time it takes to create an email in Umbraco and then gain 210 more people visiting a client’s website is worth the effort to get your email marketing campaigns into Umbraco.</p>
+
+<p>Have any questions? Do you use Umbraco for some of your marketing materials? I’d love to hear your thoughts in the comments below.</p>
+
+    </div><!-- .post-content -->
+    <!-- <div class="post-share">
+      <span>Share:</span>
+      <a target="_blank"
+        href="https://twitter.com/intent/tweet?text=Using%20Umbraco%20for%20Emails&amp;url=http://localhost:4000/articles/using-umbraco-for-emails/" rel="noopener">Twitter</a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/using-umbraco-for-emails/&amp;t=Using%20Umbraco%20for%20Emails" rel="noopener">Facebook</a>
+    </div> --><!-- .share-post -->
+    <div class="author-box">
+      
+      <div class="author-avatar" style="background-image: url('/images/blake.jpg')"><span class="screen-reader-text">Blake Watt's Picture</span></div>
+      
+      <div class="author-details">
+        <h2 class="author-title">About Blake Watt</h2>
+        <div class="author-bio"><p>Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.</p>
+</div>
+        
+        <span class="author-location">Spokane, WA</span>
+        
+        
+        <span class="author-website"><a href="http://helloblake.com" target="_blank" rel="noopener">http://helloblake.com</a></span>
+        
+      </div><!-- .author-details -->
+    </div><!-- .author-box -->
+  </article><!-- .post -->
+
+  
+    
+      <div id="disqus_thread"></div>
+<script>    
+    var disqus_config = function () {
+    this.page.url = 'https://helloblake.com/articles/using-umbraco-for-emails/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/articles/using-umbraco-for-emails/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://helloblake.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//helloblake.disqus.com/count.js" async></script>
+    
+  
+
+</main><!-- .main-content -->
+      </div>
+      <footer class="site-footer">
+  <div class="offsite-links">
+    
+      
+<a href="https://github.com/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+  <span class="screen-reader-text">GitHub</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bkclerke/" target="_blank" rel="noopener">
+  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+  <span class="screen-reader-text">LinkedIn</span>
+</a>
+
+<a href="https://umbracocommunity.social/@helloblake" target="_blank" rel="me">
+  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+  <span class="screen-reader-text">Mastodon</span>
+</a>
+
+<a href="http://discordapp.com/users/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+  <span class="screen-reader-text">Discord</span>
+</a>
+
+
+    
+  </div><!-- .offsite-links -->
+  <div class="footer-bottom">
+    <div class="site-info">
+      <!-- 
+ -->
+      <p>&copy; 2025 HelloBlake</p>
+    </div><!-- .site-info -->
+    <a href="#page" id="back-to-top" class="back-to-top"><span class="screen-reader-text">Back to the top </span>&#8593;</a>
+  </div><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
+
+    </div><!-- .inner -->
+  </div><!-- .site -->
+
+  <!-- Scripts -->
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB3CZEHJ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SB3CZEHJ16');
+</script>
+  
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+</body>
+</html>

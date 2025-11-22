@@ -1,9 +1,5 @@
-<a rel="me" href="https://umbracocommunity.social/@helloblake" target="_blank">
-  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
-  <span class="screen-reader-text">Umbraco Community Mastodon</span>
-</a>
 {% for link in site.data.social.links %}
-<a href="{{ link.url }}" target="_blank" rel="noopener">
+<a href="{{ link.url }}" target="_blank" rel="{{ link.rel }}">
   <i class="{{ link.icon }}" aria-hidden="true"></i>
   <span class="screen-reader-text">{{ link.title }}</span>
 </a>

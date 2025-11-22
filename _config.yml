@@ -32,8 +32,12 @@ navigation:
     url: /about/
   - text: Community
     url: /community/
-  - text: LetsWriteCode
-    url: https://letswritecode.net
+  - text: Resume
+    url: /resume/
+  - text: Archive
+    url: /archive/
+  - text: Contact
+    url: "mailto:hi@helloblake.com"
 
 # The shortname for your Disqus site to enable comments.
 disqus: helloblake

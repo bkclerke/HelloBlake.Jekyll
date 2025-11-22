@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Your Content Editors Happy</title>
+  <meta name="description" content="Find out how to make your Umbraco content editors happy with these tips!">
+  <link rel="canonical" href="http://localhost:4000/articles/make-your-content-editors-happy/">
+  <link rel="alternate" type="application/rss+xml" title="HelloBlake Feed"
+    href="http://localhost:4000/feed.xml">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+  
+  <!--Open Graph-->
+  <meta property="og:title" content="Make Your Content Editors Happy" />
+  <meta property="twitter:title" content="Make Your Content Editors Happy" />
+  <meta property="og:description" content="Find out how to make your Umbraco content editors happy with these tips!" />
+  <meta property="twitter:description" content="Find out how to make your Umbraco content editors happy with these tips!" />
+  <meta property="og:type" content="" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:url" content="http://localhost:4000/articles/make-your-content-editors-happy/" />
+  <meta property="twitter:url" content="http://localhost:4000/articles/make-your-content-editors-happy/" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable">Skip to Main Content</a>
+
+  <div id="page" class="site">
+    <div class="inner">
+      <header class="site-header">
+  
+  <p class="site-title"><a class="logo-text" href="/">HelloBlake</a></p>
+  
+  <nav class="site-navigation">
+    <div class="site-navigation-wrap">
+      <h2 class="screen-reader-text">Main navigation</h2>
+      <ul class="menu">
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/community/">Community</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/resume/">Resume</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/archive/">Archive</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="mailto:hi@helloblake.com">Contact</a>
+        </li>
+        
+      </ul><!-- .menu -->
+      <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
+          class="icon-close" aria-hidden="true"></span></button>
+    </div><!-- .site-navigation-wrap -->
+  </nav><!-- .site-navigation -->
+  <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+</header>
+
+
+      <div id="content">
+        <main class="main-content fadeInDown delay_075s">
+
+  <article class="post">
+    <header class="post-header">
+      <time class="post-date" datetime="2015-06-20">June 20, 2015</time>
+      <h1 class="post-title">Make Your Content Editors Happy</h1>
+      <div class="post-meta">
+        By <span class="post-author">Blake Watt</span><span class="post-tags"> in <a href="/archive/#umbraco7" rel="tag">umbraco7</a></span>
+      </div><!-- .post-meta -->
+      
+    </header><!-- .post-header -->
+    <div class="post-content">
+      
+      
+      
+        <div class="alert alert-warning" role="alert">
+    <p>This article is outdated and while some concepts may apply, the code samples may not work.</p>
+</div>
+      
+      <p>There were many great talks this year at Code Garden and one hit really close to home for me because it involves what I do every day at work. Dave Woestenborghs’s talk on making your content editors happy had a lot of excellent points to help people setup content editor friendly Umbraco sites and I thought this would be an excellent topic for a blog post. Here are some takeaways from his talk with my own experience mixed in.</p>
+
+<!--more-->
+
+<p>Setting up your Umbraco website starts with your Document Types. I can’t begin to stress how important it is to set these up properly to save everyone time in the future when updating the website. This initial phase probably takes the longest with the planning and evaluation but it has the most impact on your back office and can either help or hinder the amount of code you have to write. This setup is also going to be what the editor’s see when they manage their content and that makes this step even more important!</p>
+
+<h2 id="choose-the-right-properties">Choose the right properties</h2>
+
+<p>When you setup your document types there are some things to remember when thinking about your content editors. First you need to make sure you use the correct property editors, this is something you determine in your initial design evaluation. Using the correct property editors is going to reduce the amount of properties you need on a document type and make it less confusing for your editors.</p>
+
+<p>For example, the difference between a textstring or a content picker. These two fields do something completely different and return different values but can both be used as setting link URLs. A textstring can be used to give an editor the freedom to put in their own link, which could be to a media item or a third-party website, whereas the content picker can be used to set a link to a particular content page within the site. Knowing what your editors needs are and if you may need to limit their choices based on design would allow you to determine which property you would need for this item.</p>
+
+<h2 id="customize-your-properties">Customize your properties</h2>
+
+<p>When you get familiar with the Data Types available in Umbraco your setup becomes simpler because you have a better understanding of what is available to you and how to take advantage of it. One of the more commonly used data types in Umbraco is the Rich Text Editor. The RTE is a great tool and allows your editors to have a lot of control, but sometimes that can be too much control. There are cases where you may need to limit the functionality of the editor, for example, creating a simple editor or removing the ability to insert macros. You can customize the RTE in the Umbraco developer section. By changing the options allowed on the RTE toolbar you can add or remove functionality that the editors can use. You can also setup the image sizes when they are inserted with the RTE. This can default images to the largest size and then let the editor scale them down as needed.</p>
+
+<p>The RTE also lets you assign a style sheet. This feature in particular is very useful and should almost always be setup to give your editors some styling options for their text. Common properties include header tags, aligning images, color options, and button link styles.</p>
+
+<p>Enter, user style sheet…</p>
+
+<p>For those of us who use Visual Studio, or another IDE to write code (that is anything besides Umbraco’s editor) the user style sheet comes in handy. The user style sheet is usually very simple and just includes an import rule of the main css file used by the site.</p>
+
+<p><code class="language-plaintext highlighter-rouge">@import url('/css/main.css');</code></p>
+
+<p>Having the user style sheet setup allows developers to modify the css without worrying that Umbraco is going to overwrite their file with a cached version when a style is added to the RTE (it happens).</p>
+
+<p>By assigning the user style sheet to the RTE we can define the users’ allowed styles here.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2015-06-20/user-style-sheet.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>We can also specify how the user style displays in the RTE. For example, say you have a button class that has been added to a link in the RTE. The button style has white text. When the user sees this rendered in the RTE they can no longer see the button text because the white color blends in with the white RTE background. Technically, this has the initial desired effect because we want the user styles to display how they appear on the front end of the site, but this one in particular needs to show differently so that the user can still see their content. This is where you would modify the user style sheet to change the color of the button class.</p>
+
+<div class="alert alert-info" role="alert">
+    <p><i class="fa-solid fa-circle-info"></i> <strong>TIP:</strong> The user style sheet is only used by the RTE, the website does not reference the user style sheet.</p>
+</div>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="nf">url</span><span class="p">(</span><span class="s2">'/css/main.css'</span><span class="p">);</span>
+ 
+<span class="nc">.mceContentBody</span><span class="o">,</span> <span class="nc">.mceEditorIframe</span> <span class="p">{</span>
+	<span class="nl">background</span><span class="p">:</span><span class="nx">#FFFFFF</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */</span>
+<span class="nt">h1</span> <span class="p">{</span>
+ 
+<span class="p">}</span>
+<span class="nt">h2</span> <span class="p">{</span>
+ 
+<span class="p">}</span>
+<span class="nc">.btn</span> <span class="nt">btn-primary</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nx">#000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Once you update the user style sheet and refresh Umbraco, the user will see the updated button color in their RTE while the front end of the website remains the desired white color.</p>
+
+<p>Setting up these properties can be very helpful to your editors but fair warning, if you give an editor too many options it can get confusing and even messy. You know that whole saying about “give them an inch and they take a mile”? It happens, so just keep it in mind and make sure you point it out while you are training your editors so they know there are some expectations.</p>
+
+<h2 id="group-your-properties">Group your properties</h2>
+
+<p>When you are setting up your document types, you can group your properties by tabs. This is a simple way to keep things organized on your document types and makes it easier for your editors to find things. For example, you have can have a Footer tab that includes all the properties related to your website’s footer and a Content tab that includes properties for the basic content on the page.</p>
+
+<div class="alert alert-info" role="alert">
+    <p><i class="fa-solid fa-circle-info"></i> <strong>TIP:</strong> A good way to setup your properties is by how they appear on the front end of your website. You should also try to organize tabs this way too when possible.</p>
+</div>
+
+<h2 id="describe-your-properties">Describe your properties</h2>
+
+<p>Document types allow you to add a description on your properties. When you are adding a new property, fill out the Description textbox in order to show a note below the label. This note can help your users in figuring out what to do with this property if it may not be entirely obvious. You can use these notes for things like listing image dimensions, or letting the editor know that if the field is empty the name will be used as a backup.</p>
+
+<h2 id="use-descriptive-labels">Use descriptive labels</h2>
+
+<p>Use naming conventions that are easy to understand. Don’t label your properties with your company jargon that only people who work on your team can understand. Save that for your aliases. Your property labels need to be simple and easily understood by your editors who usually aren’t as technical savvy as developers.</p>
+
+<p>You can also apply this concept to naming your macros that are allowed in the RTE. They don’t have to be super long, just something that quickly gets the point across like Bios List. Just keep it simple!</p>
+
+<h2 id="using-packages">Using Packages</h2>
+
+<p>There are plenty of helpful packages out there that can help improve your editors experience and make setting up Umbraco sites a bit easier but be wary of using too many packages. Typically I may install anywhere from 1 to 3 packages on my site setups. I am not a big fan of using a ton of packages and I would prefer to write my own code if it is something within my realm of know how.</p>
+
+<p>A few awesome (FREE) packages from the Umbraco community include:</p>
+
+<ul>
+  <li>Archetype</li>
+  <li>Doc Type Grid Editor</li>
+  <li>Nested Content</li>
+  <li>Bookshelf</li>
+</ul>
+
+<p>I’ve found some of these very helpful when setting up Umbraco installs and if you haven’t heard of them you should definitely check them out. Have any other tips you’d like to share that I didn’t cover here? Let me know in the comments below!</p>
+
+    </div><!-- .post-content -->
+    <!-- <div class="post-share">
+      <span>Share:</span>
+      <a target="_blank"
+        href="https://twitter.com/intent/tweet?text=Make%20Your%20Content%20Editors%20Happy&amp;url=http://localhost:4000/articles/make-your-content-editors-happy/" rel="noopener">Twitter</a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/make-your-content-editors-happy/&amp;t=Make%20Your%20Content%20Editors%20Happy" rel="noopener">Facebook</a>
+    </div> --><!-- .share-post -->
+    <div class="author-box">
+      
+      <div class="author-avatar" style="background-image: url('/images/blake.jpg')"><span class="screen-reader-text">Blake Watt's Picture</span></div>
+      
+      <div class="author-details">
+        <h2 class="author-title">About Blake Watt</h2>
+        <div class="author-bio"><p>Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.</p>
+</div>
+        
+        <span class="author-location">Spokane, WA</span>
+        
+        
+        <span class="author-website"><a href="http://helloblake.com" target="_blank" rel="noopener">http://helloblake.com</a></span>
+        
+      </div><!-- .author-details -->
+    </div><!-- .author-box -->
+  </article><!-- .post -->
+
+  
+    
+      <div id="disqus_thread"></div>
+<script>    
+    var disqus_config = function () {
+    this.page.url = 'https://helloblake.com/articles/make-your-content-editors-happy/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/articles/make-your-content-editors-happy/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://helloblake.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//helloblake.disqus.com/count.js" async></script>
+    
+  
+
+</main><!-- .main-content -->
+      </div>
+      <footer class="site-footer">
+  <div class="offsite-links">
+    
+      
+<a href="https://github.com/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+  <span class="screen-reader-text">GitHub</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bkclerke/" target="_blank" rel="noopener">
+  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+  <span class="screen-reader-text">LinkedIn</span>
+</a>
+
+<a href="https://umbracocommunity.social/@helloblake" target="_blank" rel="me">
+  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+  <span class="screen-reader-text">Mastodon</span>
+</a>
+
+<a href="http://discordapp.com/users/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+  <span class="screen-reader-text">Discord</span>
+</a>
+
+
+    
+  </div><!-- .offsite-links -->
+  <div class="footer-bottom">
+    <div class="site-info">
+      <!-- 
+ -->
+      <p>&copy; 2025 HelloBlake</p>
+    </div><!-- .site-info -->
+    <a href="#page" id="back-to-top" class="back-to-top"><span class="screen-reader-text">Back to the top </span>&#8593;</a>
+  </div><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
+
+    </div><!-- .inner -->
+  </div><!-- .site -->
+
+  <!-- Scripts -->
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB3CZEHJ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SB3CZEHJ16');
+</script>
+  
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Type Compositions in Umbraco</title>
+  <meta name="description" content="What you know, what you need to know and what is to come for Umbraco Document Type Compositions. Learn about it here and plan for the changes to come!">
+  <link rel="canonical" href="http://localhost:4000/articles/document-type-compositions-in-umbraco/">
+  <link rel="alternate" type="application/rss+xml" title="HelloBlake Feed"
+    href="http://localhost:4000/feed.xml">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+  
+  <!--Open Graph-->
+  <meta property="og:title" content="Document Type Compositions in Umbraco" />
+  <meta property="twitter:title" content="Document Type Compositions in Umbraco" />
+  <meta property="og:description" content="What you know, what you need to know and what is to come for Umbraco Document Type Compositions. Learn about it here and plan for the changes to come!" />
+  <meta property="twitter:description" content="What you know, what you need to know and what is to come for Umbraco Document Type Compositions. Learn about it here and plan for the changes to come!" />
+  <meta property="og:type" content="" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:url" content="http://localhost:4000/articles/document-type-compositions-in-umbraco/" />
+  <meta property="twitter:url" content="http://localhost:4000/articles/document-type-compositions-in-umbraco/" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable">Skip to Main Content</a>
+
+  <div id="page" class="site">
+    <div class="inner">
+      <header class="site-header">
+  
+  <p class="site-title"><a class="logo-text" href="/">HelloBlake</a></p>
+  
+  <nav class="site-navigation">
+    <div class="site-navigation-wrap">
+      <h2 class="screen-reader-text">Main navigation</h2>
+      <ul class="menu">
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/community/">Community</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/resume/">Resume</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/archive/">Archive</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="mailto:hi@helloblake.com">Contact</a>
+        </li>
+        
+      </ul><!-- .menu -->
+      <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
+          class="icon-close" aria-hidden="true"></span></button>
+    </div><!-- .site-navigation-wrap -->
+  </nav><!-- .site-navigation -->
+  <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+</header>
+
+
+      <div id="content">
+        <main class="main-content fadeInDown delay_075s">
+
+  <article class="post">
+    <header class="post-header">
+      <time class="post-date" datetime="2016-01-02">January 2, 2016</time>
+      <h1 class="post-title">Document Type Compositions in Umbraco</h1>
+      <div class="post-meta">
+        By <span class="post-author">Blake Watt</span><span class="post-tags"> in <a href="/archive/#umbraco7" rel="tag">umbraco7</a></span>
+      </div><!-- .post-meta -->
+      
+    </header><!-- .post-header -->
+    <div class="post-content">
+      
+      
+      
+        <div class="alert alert-warning" role="alert">
+    <p>This article is outdated and while some concepts may apply, the code samples may not work.</p>
+</div>
+      
+      <p>Umbraco 7.2 introduced us to a new concept of Document Type Compositions. You may have seen this while you were in the back office building new sites, but what does it truly mean for you and how you build sites? To answer this, it helps to understand where this concept is coming from.</p>
+
+<!--more-->
+
+<h2 id="previous-nested-inheritance-setup">Previous “Nested Inheritance” Setup</h2>
+
+<p>Typically, in the past, when you build Umbraco websites you have the ability to “nest” Document Types under a “Master” Document Type. This nested structure allows you to inherit properties from the parent Document Type. This parent/child relationship is clearly visible in the back office (tree-like structure). For example, a simple site structure might look similar to this:</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2016-01-02/doc-type-nested-structure.png" alt="" class="img-accent" />
+  
+</figure>
+
+<h2 id="compositions-explained">Compositions Explained</h2>
+
+<p>With the addition of compositions, you have the ability to not only inherit properties from nested Document Types (that tree-like structure) but you can also Compose from Document Types. This is technically almost the same thing as nesting with a few differences, which we will get to. With Compositions you select which Document Types you would like to “inherit” properties from. So while you can’t clearly see this structure in the back office, it is viewable when checking out the Structure tab to see what Document Type Compositions are checked.</p>
+
+<p>If you are using a mixed setup taking advantage of nesting and using compositions you will see a checklist similar to this:</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2016-01-02/ex-comp-list-checked-72.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>The grayed out Document Type Composition Master is a parent to the particular Document Type we are looking at. By default, this means that this Document Type will inherit the properties from the Master Document Type and unless we move it (which is really easy to do in v 7.4) this is what you get. The other Document Type, Banner, is checked and just using the compositions as intended which also says we want the properties setup on the Banner Document Type to be on this Document Type too.</p>
+
+<p>With the new Document Type Editor in version 7.4 (currently in beta) you have a different editor all together, but the compositions are still the checkboxes allowing you to select which Document Type’s properties you would like to compose from.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2016-01-02/ex-comp-list-74.png" alt="" class="img-accent" />
+  
+</figure>
+
+<h2 id="umbraco-74-beta-changes">Umbraco 7.4 (Beta) Changes</h2>
+
+<p>In Umbraco 7.4 changes were proposed. The beta version completely got rid of the nested inheritance setup that a lot of us have been accustomed to using for a very long time and went the route of only compositions. There are some good reasons some have their reservations about moving fully to compositions just yet and Dave started up a thread on our asking the community their opinions on this improvement. <a href="https://our.umbraco.org/forum/core/general/73809-no-more-master-doctypes-in-74-beta-is-this-really-an-improvement#comment-236822" target="_blank">Long thread short</a>, the core team listened to the community and is implementing a solution to keep both styles of back office setup, for now. (YAY!)</p>
+
+<h3 id="how-do-these-changes-affect-your-workflow">How do these changes affect your workflow?</h3>
+
+<p>You are probably wondering what this changes, and does it really affect you. It is a big change for some, going from a very rigid structure of inheritance with parent/child relationships to a structure that is actually quite liberating! With an inheritance structure, you see the relationships but with compositions not so much… well at least until Offroad Code gave us Umbraco Backoffice Visualizations (Thank you!).</p>
+
+<p>Really this is a minor complaint considering the vast amount of configuration options that compositions give us. Those who have worked with larger Umbraco site setups know the struggle is very real when it comes time to expand on a site, or when a client wants a different setup and it requires reworking the Document Types. Before compositions, this was a major pain because moving Document Types just wasn’t that easy. It was do-able, but with workarounds and a lot of time invested in copying, switching, republishing, etc. The nested process requires a lot of thinking into the whole setup as you breakdown what can be reused and therefore on Master (aka Parent) Document Types and what should be on its own child Document Type. With Compositions, you still have to think about these things, but making changes and restructuring your Document Types is as easy as checking boxes. That is a huge improvement! I think the only ‘con’ I can see with this, is making sure that you check all the compositions that are necessary for a Document Type, and really in the grand scheme of things, I think we can manage this.</p>
+
+<h3 id="ill-admit-it-these-changes-made-me-nervous">I’ll admit it, these changes made me nervous.</h3>
+
+<p>I’ll be first to admit, seeing that nested inheritance was going away in the beta was really off-putting. I’ve been using Umbraco for years and one of the things I really love about their UI is seeing relationships and locations of Document Types, Templates, Content Items. It actually really helped me to understand learning razor a bit better too, but I gave the beta a shot and I’ve been playing with it, reworking test sites, upgrading older sites, messing around with my blog and I think going full on Compositions will just be a step forward for the flexibility in building sites in Umbraco. We do technically keep the same ‘inheriting’ functionality in a sense, just with the ability to inherit or “compose” from more Document Types quicker.</p>
+
+<h2 id="in-summary-go-try-out-74">In Summary, go try out 7.4!</h2>
+
+<p>While 7.4 is still in beta, this has been an overview of just one aspect of the changes being made. There are a few UI updates to the grid and some excellent improvements to the Media section that I think you are really going to like, so go download it! Play with it! Embrace the compositions! Try out Folders! Umbraco is only getting better.</p>
+
+    </div><!-- .post-content -->
+    <!-- <div class="post-share">
+      <span>Share:</span>
+      <a target="_blank"
+        href="https://twitter.com/intent/tweet?text=Document%20Type%20Compositions%20in%20Umbraco&amp;url=http://localhost:4000/articles/document-type-compositions-in-umbraco/" rel="noopener">Twitter</a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/document-type-compositions-in-umbraco/&amp;t=Document%20Type%20Compositions%20in%20Umbraco" rel="noopener">Facebook</a>
+    </div> --><!-- .share-post -->
+    <div class="author-box">
+      
+      <div class="author-avatar" style="background-image: url('/images/blake.jpg')"><span class="screen-reader-text">Blake Watt's Picture</span></div>
+      
+      <div class="author-details">
+        <h2 class="author-title">About Blake Watt</h2>
+        <div class="author-bio"><p>Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.</p>
+</div>
+        
+        <span class="author-location">Spokane, WA</span>
+        
+        
+        <span class="author-website"><a href="http://helloblake.com" target="_blank" rel="noopener">http://helloblake.com</a></span>
+        
+      </div><!-- .author-details -->
+    </div><!-- .author-box -->
+  </article><!-- .post -->
+
+  
+    
+      <div id="disqus_thread"></div>
+<script>    
+    var disqus_config = function () {
+    this.page.url = 'https://helloblake.com/articles/document-type-compositions-in-umbraco/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/articles/document-type-compositions-in-umbraco/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://helloblake.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//helloblake.disqus.com/count.js" async></script>
+    
+  
+
+</main><!-- .main-content -->
+      </div>
+      <footer class="site-footer">
+  <div class="offsite-links">
+    
+      
+<a href="https://github.com/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+  <span class="screen-reader-text">GitHub</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bkclerke/" target="_blank" rel="noopener">
+  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+  <span class="screen-reader-text">LinkedIn</span>
+</a>
+
+<a href="https://umbracocommunity.social/@helloblake" target="_blank" rel="me">
+  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+  <span class="screen-reader-text">Mastodon</span>
+</a>
+
+<a href="http://discordapp.com/users/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+  <span class="screen-reader-text">Discord</span>
+</a>
+
+
+    
+  </div><!-- .offsite-links -->
+  <div class="footer-bottom">
+    <div class="site-info">
+      <!-- 
+ -->
+      <p>&copy; 2025 HelloBlake</p>
+    </div><!-- .site-info -->
+    <a href="#page" id="back-to-top" class="back-to-top"><span class="screen-reader-text">Back to the top </span>&#8593;</a>
+  </div><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
+
+    </div><!-- .inner -->
+  </div><!-- .site -->
+
+  <!-- Scripts -->
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB3CZEHJ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SB3CZEHJ16');
+</script>
+  
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+</body>
+</html>

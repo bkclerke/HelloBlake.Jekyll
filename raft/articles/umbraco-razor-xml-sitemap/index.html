@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umbraco Razor XML Sitemap</title>
+  <meta name="description" content="Get the code to create a dynamic sitemap for your Umbraco website that updates automatically with only the content you want.">
+  <link rel="canonical" href="http://localhost:4000/articles/umbraco-razor-xml-sitemap/">
+  <link rel="alternate" type="application/rss+xml" title="HelloBlake Feed"
+    href="http://localhost:4000/feed.xml">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+  
+  <!--Open Graph-->
+  <meta property="og:title" content="Umbraco Razor XML Sitemap" />
+  <meta property="twitter:title" content="Umbraco Razor XML Sitemap" />
+  <meta property="og:description" content="Get the code to create a dynamic sitemap for your Umbraco website that updates automatically with only the content you want." />
+  <meta property="twitter:description" content="Get the code to create a dynamic sitemap for your Umbraco website that updates automatically with only the content you want." />
+  <meta property="og:type" content="" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:url" content="http://localhost:4000/articles/umbraco-razor-xml-sitemap/" />
+  <meta property="twitter:url" content="http://localhost:4000/articles/umbraco-razor-xml-sitemap/" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable">Skip to Main Content</a>
+
+  <div id="page" class="site">
+    <div class="inner">
+      <header class="site-header">
+  
+  <p class="site-title"><a class="logo-text" href="/">HelloBlake</a></p>
+  
+  <nav class="site-navigation">
+    <div class="site-navigation-wrap">
+      <h2 class="screen-reader-text">Main navigation</h2>
+      <ul class="menu">
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/community/">Community</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/resume/">Resume</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="/archive/">Archive</a>
+        </li>
+        
+        
+        
+        <li class="menu-item ">
+          <a class="" href="mailto:hi@helloblake.com">Contact</a>
+        </li>
+        
+      </ul><!-- .menu -->
+      <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span
+          class="icon-close" aria-hidden="true"></span></button>
+    </div><!-- .site-navigation-wrap -->
+  </nav><!-- .site-navigation -->
+  <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-menu" aria-hidden="true"></span></button>
+</header>
+
+
+      <div id="content">
+        <main class="main-content fadeInDown delay_075s">
+
+  <article class="post">
+    <header class="post-header">
+      <time class="post-date" datetime="2014-11-28">November 28, 2014</time>
+      <h1 class="post-title">Umbraco Razor XML Sitemap</h1>
+      <div class="post-meta">
+        By <span class="post-author">Blake Watt</span><span class="post-tags"> in <a href="/archive/#umbraco7" rel="tag">umbraco7</a></span>
+      </div><!-- .post-meta -->
+      
+    </header><!-- .post-header -->
+    <div class="post-content">
+      
+      
+      
+        <div class="alert alert-warning" role="alert">
+    <p>This article is outdated and while some concepts may apply, the code samples may not work.</p>
+</div>
+      
+      <p>Creating an XML sitemap in Umbraco that automatically updates based on the types of pages you create can be easily achieved using razor. XML sitemaps are something that Google webmasters should be familiar with since as a webmaster, you will be asked to submit a sitemap for Google to crawl.</p>
+
+<!--more-->
+
+<p>First let’s setup an XML Sitemap template in Umbraco. Login and head over to your Settings section. Right click on Templates and click Create. Name your new template, for this case I’ve named my new template XML Sitemap, since this way the name sitemap can still be used for a user sitemap that people can view.</p>
+
+<figure class="image-card width-wide caption">
+  <img src="/images/posts/2014-11-28/xml-template-1.png" alt="" class="img-accent" />
+  
+</figure>
+
+<p>Using Umbraco 7, setup the following code on your new XML Sitemap template. If you are using a version of Umbraco that supports razor, place the following code into a macro on your new template.</p>
+
+<pre><code class="language-cshtml">@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+@{
+	umbraco.library.ChangeContentType("text/xml");
+    int level = 6;
+    var home = @CurrentPage.AncestorOrSelf(1);
+    var pages = @home.Descendants().Where("hideInSitemap == false");
+}
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+	&lt;url&gt; 
+		&lt;loc&gt;@Request.Url.Scheme://@Request.Url.Host&lt;/loc&gt;
+		&lt;lastmod&gt;@home.UpdateDate.ToString("yyyy-MM-ddTHH:mm:00")+00:00&lt;/lastmod&gt;
+		&lt;changefreq&gt;daily&lt;/changefreq&gt;
+		&lt;priority&gt;0.8&lt;/priority&gt;
+	&lt;/url&gt;
+ 
+	@foreach (var page in pages)
+	{
+		if (page.Level &lt;= @level)
+		{ 
+			&lt;url&gt;
+				&lt;loc&gt;@Request.Url.Scheme://@Request.Url.Host@page.Url&lt;/loc&gt;
+				&lt;lastmod&gt;@page.UpdateDate.ToString("yyyy-MM-ddTHH:mm:00")+00:00&lt;/lastmod&gt;
+				&lt;changefreq&gt;weekly&lt;/changefreq&gt;
+				&lt;priority&gt;0.5&lt;/priority&gt;
+			&lt;/url&gt;
+		}
+	}
+&lt;/urlset&gt;
+</code></pre>
+
+<h2 id="breakdown">Breakdown</h2>
+
+<p>First we want to tell Umbraco to output this code as xml with the <code class="language-plaintext highlighter-rouge">umbraco.library.ChangeContentType("text.xml")</code>.  Next we are going to declare the max level for the sitemap to loop through. This number is going to vary depending on your particular website needs. For this purpose I’m going to set my level to 6 since most pages won’t be this deep.  Setting up some basic variables will make it easier for us to reference so lets setup home by telling Umbraco to go to the first Level and get that node. Then we are going to define the pages by telling Umbraco to  list all the descendant pages of home that are not marked hide in sitemap. This <code class="language-plaintext highlighter-rouge">hideInSitemap</code> value is a custom property on our document type for the various pages.</p>
+
+<p>Now that our variables are setup, lets starting writing our XML sitemap. First we declare our schema type and then open our <code class="language-plaintext highlighter-rouge">&lt;url&gt;</code> tag. Inside of the <code class="language-plaintext highlighter-rouge">&lt;url&gt;</code> tag we are going to set our <code class="language-plaintext highlighter-rouge">&lt;loc&gt;</code> with some C# to get our URL scheme and host. Using this allows us to build this code out on a test site and then push it live and the URL for the site will update to the new live site domain. This way allows us to avoid hard coding a link that could be missed when we move this code to a production environment. For general purpose in this example I’ve setup my <code class="language-plaintext highlighter-rouge">&lt;lastmod&gt;</code> tag to use the date that the homepage was last updated. Next set a value for your <code class="language-plaintext highlighter-rouge">&lt;changefreq&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;priority&gt;</code>. This concludes the <code class="language-plaintext highlighter-rouge">&lt;url&gt;</code> section.</p>
+
+<p>Once we have setup your <code class="language-plaintext highlighter-rouge">&lt;url&gt;</code> tag for the homepage and closed it. We need to setup a <code class="language-plaintext highlighter-rouge">&lt;url&gt;</code> tag the same way for every page in our site that we want in the sitemap. This is where we are going to use a foreach to loop through every page in our pages list. Inside of this foreach we are going to setup each <code class="language-plaintext highlighter-rouge">&lt;url&gt;</code> tag the same way as we did for our homepage. The one thing you will need to change is the update date for each of the individual pages, instead of using home, we will use the individual pages last updated date for this (see line 25).</p>
+
+<p>Once we have setup our foreach we need to close our <code class="language-plaintext highlighter-rouge">&lt;urlset&gt;</code> and then we have our code that makes our sitemap. If you want to get more specific in setting up your pages to loop through, instead of just using a hide in sitemap checkbox, you can add filters in your where statement to ignore certain document types or whatever you need to make your list. This code will be specific to your Umbraco website needs.</p>
+
+<p>Now that we have our code all written on our template, we want to render this page. You can either create a new xml sitemap document type and assign this new template to it so that you have an actual page in the Content section or you can view this alternate template on your homepage of your site. In Umbraco 7 you can view alternate templates by appending <code class="language-plaintext highlighter-rouge">?alttemplate=Alias</code> to your URL. Our alias for this new template is XMLSitemap so the URL that we would submit to Google would be domain.com/?alttemplate=XMLSitemap.</p>
+
+<p>You can view an example of this method on this blog here: http://letswritecode.net/?alttemplate=XMLSitemap.</p>
+
+    </div><!-- .post-content -->
+    <!-- <div class="post-share">
+      <span>Share:</span>
+      <a target="_blank"
+        href="https://twitter.com/intent/tweet?text=Umbraco%20Razor%20XML%20Sitemap&amp;url=http://localhost:4000/articles/umbraco-razor-xml-sitemap/" rel="noopener">Twitter</a>
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/umbraco-razor-xml-sitemap/&amp;t=Umbraco%20Razor%20XML%20Sitemap" rel="noopener">Facebook</a>
+    </div> --><!-- .share-post -->
+    <div class="author-box">
+      
+      <div class="author-avatar" style="background-image: url('/images/blake.jpg')"><span class="screen-reader-text">Blake Watt's Picture</span></div>
+      
+      <div class="author-details">
+        <h2 class="author-title">About Blake Watt</h2>
+        <div class="author-bio"><p>Umbraco Certified Master. Web Developer. Explorer. Motorcycle Rider. Weight Lifter. Snowboarder. Crazy Cat Lady.</p>
+</div>
+        
+        <span class="author-location">Spokane, WA</span>
+        
+        
+        <span class="author-website"><a href="http://helloblake.com" target="_blank" rel="noopener">http://helloblake.com</a></span>
+        
+      </div><!-- .author-details -->
+    </div><!-- .author-box -->
+  </article><!-- .post -->
+
+  
+    
+      <div id="disqus_thread"></div>
+<script>    
+    var disqus_config = function () {
+    this.page.url = 'https://helloblake.com/articles/umbraco-razor-xml-sitemap/';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/articles/umbraco-razor-xml-sitemap/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://helloblake.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//helloblake.disqus.com/count.js" async></script>
+    
+  
+
+</main><!-- .main-content -->
+      </div>
+      <footer class="site-footer">
+  <div class="offsite-links">
+    
+      
+<a href="https://github.com/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-github" aria-hidden="true"></i>
+  <span class="screen-reader-text">GitHub</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bkclerke/" target="_blank" rel="noopener">
+  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+  <span class="screen-reader-text">LinkedIn</span>
+</a>
+
+<a href="https://umbracocommunity.social/@helloblake" target="_blank" rel="me">
+  <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+  <span class="screen-reader-text">Mastodon</span>
+</a>
+
+<a href="http://discordapp.com/users/bkclerke" target="_blank" rel="noopener">
+  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+  <span class="screen-reader-text">Discord</span>
+</a>
+
+
+    
+  </div><!-- .offsite-links -->
+  <div class="footer-bottom">
+    <div class="site-info">
+      <!-- 
+ -->
+      <p>&copy; 2025 HelloBlake</p>
+    </div><!-- .site-info -->
+    <a href="#page" id="back-to-top" class="back-to-top"><span class="screen-reader-text">Back to the top </span>&#8593;</a>
+  </div><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
+
+    </div><!-- .inner -->
+  </div><!-- .site -->
+
+  <!-- Scripts -->
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB3CZEHJ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SB3CZEHJ16');
+</script>
+  
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+</body>
+</html>
