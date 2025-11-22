@@ -1,19 +1,96 @@
 ---
 ---
-/* Top-level stylesheet to compile the _sass partials into /assets/css/style.css
-   Created by GitHub Copilot assistant on 2025-11-22
+
+/**
+ * Scriptor Jekyll Theme 2.0.0
+ * By Just Good Themes - https://justgoodthemes.com/
 */
 
-@import "reset";
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+/*
+  0. Icons
+  1. Reset
+  2. General
+  3. Structure
+  4. Site Header
+  5. Content
+  6. Comments
+  7. Posts Navigation
+  8. Site Footer
+  9. Animations
+ 10. Prism
+*/
+
+// Font.
+$font: (
+  primary: ("Lato","Helvetica Neue",Helvetica,sans-serif),
+  secondary: ("Noto Serif",Georgia,serif)
+);
+
+// Palette.
+{% assign accent = site.accent_color | default: '#2d72d9' %}
+$palette: (
+  accent:    {{ accent }},
+  primary:   #6b747a,
+  secondary: #2c343c,
+  meta:      #6b747a,
+  border:    #d7d7d7,
+  bg:        #fbfbfb
+);
+
+// Imports
 @import "functions";
+//@import "icons";
+@import url(fa-all.min.css);
+@import "reset";
 @import "general";
 @import "structure";
-@import "icons";
 @import "site-header";
-@import "site-footer";
 @import "content";
-@import "posts-navigation";
-@import "prism";
-@import "animations";
 @import "comments";
+@import "posts-navigation";
+@import "site-footer";
+@import "animations";
+@import "prism";
 @import "custom";
+
+// Alerts
+.alert {
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0 0 1.66667em;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-warning {
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    color: #664d03;
+  }
+
+  &-info {
+    background-color: #cff4fc;
+    border-color: #b6effb;
+    color: #055160;
+  }
+
+  &-danger {
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    color: #842029;
+  }
+}
+
+// Custom
+.img-accent {
+  padding: 3px;
+  border: 1px solid #d7d7d7;
+}
