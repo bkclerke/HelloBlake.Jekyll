@@ -33,3 +33,7 @@ Whether it's a Codecademy course or an in-person course at my local community co
 ## I love to share
 
 I've blogged, created documentation, and participate actively in conferences and discussions to share experiences and learn from peers. Most recently, I've joined the Umbraco US Foundation board that organizes the annual Umbraco US Festival, furthering my commitment to knowledge sharing in the community.
+
+## I love to read
+
+I love to read whenever I can make the time. eBooks and audiobooks are my jam! My favorite genres include fiction, fantasy, romance, and the occasional non-fiction—especially productivity books and works about technology's impact on society and the psychology of addictive tech. If you enjoy similar reads, let's connect on [GoodReads](https://www.goodreads.com/user/show/183888661-blake){:target="_blank"} to share our recent favorites!
