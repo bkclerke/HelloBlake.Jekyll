@@ -46,4 +46,4 @@ A.S., cum laude, Computer Graphics and Design
 
 ## Recruiters
 
-You can find my [updated resume available for download here](https://drive.google.com/file/d/1l3ec7gAJLX2ytJO6E2PBPVDOZb8FGcEP/view?usp=sharing){:target="_blank"}.
+You can find my [updated resume available for download here](/resume/download/){:target="_blank"}.
