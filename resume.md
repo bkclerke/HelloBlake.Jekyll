@@ -46,4 +46,4 @@ A.S., cum laude, Computer Graphics and Design
 
 ## Recruiters
 
-You can find my [updated resume available for download here](/resume/download/){:target="_blank"}.
+You can find my [updated resume available for download here](/BlakeWattResume.pdf){:target="_blank"}.
